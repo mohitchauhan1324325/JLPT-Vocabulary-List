@@ -7,7 +7,6 @@ export function renderFurigana(text = "") {
   let lastIndex = 0;
   let match;
   let key = 0;
-  let a = 0;
 
   while ((match = regex.exec(text)) !== null) {
     // Text before the kanji
