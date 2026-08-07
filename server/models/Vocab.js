@@ -41,6 +41,7 @@ const vocabSchema = new mongoose.Schema(
 // Index for fast filtering
 vocabSchema.index({ level: 1 });
 vocabSchema.index({ type: 1 });
+vocabSchema.index({ kana: 1 });
 vocabSchema.index({ kanji: 'text', kana: 'text', romaji: 'text', meaning: 'text' });
 
 module.exports = mongoose.model('Vocab', vocabSchema);

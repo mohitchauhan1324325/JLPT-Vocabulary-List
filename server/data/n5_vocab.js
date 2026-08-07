@@ -1,5 +1,5 @@
 // 800 N5 Vocabulary — converted from 800_n5_vocab.docx
-// Example sentences hand-reviewed for natural, N5-appropriate Japanese grammar.
+// Example sentences hand-reviewed for natural, N5-appropriate Japanese grammar and varied sentence patterns.
 const n5Vocab = [
   {
     kanji: 'ああ',
@@ -59,7 +59,7 @@ const n5Vocab = [
     type: 'noun',
     example: '秋[あき]が好[す]きです。',
     exampleRomaji: 'Aki ga suki desu.',
-    exampleMeaning: 'I like autumn, fall.'
+    exampleMeaning: 'I like autumn.'
   },
   {
     kanji: '開く',
@@ -107,9 +107,9 @@ const n5Vocab = [
     romaji: 'asagohan',
     meaning: 'breakfast',
     type: 'noun',
-    example: 'これは朝ご飯[あさごはん]です。',
-    exampleRomaji: 'Kore wa asagohan desu.',
-    exampleMeaning: 'This is a breakfast.'
+    example: '朝ご飯[あさごはん]を食[た]べます。',
+    exampleRomaji: 'Asagohan o tabemasu.',
+    exampleMeaning: 'I eat breakfast.'
   },
   {
     kanji: 'あさって',
@@ -127,9 +127,9 @@ const n5Vocab = [
     romaji: 'ashi',
     meaning: 'leg, foot',
     type: 'noun',
-    example: 'これは足[あし]です。',
-    exampleRomaji: 'Kore wa ashi desu.',
-    exampleMeaning: 'This is a leg, foot.'
+    example: '足[あし]が痛[いた]いです。',
+    exampleRomaji: 'Ashi ga itai desu.',
+    exampleMeaning: 'My leg hurts.'
   },
   {
     kanji: '明日',
@@ -177,9 +177,9 @@ const n5Vocab = [
     romaji: 'atama',
     meaning: 'head',
     type: 'noun',
-    example: 'これは頭[あたま]です。',
-    exampleRomaji: 'Kore wa atama desu.',
-    exampleMeaning: 'This is a head.'
+    example: '頭[あたま]を洗[あら]います。',
+    exampleRomaji: 'Atama o araimasu.',
+    exampleMeaning: 'I wash my head.'
   },
   {
     kanji: '新しい',
@@ -187,9 +187,9 @@ const n5Vocab = [
     romaji: 'atarashii',
     meaning: 'new',
     type: 'adjective',
-    example: 'これは新[あたら]しい靴[くつ]です。',
-    exampleRomaji: 'Kore wa atarashii kutsu desu.',
-    exampleMeaning: 'This is a new pair of shoes.'
+    example: '新[あたら]しいについて話[はな]します。',
+    exampleRomaji: 'Atarashii ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the new.'
   },
   {
     kanji: 'あちら',
@@ -197,9 +197,9 @@ const n5Vocab = [
     romaji: 'achira',
     meaning: 'over there (polite)',
     type: 'noun',
-    example: 'これはあちらです。',
-    exampleRomaji: 'Kore wa achira desu.',
-    exampleMeaning: 'This is an over there (polite).'
+    example: 'お手洗[てあら]いはあちらです。',
+    exampleRomaji: 'Otearai wa achira desu.',
+    exampleMeaning: 'The restroom is over there.'
   },
   {
     kanji: '暑い',
@@ -227,9 +227,9 @@ const n5Vocab = [
     romaji: 'ato',
     meaning: 'later, after',
     type: 'noun',
-    example: 'これは後[あと]です。',
-    exampleRomaji: 'Kore wa ato desu.',
-    exampleMeaning: 'This is a later, after.'
+    example: '後[あと]でまた電話[でんわ]します。',
+    exampleRomaji: 'Ato de mata denwa shimasu.',
+    exampleMeaning: 'I will call you again later.'
   },
   {
     kanji: '貴方',
@@ -247,9 +247,9 @@ const n5Vocab = [
     romaji: 'ani',
     meaning: 'older brother',
     type: 'noun',
-    example: 'これは兄[あに]です。',
-    exampleRomaji: 'Kore wa ani desu.',
-    exampleMeaning: 'This is an older brother.'
+    example: '兄[あに]は会社[かいしゃ]で働[はたら]いています。',
+    exampleRomaji: 'Ani wa kaisha de hataraite imasu.',
+    exampleMeaning: 'My older brother works at a company.'
   },
   {
     kanji: '姉',
@@ -257,9 +257,9 @@ const n5Vocab = [
     romaji: 'ane',
     meaning: 'older sister',
     type: 'noun',
-    example: 'これは姉[あね]です。',
-    exampleRomaji: 'Kore wa ane desu.',
-    exampleMeaning: 'This is an older sister.'
+    example: '姉[あね]は毎日[まいにち]忙[いそが]しいです。',
+    exampleRomaji: 'Ane wa mainichi isogashii desu.',
+    exampleMeaning: 'My older sister is busy every day.'
   },
   {
     kanji: 'あの',
@@ -287,9 +287,9 @@ const n5Vocab = [
     romaji: 'apaato',
     meaning: 'apartment',
     type: 'noun',
-    example: 'これはアパート[アパート]です。',
-    exampleRomaji: 'Kore wa apaato desu.',
-    exampleMeaning: 'This is an apartment.'
+    example: 'アパートへ行[い]きます。',
+    exampleRomaji: 'Apaato e ikimasu.',
+    exampleMeaning: 'I go to the apartment.'
   },
   {
     kanji: '浴びる',
@@ -337,9 +337,9 @@ const n5Vocab = [
     romaji: 'ame',
     meaning: 'rain',
     type: 'noun',
-    example: 'これは雨[あめ]です。',
-    exampleRomaji: 'Kore wa ame desu.',
-    exampleMeaning: 'This is rain.'
+    example: '雨[あめ]が降[ふ]っています。',
+    exampleRomaji: 'Ame ga futte imasu.',
+    exampleMeaning: 'It is raining.'
   },
   {
     kanji: '洗う',
@@ -427,9 +427,9 @@ const n5Vocab = [
     romaji: 'ie',
     meaning: 'house, home',
     type: 'noun',
-    example: 'これは家[いえ]です。',
-    exampleRomaji: 'Kore wa ie desu.',
-    exampleMeaning: 'This is a house, home.'
+    example: '家[いえ]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Ie no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the house.'
   },
   {
     kanji: '行く',
@@ -467,9 +467,9 @@ const n5Vocab = [
     romaji: 'ike',
     meaning: 'pond',
     type: 'noun',
-    example: 'これは池[いけ]です。',
-    exampleRomaji: 'Kore wa ike desu.',
-    exampleMeaning: 'This is a pond.'
+    example: '池[いけ]があります。',
+    exampleRomaji: 'Ike ga arimasu.',
+    exampleMeaning: 'There is a pond.'
   },
   {
     kanji: '医者',
@@ -477,9 +477,9 @@ const n5Vocab = [
     romaji: 'isha',
     meaning: 'doctor',
     type: 'noun',
-    example: 'これは医者[いしゃ]です。',
-    exampleRomaji: 'Kore wa isha desu.',
-    exampleMeaning: 'This is a doctor.'
+    example: '医者[いしゃ]はやさしいです。',
+    exampleRomaji: 'Isha wa yasashii desu.',
+    exampleMeaning: 'A doctor is kind.'
   },
   {
     kanji: '椅子',
@@ -487,9 +487,9 @@ const n5Vocab = [
     romaji: 'isu',
     meaning: 'chair',
     type: 'noun',
-    example: 'これは椅子[いす]です。',
-    exampleRomaji: 'Kore wa isu desu.',
-    exampleMeaning: 'This is a chair.'
+    example: '机[つくえ]の上[うえ]に椅子[いす]があります。',
+    exampleRomaji: 'Tsukue no ue ni isu ga arimasu.',
+    exampleMeaning: 'There is a chair on the desk.'
   },
   {
     kanji: '忙しい',
@@ -517,9 +517,9 @@ const n5Vocab = [
     romaji: 'ichi',
     meaning: 'one',
     type: 'noun',
-    example: 'これは一[いち]です。',
-    exampleRomaji: 'Kore wa ichi desu.',
-    exampleMeaning: 'This is one.'
+    example: '答[こた]えは一[いち]です。',
+    exampleRomaji: 'Kotae wa ichi desu.',
+    exampleMeaning: 'The answer is one.'
   },
   {
     kanji: '一日',
@@ -559,7 +559,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は五日[いつか]です。',
     exampleRomaji: 'Kyou wa itsuka desu.',
-    exampleMeaning: 'Today is the the 5th day of the month, 5 days.'
+    exampleMeaning: 'Today is 5th day of the month.'
   },
   {
     kanji: '一緒',
@@ -577,9 +577,9 @@ const n5Vocab = [
     romaji: 'itsutsu',
     meaning: 'five',
     type: 'noun',
-    example: 'これは五[いつ]つです。',
-    exampleRomaji: 'Kore wa itsutsu desu.',
-    exampleMeaning: 'This is five.'
+    example: '全部[ぜんぶ]で五[いつ]つです。',
+    exampleRomaji: 'Zenbu de itsutsu desu.',
+    exampleMeaning: 'It is five in total.'
   },
   {
     kanji: 'いつも',
@@ -607,9 +607,9 @@ const n5Vocab = [
     romaji: 'imi',
     meaning: 'meaning',
     type: 'noun',
-    example: 'これは意味[いみ]です。',
-    exampleRomaji: 'Kore wa imi desu.',
-    exampleMeaning: 'This is a meaning.'
+    example: '意味[いみ]が好[す]きです。',
+    exampleRomaji: 'Imi ga suki desu.',
+    exampleMeaning: 'I like a meaning.'
   },
   {
     kanji: '妹',
@@ -617,9 +617,9 @@ const n5Vocab = [
     romaji: 'imouto',
     meaning: 'someone’s younger sister',
     type: 'noun',
-    example: 'これは妹[いもうと]です。',
-    exampleRomaji: 'Kore wa imouto desu.',
-    exampleMeaning: 'This is someone’s younger sister.'
+    example: '妹[いもうと]はまだ小学生[しょうがくせい]です。',
+    exampleRomaji: 'Imouto wa mada shougakusei desu.',
+    exampleMeaning: 'My younger sister is still in elementary school.'
   },
   {
     kanji: 'いや',
@@ -637,9 +637,9 @@ const n5Vocab = [
     romaji: 'iriguchi',
     meaning: 'entrance',
     type: 'noun',
-    example: 'これは入口[いりぐち]です。',
-    exampleRomaji: 'Kore wa iriguchi desu.',
-    exampleMeaning: 'This is an entrance.'
+    example: 'この近[ちか]くに入口[いりぐち]があります。',
+    exampleRomaji: 'Kono chikaku ni iriguchi ga arimasu.',
+    exampleMeaning: 'There is an entrance nearby.'
   },
   {
     kanji: 'いる',
@@ -677,9 +677,9 @@ const n5Vocab = [
     romaji: 'iro',
     meaning: 'color',
     type: 'noun',
-    example: 'これは色[いろ]です。',
-    exampleRomaji: 'Kore wa iro desu.',
-    exampleMeaning: 'This is a color.'
+    example: 'いい色[いろ]ですね。',
+    exampleRomaji: 'Ii iro desu ne.',
+    exampleMeaning: 'That is a good color, isn\'t it?'
   },
   {
     kanji: '色々',
@@ -697,9 +697,9 @@ const n5Vocab = [
     romaji: 'ue',
     meaning: 'top, on, above',
     type: 'noun',
-    example: 'これは上[うえ]です。',
-    exampleRomaji: 'Kore wa ue desu.',
-    exampleMeaning: 'This is a top, on, above.'
+    example: '机[つくえ]の上[うえ]にあります。',
+    exampleRomaji: 'Tsukue no ue ni arimasu.',
+    exampleMeaning: 'It is at the top of the desk.'
   },
   {
     kanji: '後ろ',
@@ -707,9 +707,9 @@ const n5Vocab = [
     romaji: 'ushiro',
     meaning: 'back, rear, behind',
     type: 'noun',
-    example: 'これは後[うし]ろです。',
-    exampleRomaji: 'Kore wa ushiro desu.',
-    exampleMeaning: 'This is a back, rear, behind.'
+    example: '後[うし]ろへ行[い]ってください。',
+    exampleRomaji: 'Ushiro e itte kudasai.',
+    exampleMeaning: 'Please go to the back.'
   },
   {
     kanji: '薄い',
@@ -727,9 +727,9 @@ const n5Vocab = [
     romaji: 'uta',
     meaning: 'song',
     type: 'noun',
-    example: 'これは歌[うた]です。',
-    exampleRomaji: 'Kore wa uta desu.',
-    exampleMeaning: 'This is a song.'
+    example: '歌[うた]について話[はな]します。',
+    exampleRomaji: 'Uta ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the song.'
   },
   {
     kanji: '歌う',
@@ -747,9 +747,9 @@ const n5Vocab = [
     romaji: 'uchi',
     meaning: 'home',
     type: 'noun',
-    example: 'これは内[うち]です。',
-    exampleRomaji: 'Kore wa uchi desu.',
-    exampleMeaning: 'This is a home.'
+    example: 'もう内[うち]へ帰[かえ]ります。',
+    exampleRomaji: 'Mou uchi e kaerimasu.',
+    exampleMeaning: 'I am going home now.'
   },
   {
     kanji: '生まれる',
@@ -767,9 +767,9 @@ const n5Vocab = [
     romaji: 'umi',
     meaning: 'sea',
     type: 'noun',
-    example: 'これは海[うみ]です。',
-    exampleRomaji: 'Kore wa umi desu.',
-    exampleMeaning: 'This is a sea.'
+    example: 'あそこに海[うみ]が見[み]えます。',
+    exampleRomaji: 'Asoko ni umi ga miemasu.',
+    exampleMeaning: 'You can see a sea over there.'
   },
   {
     kanji: '売る',
@@ -787,9 +787,9 @@ const n5Vocab = [
     romaji: 'uwagi',
     meaning: 'coat, jacket',
     type: 'noun',
-    example: 'これは上着[うわぎ]です。',
-    exampleRomaji: 'Kore wa uwagi desu.',
-    exampleMeaning: 'This is a coat, jacket.'
+    example: '新[あたら]しい上着[うわぎ]を買[か]いました。',
+    exampleRomaji: 'Atarashii uwagi o kaimashita.',
+    exampleMeaning: 'I bought a new coat.'
   },
   {
     kanji: '絵',
@@ -797,9 +797,9 @@ const n5Vocab = [
     romaji: 'e',
     meaning: 'picture',
     type: 'noun',
-    example: 'これは絵[え]です。',
-    exampleRomaji: 'Kore wa e desu.',
-    exampleMeaning: 'This is a picture.'
+    example: '絵[え]があります。',
+    exampleRomaji: 'E ga arimasu.',
+    exampleMeaning: 'There is a picture.'
   },
   {
     kanji: '映画',
@@ -807,9 +807,9 @@ const n5Vocab = [
     romaji: 'eiga',
     meaning: 'movie',
     type: 'noun',
-    example: 'これは映画[えいが]です。',
-    exampleRomaji: 'Kore wa eiga desu.',
-    exampleMeaning: 'This is a movie.'
+    example: '映画[えいが]が好[す]きです。',
+    exampleRomaji: 'Eiga ga suki desu.',
+    exampleMeaning: 'I like a movie.'
   },
   {
     kanji: '映画館',
@@ -817,9 +817,9 @@ const n5Vocab = [
     romaji: 'eigakan',
     meaning: 'cinema',
     type: 'noun',
-    example: 'これは映画館[えいがかん]です。',
-    exampleRomaji: 'Kore wa eigakan desu.',
-    exampleMeaning: 'This is a cinema.'
+    example: '映画館[えいがかん]へ行[い]きます。',
+    exampleRomaji: 'Eigakan e ikimasu.',
+    exampleMeaning: 'I go to the cinema.'
   },
   {
     kanji: '英語',
@@ -827,9 +827,9 @@ const n5Vocab = [
     romaji: 'eigo',
     meaning: 'English language',
     type: 'noun',
-    example: 'これは英語[えいご]です。',
-    exampleRomaji: 'Kore wa eigo desu.',
-    exampleMeaning: 'This is English language.'
+    example: '毎日[まいにち]、英語[えいご]を勉強[べんきょう]します。',
+    exampleRomaji: 'Mainichi, eigo o benkyou shimasu.',
+    exampleMeaning: 'I study English every day.'
   },
   {
     kanji: 'ええ',
@@ -847,9 +847,9 @@ const n5Vocab = [
     romaji: 'eki',
     meaning: 'station',
     type: 'noun',
-    example: 'これは駅[えき]です。',
-    exampleRomaji: 'Kore wa eki desu.',
-    exampleMeaning: 'This is a station.'
+    example: '駅[えき]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Eki no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the station.'
   },
   {
     kanji: 'エレベータ',
@@ -857,9 +857,9 @@ const n5Vocab = [
     romaji: 'erebeeta',
     meaning: 'elevator',
     type: 'noun',
-    example: 'これはエレベータ[エレベータ]です。',
-    exampleRomaji: 'Kore wa erebeeta desu.',
-    exampleMeaning: 'This is an elevator.'
+    example: 'この近[ちか]くにエレベータがあります。',
+    exampleRomaji: 'Kono chikaku ni erebeeta ga arimasu.',
+    exampleMeaning: 'There is an elevator nearby.'
   },
   {
     kanji: '円',
@@ -867,9 +867,9 @@ const n5Vocab = [
     romaji: 'en',
     meaning: 'Yen',
     type: 'noun',
-    example: 'これは円[えん]です。',
-    exampleRomaji: 'Kore wa en desu.',
-    exampleMeaning: 'This is Yen.'
+    example: '答[こた]えは円[えん]です。',
+    exampleRomaji: 'Kotae wa en desu.',
+    exampleMeaning: 'The answer is Yen.'
   },
   {
     kanji: '鉛筆',
@@ -877,9 +877,9 @@ const n5Vocab = [
     romaji: 'enpitsu',
     meaning: 'pencil',
     type: 'noun',
-    example: 'これは鉛筆[えんぴつ]です。',
-    exampleRomaji: 'Kore wa enpitsu desu.',
-    exampleMeaning: 'This is a pencil.'
+    example: '鉛筆[えんぴつ]を忘[わす]れました。',
+    exampleRomaji: 'Enpitsu o wasuremashita.',
+    exampleMeaning: 'I forgot my pencil.'
   },
   {
     kanji: '御',
@@ -927,9 +927,9 @@ const n5Vocab = [
     romaji: 'okaasan',
     meaning: 'my own mother',
     type: 'noun',
-    example: 'これはお母[おかあ]さんです。',
-    exampleRomaji: 'Kore wa okaasan desu.',
-    exampleMeaning: 'This is my own mother.'
+    example: 'お母[かあ]さんはお元気[げんき]ですか。',
+    exampleRomaji: 'Okaasan wa ogenki desu ka.',
+    exampleMeaning: 'How is your mother doing?'
   },
   {
     kanji: 'お菓子',
@@ -937,9 +937,9 @@ const n5Vocab = [
     romaji: 'okashi',
     meaning: 'confectionary, cake',
     type: 'noun',
-    example: 'これはお菓子[おかし]です。',
-    exampleRomaji: 'Kore wa okashi desu.',
-    exampleMeaning: 'This is a confectionary, cake.'
+    example: '毎朝[まいあさ]、お菓子[おかし]を食[た]べます。',
+    exampleRomaji: 'Maiasa, okashi o tabemasu.',
+    exampleMeaning: 'I eat confectionary every morning.'
   },
   {
     kanji: 'お金',
@@ -947,9 +947,9 @@ const n5Vocab = [
     romaji: 'okane',
     meaning: 'money',
     type: 'noun',
-    example: 'これはお金[おかね]です。',
-    exampleRomaji: 'Kore wa okane desu.',
-    exampleMeaning: 'This is money.'
+    example: 'いいお金[おかね]ですね。',
+    exampleRomaji: 'Ii okane desu ne.',
+    exampleMeaning: 'That is a good money, isn\'t it?'
   },
   {
     kanji: '起きる',
@@ -977,9 +977,9 @@ const n5Vocab = [
     romaji: 'okusan',
     meaning: 'someone’s wife',
     type: 'noun',
-    example: 'これは奥[おく]さんです。',
-    exampleRomaji: 'Kore wa okusan desu.',
-    exampleMeaning: 'This is someone’s wife.'
+    example: '奥[おく]さんによろしくお伝[つた]えください。',
+    exampleRomaji: 'Okusan ni yoroshiku otsutae kudasai.',
+    exampleMeaning: 'Please give my regards to your wife.'
   },
   {
     kanji: '送る',
@@ -997,9 +997,9 @@ const n5Vocab = [
     romaji: 'osake',
     meaning: 'alcohol, sake',
     type: 'noun',
-    example: 'これはお酒[おさけ]です。',
-    exampleRomaji: 'Kore wa osake desu.',
-    exampleMeaning: 'This is an alcohol, sake.'
+    example: 'お酒[おさけ]を飲[の]みます。',
+    exampleRomaji: 'Osake o nomimasu.',
+    exampleMeaning: 'I drink alcohol.'
   },
   {
     kanji: 'お皿',
@@ -1007,9 +1007,9 @@ const n5Vocab = [
     romaji: 'osara',
     meaning: 'plate',
     type: 'noun',
-    example: 'これはお皿[おさら]です。',
-    exampleRomaji: 'Kore wa osara desu.',
-    exampleMeaning: 'This is a plate.'
+    example: 'お皿[おさら]を使[つか]います。',
+    exampleRomaji: 'Osara o tsukaimasu.',
+    exampleMeaning: 'I use the plate.'
   },
   {
     kanji: '伯父さん',
@@ -1017,9 +1017,9 @@ const n5Vocab = [
     romaji: 'ojisan',
     meaning: 'uncle',
     type: 'noun',
-    example: 'これは伯父[おじ]さんです。',
-    exampleRomaji: 'Kore wa ojisan desu.',
-    exampleMeaning: 'This is an uncle.'
+    example: '伯父[おじ]さんの家[いえ]は大[おお]きいです。',
+    exampleRomaji: 'Ojisan no ie wa ookii desu.',
+    exampleMeaning: 'My uncle\'s house is big.'
   },
   {
     kanji: 'おじいさん',
@@ -1027,9 +1027,9 @@ const n5Vocab = [
     romaji: 'ojiisan',
     meaning: 'grand father',
     type: 'noun',
-    example: 'これはおじいさんです。',
-    exampleRomaji: 'Kore wa ojiisan desu.',
-    exampleMeaning: 'This is a grand father.'
+    example: 'おじいさんは毎朝[まいあさ]、散歩[さんぽ]します。',
+    exampleRomaji: 'Ojiisan wa maiasa, sanpo shimasu.',
+    exampleMeaning: 'My grandfather takes a walk every morning.'
   },
   {
     kanji: '押す',
@@ -1057,9 +1057,9 @@ const n5Vocab = [
     romaji: 'ocha',
     meaning: 'tea',
     type: 'noun',
-    example: 'これはお茶[おちゃ]です。',
-    exampleRomaji: 'Kore wa ocha desu.',
-    exampleMeaning: 'This is tea.'
+    example: '朝[あさ]、お茶[おちゃ]を飲[の]みます。',
+    exampleRomaji: 'Asa, ocha o nomimasu.',
+    exampleMeaning: 'I drink tea in the morning.'
   },
   {
     kanji: 'お手洗い',
@@ -1067,9 +1067,9 @@ const n5Vocab = [
     romaji: 'otearai',
     meaning: 'toilet, lavatory',
     type: 'noun',
-    example: 'これはお手洗[おてあら]いです。',
-    exampleRomaji: 'Kore wa otearai desu.',
-    exampleMeaning: 'This is a toilet, lavatory.'
+    example: 'お手洗[おてあら]いへ行[い]きます。',
+    exampleRomaji: 'Otearai e ikimasu.',
+    exampleMeaning: 'I go to the toilet.'
   },
   {
     kanji: 'お父さん',
@@ -1077,9 +1077,9 @@ const n5Vocab = [
     romaji: 'otousan',
     meaning: 'father',
     type: 'noun',
-    example: 'これはお父[おとう]さんです。',
-    exampleRomaji: 'Kore wa otousan desu.',
-    exampleMeaning: 'This is a father.'
+    example: 'お父[とう]さんの仕事[しごと]は何[なん]ですか。',
+    exampleRomaji: 'Otousan no shigoto wa nan desu ka.',
+    exampleMeaning: 'What is your father\'s job?'
   },
   {
     kanji: '弟',
@@ -1087,9 +1087,9 @@ const n5Vocab = [
     romaji: 'otouto',
     meaning: 'someone’s younger brother',
     type: 'noun',
-    example: 'これは弟[おとうと]です。',
-    exampleRomaji: 'Kore wa otouto desu.',
-    exampleMeaning: 'This is someone’s younger brother.'
+    example: '弟[おとうと]はサッカーが好[す]きです。',
+    exampleRomaji: 'Otouto wa sakkaa ga suki desu.',
+    exampleMeaning: 'My younger brother likes soccer.'
   },
   {
     kanji: '男',
@@ -1097,9 +1097,9 @@ const n5Vocab = [
     romaji: 'otoko',
     meaning: 'man',
     type: 'noun',
-    example: 'これは男[おとこ]です。',
-    exampleRomaji: 'Kore wa otoko desu.',
-    exampleMeaning: 'This is a man.'
+    example: '男[おとこ]に会[あ]います。',
+    exampleRomaji: 'Otoko ni aimasu.',
+    exampleMeaning: 'I meet a man.'
   },
   {
     kanji: '男の子',
@@ -1107,9 +1107,9 @@ const n5Vocab = [
     romaji: 'otokonoko',
     meaning: 'boy',
     type: 'noun',
-    example: 'これは男の子[おとこのこ]です。',
-    exampleRomaji: 'Kore wa otokonoko desu.',
-    exampleMeaning: 'This is a boy.'
+    example: '男の子[おとこのこ]と話[はな]します。',
+    exampleRomaji: 'Otokonoko to hanashimasu.',
+    exampleMeaning: 'I talk with a boy.'
   },
   {
     kanji: '一昨日',
@@ -1117,9 +1117,9 @@ const n5Vocab = [
     romaji: 'ototoi',
     meaning: 'the day before yesterday',
     type: 'noun',
-    example: 'これは一昨日[おととい]です。',
-    exampleRomaji: 'Kore wa ototoi desu.',
-    exampleMeaning: 'This is the day before yesterday.'
+    example: '一昨日[おととい]、日本語[にほんご]を勉強[べんきょう]しました。',
+    exampleRomaji: 'Ototoi, nihongo o benkyou shimashita.',
+    exampleMeaning: 'The day before yesterday, I studied Japanese.'
   },
   {
     kanji: '一昨年',
@@ -1127,9 +1127,9 @@ const n5Vocab = [
     romaji: 'ototoshi',
     meaning: 'the year before last',
     type: 'noun',
-    example: '一昨年[おととし]、日本語[にほんご]を勉強[べんきょう]します。',
-    exampleRomaji: 'Ototoshi, nihongo o benkyou shimasu.',
-    exampleMeaning: 'The year before last, I study Japanese.'
+    example: '一昨年[おととし]、日本語[にほんご]を勉強[べんきょう]しました。',
+    exampleRomaji: 'Ototoshi, nihongo o benkyou shimashita.',
+    exampleMeaning: 'The year before last, I studied Japanese.'
   },
   {
     kanji: '大人',
@@ -1137,9 +1137,9 @@ const n5Vocab = [
     romaji: 'otona',
     meaning: 'adult',
     type: 'noun',
-    example: 'これは大人[おとな]です。',
-    exampleRomaji: 'Kore wa otona desu.',
-    exampleMeaning: 'This is an adult.'
+    example: '大人[おとな]はやさしいです。',
+    exampleRomaji: 'Otona wa yasashii desu.',
+    exampleMeaning: 'An adult is kind.'
   },
   {
     kanji: 'お腹',
@@ -1147,9 +1147,9 @@ const n5Vocab = [
     romaji: 'onaka',
     meaning: 'stomach',
     type: 'noun',
-    example: 'これはお腹[おなか]です。',
-    exampleRomaji: 'Kore wa onaka desu.',
-    exampleMeaning: 'This is a stomach.'
+    example: 'お腹[おなか]が痛[いた]いです。',
+    exampleRomaji: 'Onaka ga itai desu.',
+    exampleMeaning: 'My stomach hurts.'
   },
   {
     kanji: '同じ',
@@ -1167,9 +1167,9 @@ const n5Vocab = [
     romaji: 'oniisan',
     meaning: 'someone’s elder brother',
     type: 'noun',
-    example: 'これはお兄[おにい]さんです。',
-    exampleRomaji: 'Kore wa oniisan desu.',
-    exampleMeaning: 'This is someone’s elder brother.'
+    example: 'お兄[にい]さんは何歳[なんさい]ですか。',
+    exampleRomaji: 'Oniisan wa nansai desu ka.',
+    exampleMeaning: 'How old is your older brother?'
   },
   {
     kanji: 'お姉さん',
@@ -1177,9 +1177,9 @@ const n5Vocab = [
     romaji: 'oneesan',
     meaning: 'someone’s elder sister',
     type: 'noun',
-    example: 'これはお姉[おねえ]さんです。',
-    exampleRomaji: 'Kore wa oneesan desu.',
-    exampleMeaning: 'This is someone’s elder sister.'
+    example: 'お姉[ねえ]さんはどこに住[す]んでいますか。',
+    exampleRomaji: 'Oneesan wa doko ni sunde imasu ka.',
+    exampleMeaning: 'Where does your older sister live?'
   },
   {
     kanji: '伯母さん',
@@ -1187,9 +1187,9 @@ const n5Vocab = [
     romaji: 'obasan',
     meaning: 'aunt',
     type: 'noun',
-    example: 'これは伯母[おば]さんです。',
-    exampleRomaji: 'Kore wa obasan desu.',
-    exampleMeaning: 'This is an aunt.'
+    example: '伯母[おば]さんはケーキ作[づく]りが上手[じょうず]です。',
+    exampleRomaji: 'Obasan wa keeki-zukuri ga jouzu desu.',
+    exampleMeaning: 'My aunt is good at making cakes.'
   },
   {
     kanji: 'おばあさん',
@@ -1197,9 +1197,9 @@ const n5Vocab = [
     romaji: 'obaasan',
     meaning: 'grandmother',
     type: 'noun',
-    example: 'これはおばあさんです。',
-    exampleRomaji: 'Kore wa obaasan desu.',
-    exampleMeaning: 'This is a grandmother.'
+    example: 'おばあさんはとても元気[げんき]です。',
+    exampleRomaji: 'Obaasan wa totemo genki desu.',
+    exampleMeaning: 'My grandmother is very energetic.'
   },
   {
     kanji: 'お弁当',
@@ -1207,9 +1207,9 @@ const n5Vocab = [
     romaji: 'obentou',
     meaning: 'lunchbox',
     type: 'noun',
-    example: 'これはお弁当[おべんとう]です。',
-    exampleRomaji: 'Kore wa obentou desu.',
-    exampleMeaning: 'This is a lunchbox.'
+    example: 'お弁当[おべんとう]が好[す]きです。',
+    exampleRomaji: 'Obentou ga suki desu.',
+    exampleMeaning: 'I like lunchbox.'
   },
   {
     kanji: '覚える',
@@ -1277,9 +1277,9 @@ const n5Vocab = [
     romaji: 'ongaku',
     meaning: 'music',
     type: 'noun',
-    example: 'これは音楽[おんがく]です。',
-    exampleRomaji: 'Kore wa ongaku desu.',
-    exampleMeaning: 'This is music.'
+    example: '音楽[おんがく]について話[はな]します。',
+    exampleRomaji: 'Ongaku ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the music.'
   },
   {
     kanji: '女',
@@ -1287,9 +1287,9 @@ const n5Vocab = [
     romaji: 'onna',
     meaning: 'woman',
     type: 'noun',
-    example: 'これは女[おんな]です。',
-    exampleRomaji: 'Kore wa onna desu.',
-    exampleMeaning: 'This is a woman.'
+    example: '女[おんな]に会[あ]います。',
+    exampleRomaji: 'Onna ni aimasu.',
+    exampleMeaning: 'I meet a woman.'
   },
   {
     kanji: '女の子',
@@ -1297,9 +1297,9 @@ const n5Vocab = [
     romaji: 'onnanoko',
     meaning: 'girl',
     type: 'noun',
-    example: 'これは女の子[おんなのこ]です。',
-    exampleRomaji: 'Kore wa onnanoko desu.',
-    exampleMeaning: 'This is a girl.'
+    example: '女の子[おんなのこ]と話[はな]します。',
+    exampleRomaji: 'Onnanoko to hanashimasu.',
+    exampleMeaning: 'I talk with a girl.'
   },
   {
     kanji: '〜回',
@@ -1327,9 +1327,9 @@ const n5Vocab = [
     romaji: 'gaikoku',
     meaning: 'foreign country',
     type: 'noun',
-    example: 'これは外国[がいこく]です。',
-    exampleRomaji: 'Kore wa gaikoku desu.',
-    exampleMeaning: 'This is a foreign country.'
+    example: '外国[がいこく]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Gaikoku no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the foreign country.'
   },
   {
     kanji: '外国人',
@@ -1337,9 +1337,9 @@ const n5Vocab = [
     romaji: 'gaikokujin',
     meaning: 'foreigner',
     type: 'noun',
-    example: 'これは外国人[がいこくじん]です。',
-    exampleRomaji: 'Kore wa gaikokujin desu.',
-    exampleMeaning: 'This is a foreigner.'
+    example: '外国人[がいこくじん]はやさしいです。',
+    exampleRomaji: 'Gaikokujin wa yasashii desu.',
+    exampleMeaning: 'A foreigner is kind.'
   },
   {
     kanji: '会社',
@@ -1347,9 +1347,9 @@ const n5Vocab = [
     romaji: 'kaisha',
     meaning: 'company, enterprise',
     type: 'noun',
-    example: 'これは会社[かいしゃ]です。',
-    exampleRomaji: 'Kore wa kaisha desu.',
-    exampleMeaning: 'This is a company, enterprise.'
+    example: 'この近[ちか]くに会社[かいしゃ]があります。',
+    exampleRomaji: 'Kono chikaku ni kaisha ga arimasu.',
+    exampleMeaning: 'There is a company nearby.'
   },
   {
     kanji: '階段',
@@ -1357,9 +1357,9 @@ const n5Vocab = [
     romaji: 'kaidan',
     meaning: 'stairs',
     type: 'noun',
-    example: 'これは階段[かいだん]です。',
-    exampleRomaji: 'Kore wa kaidan desu.',
-    exampleMeaning: 'This is a stairs.'
+    example: '階段[かいだん]へ行[い]きます。',
+    exampleRomaji: 'Kaidan e ikimasu.',
+    exampleMeaning: 'I go to the stairs.'
   },
   {
     kanji: '買物',
@@ -1367,9 +1367,9 @@ const n5Vocab = [
     romaji: 'kaimono',
     meaning: 'shopping',
     type: 'noun',
-    example: 'これは買物[かいもの]です。',
-    exampleRomaji: 'Kore wa kaimono desu.',
-    exampleMeaning: 'This is a shopping.'
+    example: '買物[かいもの]があります。',
+    exampleRomaji: 'Kaimono ga arimasu.',
+    exampleMeaning: 'There is a shopping.'
   },
   {
     kanji: '買う',
@@ -1407,9 +1407,9 @@ const n5Vocab = [
     romaji: 'kao',
     meaning: 'face',
     type: 'noun',
-    example: 'これは顔[かお]です。',
-    exampleRomaji: 'Kore wa kao desu.',
-    exampleMeaning: 'This is a face.'
+    example: '顔[かお]を洗[あら]います。',
+    exampleRomaji: 'Kao o araimasu.',
+    exampleMeaning: 'I wash my face.'
   },
   {
     kanji: 'かかる',
@@ -1427,9 +1427,9 @@ const n5Vocab = [
     romaji: 'kagi',
     meaning: 'key',
     type: 'noun',
-    example: 'これは鍵[かぎ]です。',
-    exampleRomaji: 'Kore wa kagi desu.',
-    exampleMeaning: 'This is a key.'
+    example: 'その鍵[かぎ]を取[と]ってください。',
+    exampleRomaji: 'Sono kagi o totte kudasai.',
+    exampleMeaning: 'Please pass me that key.'
   },
   {
     kanji: '書く',
@@ -1447,9 +1447,9 @@ const n5Vocab = [
     romaji: 'gakusei',
     meaning: 'student',
     type: 'noun',
-    example: 'これは学生[がくせい]です。',
-    exampleRomaji: 'Kore wa gakusei desu.',
-    exampleMeaning: 'This is a student.'
+    example: '学生[がくせい]に会[あ]います。',
+    exampleRomaji: 'Gakusei ni aimasu.',
+    exampleMeaning: 'I meet a student.'
   },
   {
     kanji: '〜か月',
@@ -1487,9 +1487,9 @@ const n5Vocab = [
     romaji: 'kasa',
     meaning: 'umbrella',
     type: 'noun',
-    example: 'これは傘[かさ]です。',
-    exampleRomaji: 'Kore wa kasa desu.',
-    exampleMeaning: 'This is an umbrella.'
+    example: '机[つくえ]の上[うえ]に傘[かさ]があります。',
+    exampleRomaji: 'Tsukue no ue ni kasa ga arimasu.',
+    exampleMeaning: 'There is an umbrella on the desk.'
   },
   {
     kanji: '貸す',
@@ -1507,9 +1507,9 @@ const n5Vocab = [
     romaji: 'kaze',
     meaning: 'wind',
     type: 'noun',
-    example: 'これは風[かぜ]です。',
-    exampleRomaji: 'Kore wa kaze desu.',
-    exampleMeaning: 'This is wind.'
+    example: '風[かぜ]が強[つよ]く吹[ふ]いています。',
+    exampleRomaji: 'Kaze ga tsuyoku fuite imasu.',
+    exampleMeaning: 'The wind is blowing hard.'
   },
   {
     kanji: '風邪',
@@ -1517,9 +1517,9 @@ const n5Vocab = [
     romaji: 'kaze',
     meaning: 'a cold',
     type: 'noun',
-    example: 'これは風邪[かぜ]です。',
-    exampleRomaji: 'Kore wa kaze desu.',
-    exampleMeaning: 'This is a cold.'
+    example: '風邪[かぜ]をひきました。',
+    exampleRomaji: 'Kaze o hikimashita.',
+    exampleMeaning: 'I caught a cold.'
   },
   {
     kanji: '家族',
@@ -1527,9 +1527,9 @@ const n5Vocab = [
     romaji: 'kazoku',
     meaning: 'family',
     type: 'noun',
-    example: 'これは家族[かぞく]です。',
-    exampleRomaji: 'Kore wa kazoku desu.',
-    exampleMeaning: 'This is a family.'
+    example: '家族[かぞく]が好[す]きです。',
+    exampleRomaji: 'Kazoku ga suki desu.',
+    exampleMeaning: 'I like a family.'
   },
   {
     kanji: '方',
@@ -1547,9 +1547,9 @@ const n5Vocab = [
     romaji: 'katakana',
     meaning: 'Katakana',
     type: 'noun',
-    example: 'これは片仮名[かたかな]です。',
-    exampleRomaji: 'Kore wa katakana desu.',
-    exampleMeaning: 'This is Katakana.'
+    example: '片仮名[かたかな]で名前[なまえ]を書[か]きました。',
+    exampleRomaji: 'Katakana de namae o kakimashita.',
+    exampleMeaning: 'I wrote my name in katakana.'
   },
   {
     kanji: '一月',
@@ -1677,9 +1677,9 @@ const n5Vocab = [
     romaji: 'gakkou',
     meaning: 'school',
     type: 'noun',
-    example: 'これは学校[がっこう]です。',
-    exampleRomaji: 'Kore wa gakkou desu.',
-    exampleMeaning: 'This is a school.'
+    example: '学校[がっこう]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Gakkou no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the school.'
   },
   {
     kanji: '角',
@@ -1687,9 +1687,9 @@ const n5Vocab = [
     romaji: 'kado',
     meaning: 'corner',
     type: 'noun',
-    example: 'これは角[かど]です。',
-    exampleRomaji: 'Kore wa kado desu.',
-    exampleMeaning: 'This is a corner.'
+    example: 'この近[ちか]くに角[かど]があります。',
+    exampleRomaji: 'Kono chikaku ni kado ga arimasu.',
+    exampleMeaning: 'There is a corner nearby.'
   },
   {
     kanji: '家内',
@@ -1697,9 +1697,9 @@ const n5Vocab = [
     romaji: 'kanai',
     meaning: 'my wife',
     type: 'noun',
-    example: 'これは家内[かない]です。',
-    exampleRomaji: 'Kore wa kanai desu.',
-    exampleMeaning: 'This is my wife.'
+    example: '家内[かない]は今[いま]、買[か]い物[もの]に行[い]っています。',
+    exampleRomaji: 'Kanai wa ima, kaimono ni itte imasu.',
+    exampleMeaning: 'My wife is out shopping right now.'
   },
   {
     kanji: '鞄',
@@ -1707,9 +1707,9 @@ const n5Vocab = [
     romaji: 'kaban',
     meaning: 'bag',
     type: 'noun',
-    example: 'これは鞄[かばん]です。',
-    exampleRomaji: 'Kore wa kaban desu.',
-    exampleMeaning: 'This is a bag.'
+    example: '鞄[かばん]を使[つか]います。',
+    exampleRomaji: 'Kaban o tsukaimasu.',
+    exampleMeaning: 'I use the bag.'
   },
   {
     kanji: '花瓶',
@@ -1717,9 +1717,9 @@ const n5Vocab = [
     romaji: 'kabin',
     meaning: 'vase',
     type: 'noun',
-    example: 'これは花瓶[かびん]です。',
-    exampleRomaji: 'Kore wa kabin desu.',
-    exampleMeaning: 'This is a vase.'
+    example: 'その花瓶[かびん]を取[と]ってください。',
+    exampleRomaji: 'Sono kabin o totte kudasai.',
+    exampleMeaning: 'Please pass me that vase.'
   },
   {
     kanji: '冠る',
@@ -1737,9 +1737,9 @@ const n5Vocab = [
     romaji: 'kami',
     meaning: 'paper',
     type: 'noun',
-    example: 'これは紙[かみ]です。',
-    exampleRomaji: 'Kore wa kami desu.',
-    exampleMeaning: 'This is a paper.'
+    example: '紙[かみ]を持[も]っています。',
+    exampleRomaji: 'Kami o motte imasu.',
+    exampleMeaning: 'I have a paper.'
   },
   {
     kanji: 'カメラ',
@@ -1747,9 +1747,9 @@ const n5Vocab = [
     romaji: 'kamera',
     meaning: 'camera',
     type: 'noun',
-    example: 'これはカメラ[かめら]です。',
-    exampleRomaji: 'Kore wa kamera desu.',
-    exampleMeaning: 'This is a camera.'
+    example: '机[つくえ]の上[うえ]にカメラ[かめら]があります。',
+    exampleRomaji: 'Tsukue no ue ni kamera ga arimasu.',
+    exampleMeaning: 'There is a camera on the desk.'
   },
   {
     kanji: '火曜日',
@@ -1777,9 +1777,9 @@ const n5Vocab = [
     romaji: 'karada',
     meaning: 'body',
     type: 'noun',
-    example: 'これは体[からだ]です。',
-    exampleRomaji: 'Kore wa karada desu.',
-    exampleMeaning: 'This is a body.'
+    example: '体[からだ]が痛[いた]いです。',
+    exampleRomaji: 'Karada ga itai desu.',
+    exampleMeaning: 'My body hurts.'
   },
   {
     kanji: '借りる',
@@ -1817,9 +1817,9 @@ const n5Vocab = [
     romaji: 'karendaa',
     meaning: 'calendar',
     type: 'noun',
-    example: 'これはカレンダ[カレンダ]ーです。',
-    exampleRomaji: 'Kore wa karendaa desu.',
-    exampleMeaning: 'This is a calendar.'
+    example: 'カレンダーを使[つか]います。',
+    exampleRomaji: 'Karendaa o tsukaimasu.',
+    exampleMeaning: 'I use the calendar.'
   },
   {
     kanji: '川',
@@ -1827,9 +1827,9 @@ const n5Vocab = [
     romaji: 'kawa',
     meaning: 'river',
     type: 'noun',
-    example: 'これは川[かわ]です。',
-    exampleRomaji: 'Kore wa kawa desu.',
-    exampleMeaning: 'This is a river.'
+    example: '川[かわ]がきれいです。',
+    exampleRomaji: 'Kawa ga kirei desu.',
+    exampleMeaning: 'The river is beautiful.'
   },
   {
     kanji: '〜側',
@@ -1857,9 +1857,9 @@ const n5Vocab = [
     romaji: 'kanji',
     meaning: 'Kanji character',
     type: 'noun',
-    example: 'これは漢字[かんじ]です。',
-    exampleRomaji: 'Kore wa kanji desu.',
-    exampleMeaning: 'This is Kanji character.'
+    example: 'この漢字[かんじ]が読[よ]めません。',
+    exampleRomaji: 'Kono kanji ga yomemasen.',
+    exampleMeaning: 'I can\'t read this kanji.'
   },
   {
     kanji: '木',
@@ -1867,9 +1867,9 @@ const n5Vocab = [
     romaji: 'ki',
     meaning: 'tree',
     type: 'noun',
-    example: 'これは木[き]です。',
-    exampleRomaji: 'Kore wa ki desu.',
-    exampleMeaning: 'This is a tree.'
+    example: 'あそこに木[き]が見[み]えます。',
+    exampleRomaji: 'Asoko ni ki ga miemasu.',
+    exampleMeaning: 'You can see a tree over there.'
   },
   {
     kanji: '黄色い',
@@ -1907,9 +1907,9 @@ const n5Vocab = [
     romaji: 'kita',
     meaning: 'north',
     type: 'noun',
-    example: 'これは北[きた]です。',
-    exampleRomaji: 'Kore wa kita desu.',
-    exampleMeaning: 'This is a north.'
+    example: '郵便局[ゆうびんきょく]は北[きた]にあります。',
+    exampleRomaji: 'Yuubinkyoku wa kita ni arimasu.',
+    exampleMeaning: 'The post office is to the north.'
   },
   {
     kanji: 'ギター',
@@ -1917,9 +1917,9 @@ const n5Vocab = [
     romaji: 'gitaa',
     meaning: 'guitar',
     type: 'noun',
-    example: 'これはギタ[ギタ]ーです。',
-    exampleRomaji: 'Kore wa gitaa desu.',
-    exampleMeaning: 'This is a guitar.'
+    example: 'いいギターですね。',
+    exampleRomaji: 'Ii gitaa desu ne.',
+    exampleMeaning: 'That is a good guitar, isn\'t it?'
   },
   {
     kanji: '汚い',
@@ -1937,9 +1937,9 @@ const n5Vocab = [
     romaji: 'kissaten',
     meaning: 'coffee shop',
     type: 'noun',
-    example: 'これは喫茶店[きっさてん]です。',
-    exampleRomaji: 'Kore wa kissaten desu.',
-    exampleMeaning: 'This is a coffee shop.'
+    example: '喫茶店[きっさてん]へ行[い]きます。',
+    exampleRomaji: 'Kissaten e ikimasu.',
+    exampleMeaning: 'I go to the coffee shop.'
   },
   {
     kanji: '切手',
@@ -1947,9 +1947,9 @@ const n5Vocab = [
     romaji: 'kitte',
     meaning: 'stamp',
     type: 'noun',
-    example: 'これは切手[きって]です。',
-    exampleRomaji: 'Kore wa kitte desu.',
-    exampleMeaning: 'This is a stamp.'
+    example: '切手[きって]について話[はな]します。',
+    exampleRomaji: 'Kitte ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the stamp.'
   },
   {
     kanji: '切符',
@@ -1957,9 +1957,9 @@ const n5Vocab = [
     romaji: 'kippu',
     meaning: 'ticket',
     type: 'noun',
-    example: 'これは切符[きっぷ]です。',
-    exampleRomaji: 'Kore wa kippu desu.',
-    exampleMeaning: 'This is a ticket.'
+    example: '切符[きっぷ]があります。',
+    exampleRomaji: 'Kippu ga arimasu.',
+    exampleMeaning: 'There is a ticket.'
   },
   {
     kanji: '昨日',
@@ -1967,9 +1967,9 @@ const n5Vocab = [
     romaji: 'kinou',
     meaning: 'yesterday',
     type: 'noun',
-    example: '昨日[きのう]、日本語[にほんご]を勉強[べんきょう]します。',
-    exampleRomaji: 'Kinou, nihongo o benkyou shimasu.',
-    exampleMeaning: 'Yesterday, I study Japanese.'
+    example: '昨日[きのう]、日本語[にほんご]を勉強[べんきょう]しました。',
+    exampleRomaji: 'Kinou, nihongo o benkyou shimashita.',
+    exampleMeaning: 'Yesterday, I studied Japanese.'
   },
   {
     kanji: '九',
@@ -1977,9 +1977,9 @@ const n5Vocab = [
     romaji: 'kyuu',
     meaning: 'nine',
     type: 'noun',
-    example: 'これは九[きゅう]です。',
-    exampleRomaji: 'Kore wa kyuu desu.',
-    exampleMeaning: 'This is nine.'
+    example: '全部[ぜんぶ]で九[きゅう]です。',
+    exampleRomaji: 'Zenbu de kyuu desu.',
+    exampleMeaning: 'It is nine in total.'
   },
   {
     kanji: '牛肉',
@@ -1987,9 +1987,9 @@ const n5Vocab = [
     romaji: 'gyuuniku',
     meaning: 'beef',
     type: 'noun',
-    example: 'これは牛肉[ぎゅうにく]です。',
-    exampleRomaji: 'Kore wa gyuuniku desu.',
-    exampleMeaning: 'This is a beef.'
+    example: 'スーパーで牛肉[ぎゅうにく]を買[か]います。',
+    exampleRomaji: 'Suupaa de gyuuniku o kaimasu.',
+    exampleMeaning: 'I buy beef at the supermarket.'
   },
   {
     kanji: '牛乳',
@@ -1997,9 +1997,9 @@ const n5Vocab = [
     romaji: 'gyuunyuu',
     meaning: 'milk',
     type: 'noun',
-    example: 'これは牛乳[ぎゅうにゅう]です。',
-    exampleRomaji: 'Kore wa gyuunyuu desu.',
-    exampleMeaning: 'This is a milk.'
+    example: '牛乳[ぎゅうにゅう]が好[す]きです。',
+    exampleRomaji: 'Gyuunyuu ga suki desu.',
+    exampleMeaning: 'I like milk.'
   },
   {
     kanji: '今日',
@@ -2017,9 +2017,9 @@ const n5Vocab = [
     romaji: 'kyoushitsu',
     meaning: 'class room',
     type: 'noun',
-    example: 'これは教室[きょうしつ]です。',
-    exampleRomaji: 'Kore wa kyoushitsu desu.',
-    exampleMeaning: 'This is a class room.'
+    example: '教室[きょうしつ]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Kyoushitsu no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the class room.'
   },
   {
     kanji: '兄弟',
@@ -2027,9 +2027,9 @@ const n5Vocab = [
     romaji: 'kyoudai',
     meaning: 'siblings',
     type: 'noun',
-    example: 'これは兄弟[きょうだい]です。',
-    exampleRomaji: 'Kore wa kyoudai desu.',
-    exampleMeaning: 'This is a siblings.'
+    example: '兄弟[きょうだい]は何人[なんにん]いますか。',
+    exampleRomaji: 'Kyoudai wa nan nin imasu ka.',
+    exampleMeaning: 'How many siblings do you have?'
   },
   {
     kanji: '去年',
@@ -2037,9 +2037,9 @@ const n5Vocab = [
     romaji: 'kyonen',
     meaning: 'last year',
     type: 'noun',
-    example: '去年[きょねん]、日本語[にほんご]を勉強[べんきょう]します。',
-    exampleRomaji: 'Kyonen, nihongo o benkyou shimasu.',
-    exampleMeaning: 'Last year, I study Japanese.'
+    example: '去年[きょねん]、日本語[にほんご]を勉強[べんきょう]しました。',
+    exampleRomaji: 'Kyonen, nihongo o benkyou shimashita.',
+    exampleMeaning: 'Last year, I studied Japanese.'
   },
   {
     kanji: '嫌い',
@@ -2117,9 +2117,9 @@ const n5Vocab = [
     romaji: 'ginkou',
     meaning: 'bank',
     type: 'noun',
-    example: 'これは銀行[ぎんこう]です。',
-    exampleRomaji: 'Kore wa ginkou desu.',
-    exampleMeaning: 'This is a bank.'
+    example: 'この近[ちか]くに銀行[ぎんこう]があります。',
+    exampleRomaji: 'Kono chikaku ni ginkou ga arimasu.',
+    exampleMeaning: 'There is a bank nearby.'
   },
   {
     kanji: '金曜日',
@@ -2137,9 +2137,9 @@ const n5Vocab = [
     romaji: 'ku',
     meaning: 'nine',
     type: 'noun',
-    example: 'これは九[く]です。',
-    exampleRomaji: 'Kore wa ku desu.',
-    exampleMeaning: 'This is nine.'
+    example: '答[こた]えは九[く]です。',
+    exampleRomaji: 'Kotae wa ku desu.',
+    exampleMeaning: 'The answer is nine.'
   },
   {
     kanji: '薬',
@@ -2147,9 +2147,9 @@ const n5Vocab = [
     romaji: 'kusuri',
     meaning: 'medicine',
     type: 'noun',
-    example: 'これは薬[くすり]です。',
-    exampleRomaji: 'Kore wa kusuri desu.',
-    exampleMeaning: 'This is a medicine.'
+    example: '薬[くすり]が好[す]きです。',
+    exampleRomaji: 'Kusuri ga suki desu.',
+    exampleMeaning: 'I like a medicine.'
   },
   {
     kanji: '下さい',
@@ -2167,9 +2167,9 @@ const n5Vocab = [
     romaji: 'kudamono',
     meaning: 'fruit',
     type: 'noun',
-    example: 'これは果物[くだもの]です。',
-    exampleRomaji: 'Kore wa kudamono desu.',
-    exampleMeaning: 'This is a fruit.'
+    example: '果物[くだもの]を食[た]べます。',
+    exampleRomaji: 'Kudamono o tabemasu.',
+    exampleMeaning: 'I eat fruit.'
   },
   {
     kanji: '口',
@@ -2177,9 +2177,9 @@ const n5Vocab = [
     romaji: 'kuchi',
     meaning: 'mouth',
     type: 'noun',
-    example: 'これは口[くち]です。',
-    exampleRomaji: 'Kore wa kuchi desu.',
-    exampleMeaning: 'This is a mouth.'
+    example: '口[くち]を洗[あら]います。',
+    exampleRomaji: 'Kuchi o araimasu.',
+    exampleMeaning: 'I wash my mouth.'
   },
   {
     kanji: '靴',
@@ -2187,9 +2187,9 @@ const n5Vocab = [
     romaji: 'kutsu',
     meaning: 'shoe',
     type: 'noun',
-    example: 'これは靴[くつ]です。',
-    exampleRomaji: 'Kore wa kutsu desu.',
-    exampleMeaning: 'This is a shoe.'
+    example: 'その靴[くつ]はかっこいいですね。',
+    exampleRomaji: 'Sono kutsu wa kakkoii desu ne.',
+    exampleMeaning: 'That shoe looks nice.'
   },
   {
     kanji: '靴下',
@@ -2197,9 +2197,9 @@ const n5Vocab = [
     romaji: 'kutsushita',
     meaning: 'socks',
     type: 'noun',
-    example: 'これは靴下[くつした]です。',
-    exampleRomaji: 'Kore wa kutsushita desu.',
-    exampleMeaning: 'This is a socks.'
+    example: '靴下[くつした]をください。',
+    exampleRomaji: 'Kutsushita o kudasai.',
+    exampleMeaning: 'Please give me the socks.'
   },
   {
     kanji: '国',
@@ -2207,9 +2207,9 @@ const n5Vocab = [
     romaji: 'kuni',
     meaning: 'country',
     type: 'noun',
-    example: 'これは国[くに]です。',
-    exampleRomaji: 'Kore wa kuni desu.',
-    exampleMeaning: 'This is a country.'
+    example: '国[くに]へ行[い]きます。',
+    exampleRomaji: 'Kuni e ikimasu.',
+    exampleMeaning: 'I go to the country.'
   },
   {
     kanji: '曇り',
@@ -2217,9 +2217,9 @@ const n5Vocab = [
     romaji: 'kumori',
     meaning: 'cloudy weather',
     type: 'noun',
-    example: 'これは曇[くも]りです。',
-    exampleRomaji: 'Kore wa kumori desu.',
-    exampleMeaning: 'This is a cloudy weather.'
+    example: '曇[くも]りがきれいです。',
+    exampleRomaji: 'Kumori ga kirei desu.',
+    exampleMeaning: 'The cloudy weather is beautiful.'
   },
   {
     kanji: '暗い',
@@ -2247,9 +2247,9 @@ const n5Vocab = [
     romaji: 'kurasu',
     meaning: 'class',
     type: 'noun',
-    example: 'これはクラス[クラス]です。',
-    exampleRomaji: 'Kore wa kurasu desu.',
-    exampleMeaning: 'This is a class.'
+    example: 'いいクラスですね。',
+    exampleRomaji: 'Ii kurasu desu ne.',
+    exampleMeaning: 'That is a good class, isn\'t it?'
   },
   {
     kanji: 'グラム',
@@ -2257,9 +2257,9 @@ const n5Vocab = [
     romaji: 'guramu',
     meaning: 'gram',
     type: 'noun',
-    example: 'これはグラム[グラム]です。',
-    exampleRomaji: 'Kore wa guramu desu.',
-    exampleMeaning: 'This is a gram.'
+    example: '肉[にく]を三百[さんびゃく]グラム買[か]いました。',
+    exampleRomaji: 'Niku o sanbyaku guramu kaimashita.',
+    exampleMeaning: 'I bought three hundred grams of meat.'
   },
   {
     kanji: '車',
@@ -2267,9 +2267,9 @@ const n5Vocab = [
     romaji: 'kuruma',
     meaning: 'car',
     type: 'noun',
-    example: 'これは車[くるま]です。',
-    exampleRomaji: 'Kore wa kuruma desu.',
-    exampleMeaning: 'This is a car.'
+    example: '車[くるま]に乗[の]ります。',
+    exampleRomaji: 'Kuruma ni norimasu.',
+    exampleMeaning: 'I ride the car.'
   },
   {
     kanji: '黒い',
@@ -2317,9 +2317,9 @@ const n5Vocab = [
     romaji: 'kekkon',
     meaning: 'marriage',
     type: 'noun',
-    example: 'これは結婚[けっこん]です。',
-    exampleRomaji: 'Kore wa kekkon desu.',
-    exampleMeaning: 'This is a marriage.'
+    example: '結婚[けっこん]について話[はな]します。',
+    exampleRomaji: 'Kekkon ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the marriage.'
   },
   {
     kanji: '月曜日',
@@ -2337,9 +2337,9 @@ const n5Vocab = [
     romaji: 'genkan',
     meaning: 'entrance of a house',
     type: 'noun',
-    example: 'これは玄関[げんかん]です。',
-    exampleRomaji: 'Kore wa genkan desu.',
-    exampleMeaning: 'This is entrance of a house.'
+    example: '玄関[げんかん]で靴[くつ]を脱[ぬ]ぎます。',
+    exampleRomaji: 'Genkan de kutsu o nugimasu.',
+    exampleMeaning: 'I take off my shoes at the entrance.'
   },
   {
     kanji: '元気',
@@ -2367,9 +2367,9 @@ const n5Vocab = [
     romaji: 'go',
     meaning: 'five',
     type: 'noun',
-    example: 'これは五[ご]です。',
-    exampleRomaji: 'Kore wa go desu.',
-    exampleMeaning: 'This is five.'
+    example: '全部[ぜんぶ]で五[ご]です。',
+    exampleRomaji: 'Zenbu de go desu.',
+    exampleMeaning: 'It is five in total.'
   },
   {
     kanji: '〜語',
@@ -2387,9 +2387,9 @@ const n5Vocab = [
     romaji: 'kouen',
     meaning: 'park, large garden',
     type: 'noun',
-    example: 'これは公園[こうえん]です。',
-    exampleRomaji: 'Kore wa kouen desu.',
-    exampleMeaning: 'This is a park, large garden.'
+    example: '公園[こうえん]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Kouen no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the park.'
   },
   {
     kanji: '交番',
@@ -2397,9 +2397,9 @@ const n5Vocab = [
     romaji: 'kouban',
     meaning: 'police box',
     type: 'noun',
-    example: 'これは交番[こうばん]です。',
-    exampleRomaji: 'Kore wa kouban desu.',
-    exampleMeaning: 'This is a police box.'
+    example: 'その交番[こうばん]を取[と]ってください。',
+    exampleRomaji: 'Sono kouban o totte kudasai.',
+    exampleMeaning: 'Please pass me that police box.'
   },
   {
     kanji: '声',
@@ -2407,9 +2407,9 @@ const n5Vocab = [
     romaji: 'koe',
     meaning: 'voice',
     type: 'noun',
-    example: 'これは声[こえ]です。',
-    exampleRomaji: 'Kore wa koe desu.',
-    exampleMeaning: 'This is a voice.'
+    example: '声[こえ]が痛[いた]いです。',
+    exampleRomaji: 'Koe ga itai desu.',
+    exampleMeaning: 'My voice hurts.'
   },
   {
     kanji: 'コート',
@@ -2417,9 +2417,9 @@ const n5Vocab = [
     romaji: 'kooto',
     meaning: 'coat',
     type: 'noun',
-    example: 'これはコート[コート]です。',
-    exampleRomaji: 'Kore wa kooto desu.',
-    exampleMeaning: 'This is a coat.'
+    example: '新[あたら]しいコートを買[か]いました。',
+    exampleRomaji: 'Atarashii kooto o kaimashita.',
+    exampleMeaning: 'I bought a new coat.'
   },
   {
     kanji: 'ここ',
@@ -2449,7 +2449,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は九日[ここのか]です。',
     exampleRomaji: 'Kyou wa kokonoka desu.',
-    exampleMeaning: 'Today is the 9th day of a month, 9 days.'
+    exampleMeaning: 'Today is 9th day of a month.'
   },
   {
     kanji: '九つ',
@@ -2457,9 +2457,9 @@ const n5Vocab = [
     romaji: 'kokonotsu',
     meaning: 'nine',
     type: 'noun',
-    example: 'これは九[ここの]つです。',
-    exampleRomaji: 'Kore wa kokonotsu desu.',
-    exampleMeaning: 'This is nine.'
+    example: '答[こた]えは九[ここの]つです。',
+    exampleRomaji: 'Kotae wa kokonotsu desu.',
+    exampleMeaning: 'The answer is nine.'
   },
   {
     kanji: 'ご主人',
@@ -2467,9 +2467,9 @@ const n5Vocab = [
     romaji: 'goshujin',
     meaning: 'someone else’s husband',
     type: 'noun',
-    example: 'これはご主人[ごしゅじん]です。',
-    exampleRomaji: 'Kore wa goshujin desu.',
-    exampleMeaning: 'This is someone else’s husband.'
+    example: 'ご主人[しゅじん]はお仕事[しごと]ですか。',
+    exampleRomaji: 'Goshujin wa oshigoto desu ka.',
+    exampleMeaning: 'Is your husband at work?'
   },
   {
     kanji: '午前',
@@ -2479,7 +2479,7 @@ const n5Vocab = [
     type: 'noun',
     example: '午前[ごぜん]、日本語[にほんご]を勉強[べんきょう]します。',
     exampleRomaji: 'Gozen, nihongo o benkyou shimasu.',
-    exampleMeaning: 'Morning, a.m., I study Japanese.'
+    exampleMeaning: 'Morning, I study Japanese.'
   },
   {
     kanji: '答える',
@@ -2497,9 +2497,9 @@ const n5Vocab = [
     romaji: 'kochira',
     meaning: 'this side, this place',
     type: 'noun',
-    example: 'これはこちらです。',
-    exampleRomaji: 'Kore wa kochira desu.',
-    exampleMeaning: 'This is a this side, this place.'
+    example: 'こちらへどうぞ。',
+    exampleRomaji: 'Kochira e douzo.',
+    exampleMeaning: 'This way, please.'
   },
   {
     kanji: 'コップ',
@@ -2507,9 +2507,9 @@ const n5Vocab = [
     romaji: 'koppu',
     meaning: 'cup, glass',
     type: 'noun',
-    example: 'これはコップ[コップ]です。',
-    exampleRomaji: 'Kore wa koppu desu.',
-    exampleMeaning: 'This is a cup, glass.'
+    example: '机[つくえ]の上[うえ]にコップがあります。',
+    exampleRomaji: 'Tsukue no ue ni koppu ga arimasu.',
+    exampleMeaning: 'There is a cup on the desk.'
   },
   {
     kanji: '今年',
@@ -2527,9 +2527,9 @@ const n5Vocab = [
     romaji: 'kotoba',
     meaning: 'phrase, language',
     type: 'noun',
-    example: 'これは言葉[ことば]です。',
-    exampleRomaji: 'Kore wa kotoba desu.',
-    exampleMeaning: 'This is a phrase, language.'
+    example: '言葉[ことば]があります。',
+    exampleRomaji: 'Kotoba ga arimasu.',
+    exampleMeaning: 'There is a phrase.'
   },
   {
     kanji: '子供',
@@ -2537,9 +2537,9 @@ const n5Vocab = [
     romaji: 'kodomo',
     meaning: 'child',
     type: 'noun',
-    example: 'これは子供[こども]です。',
-    exampleRomaji: 'Kore wa kodomo desu.',
-    exampleMeaning: 'This is a child.'
+    example: '子供[こども]と話[はな]します。',
+    exampleRomaji: 'Kodomo to hanashimasu.',
+    exampleMeaning: 'I talk with a child.'
   },
   {
     kanji: 'この',
@@ -2557,9 +2557,9 @@ const n5Vocab = [
     romaji: 'gohan',
     meaning: 'meal, cooked rice',
     type: 'noun',
-    example: 'これは御飯[ごはん]です。',
-    exampleRomaji: 'Kore wa gohan desu.',
-    exampleMeaning: 'This is a meal, cooked rice.'
+    example: '毎朝[まいあさ]、御飯[ごはん]を食[た]べます。',
+    exampleRomaji: 'Maiasa, gohan o tabemasu.',
+    exampleMeaning: 'I eat meal every morning.'
   },
   {
     kanji: '困る',
@@ -2617,9 +2617,9 @@ const n5Vocab = [
     romaji: 'konna',
     meaning: 'this sort of, this kind of',
     type: 'noun',
-    example: 'これはこんなです。',
-    exampleRomaji: 'Kore wa konna desu.',
-    exampleMeaning: 'This is a this sort of, this kind of.'
+    example: 'こんな天気[てんき]は好[す]きです。',
+    exampleRomaji: 'Konna tenki wa suki desu.',
+    exampleMeaning: 'I like this kind of weather.'
   },
   {
     kanji: '今晩',
@@ -2657,9 +2657,9 @@ const n5Vocab = [
     romaji: 'sakana',
     meaning: 'fish',
     type: 'noun',
-    example: 'これは魚[さかな]です。',
-    exampleRomaji: 'Kore wa sakana desu.',
-    exampleMeaning: 'This is a fish.'
+    example: '公園[こうえん]に魚[さかな]がいます。',
+    exampleRomaji: 'Kouen ni sakana ga imasu.',
+    exampleMeaning: 'There is a fish in the park.'
   },
   {
     kanji: '先',
@@ -2667,9 +2667,9 @@ const n5Vocab = [
     romaji: 'saki',
     meaning: 'earlier, former',
     type: 'noun',
-    example: 'これは先[さき]です。',
-    exampleRomaji: 'Kore wa saki desu.',
-    exampleMeaning: 'This is an earlier, former.'
+    example: '先[さき]に帰[かえ]ります。',
+    exampleRomaji: 'Saki ni kaerimasu.',
+    exampleMeaning: 'I will go home ahead of the others.'
   },
   {
     kanji: '咲く',
@@ -2687,9 +2687,9 @@ const n5Vocab = [
     romaji: 'sakubun',
     meaning: 'composition',
     type: 'noun',
-    example: 'これは作文[さくぶん]です。',
-    exampleRomaji: 'Kore wa sakubun desu.',
-    exampleMeaning: 'This is a composition.'
+    example: '机[つくえ]の上[うえ]に作文[さくぶん]があります。',
+    exampleRomaji: 'Tsukue no ue ni sakubun ga arimasu.',
+    exampleMeaning: 'There is a composition on the desk.'
   },
   {
     kanji: 'さす',
@@ -2717,9 +2717,9 @@ const n5Vocab = [
     romaji: 'zasshi',
     meaning: 'magazine',
     type: 'noun',
-    example: 'これは雑誌[ざっし]です。',
-    exampleRomaji: 'Kore wa zasshi desu.',
-    exampleMeaning: 'This is a magazine.'
+    example: '雑誌[ざっし]を忘[わす]れました。',
+    exampleRomaji: 'Zasshi o wasuremashita.',
+    exampleMeaning: 'I forgot my magazine.'
   },
   {
     kanji: '砂糖',
@@ -2727,9 +2727,9 @@ const n5Vocab = [
     romaji: 'satou',
     meaning: 'sugar',
     type: 'noun',
-    example: 'これは砂糖[さとう]です。',
-    exampleRomaji: 'Kore wa satou desu.',
-    exampleMeaning: 'This is a sugar.'
+    example: '砂糖[さとう]が好[す]きです。',
+    exampleRomaji: 'Satou ga suki desu.',
+    exampleMeaning: 'I like sugar.'
   },
   {
     kanji: '寒い',
@@ -2757,9 +2757,9 @@ const n5Vocab = [
     romaji: 'san',
     meaning: 'three',
     type: 'noun',
-    example: 'これは三[さん]です。',
-    exampleRomaji: 'Kore wa san desu.',
-    exampleMeaning: 'This is three.'
+    example: '全部[ぜんぶ]で三[さん]です。',
+    exampleRomaji: 'Zenbu de san desu.',
+    exampleMeaning: 'It is three in total.'
   },
   {
     kanji: '〜さん',
@@ -2787,9 +2787,9 @@ const n5Vocab = [
     romaji: 'shi',
     meaning: 'four',
     type: 'noun',
-    example: 'これは四[し]です。',
-    exampleRomaji: 'Kore wa shi desu.',
-    exampleMeaning: 'This is four.'
+    example: '答[こた]えは四[し]です。',
+    exampleRomaji: 'Kotae wa shi desu.',
+    exampleMeaning: 'The answer is four.'
   },
   {
     kanji: '〜時',
@@ -2807,9 +2807,9 @@ const n5Vocab = [
     romaji: 'shio',
     meaning: 'salt',
     type: 'noun',
-    example: 'これは塩[しお]です。',
-    exampleRomaji: 'Kore wa shio desu.',
-    exampleMeaning: 'This is a salt.'
+    example: 'スーパーで塩[しお]を買[か]います。',
+    exampleRomaji: 'Suupaa de shio o kaimasu.',
+    exampleMeaning: 'I buy salt at the supermarket.'
   },
   {
     kanji: 'しかし',
@@ -2817,9 +2817,9 @@ const n5Vocab = [
     romaji: 'shikashi',
     meaning: 'however, but',
     type: 'noun',
-    example: 'これはしかしです。',
-    exampleRomaji: 'Kore wa shikashi desu.',
-    exampleMeaning: 'This is a however, but.'
+    example: '頑張[がんば]りました。しかし、負[ま]けました。',
+    exampleRomaji: 'Ganbarimashita. Shikashi, makemashita.',
+    exampleMeaning: 'I tried hard. However, I lost.'
   },
   {
     kanji: '時間',
@@ -2827,9 +2827,9 @@ const n5Vocab = [
     romaji: 'jikan',
     meaning: 'time',
     type: 'noun',
-    example: 'これは時間[じかん]です。',
-    exampleRomaji: 'Kore wa jikan desu.',
-    exampleMeaning: 'This is a time.'
+    example: '時間[じかん]が好[す]きです。',
+    exampleRomaji: 'Jikan ga suki desu.',
+    exampleMeaning: 'I like a time.'
   },
   {
     kanji: '〜時間',
@@ -2847,9 +2847,9 @@ const n5Vocab = [
     romaji: 'shigoto',
     meaning: 'work',
     type: 'noun',
-    example: 'これは仕事[しごと]です。',
-    exampleRomaji: 'Kore wa shigoto desu.',
-    exampleMeaning: 'This is a work.'
+    example: 'いい仕事[しごと]ですね。',
+    exampleRomaji: 'Ii shigoto desu ne.',
+    exampleMeaning: 'That is a good work, isn\'t it?'
   },
   {
     kanji: '辞書',
@@ -2857,9 +2857,9 @@ const n5Vocab = [
     romaji: 'jisho',
     meaning: 'dictionary',
     type: 'noun',
-    example: 'これは辞書[じしょ]です。',
-    exampleRomaji: 'Kore wa jisho desu.',
-    exampleMeaning: 'This is a dictionary.'
+    example: '辞書[じしょ]を持[も]っています。',
+    exampleRomaji: 'Jisho o motte imasu.',
+    exampleMeaning: 'I have a dictionary.'
   },
   {
     kanji: '静か',
@@ -2877,9 +2877,9 @@ const n5Vocab = [
     romaji: 'shita',
     meaning: 'under, below',
     type: 'noun',
-    example: 'これは下[した]です。',
-    exampleRomaji: 'Kore wa shita desu.',
-    exampleMeaning: 'This is an under, below.'
+    example: '猫[ねこ]はテーブルの下[した]にいます。',
+    exampleRomaji: 'Neko wa teeburu no shita ni imasu.',
+    exampleMeaning: 'The cat is under the table.'
   },
   {
     kanji: '質問',
@@ -2887,9 +2887,9 @@ const n5Vocab = [
     romaji: 'shitsumon',
     meaning: 'question',
     type: 'noun',
-    example: 'これは質問[しつもん]です。',
-    exampleRomaji: 'Kore wa shitsumon desu.',
-    exampleMeaning: 'This is a question.'
+    example: '机[つくえ]の上[うえ]に質問[しつもん]があります。',
+    exampleRomaji: 'Tsukue no ue ni shitsumon ga arimasu.',
+    exampleMeaning: 'There is a question on the desk.'
   },
   {
     kanji: '自転車',
@@ -2897,9 +2897,9 @@ const n5Vocab = [
     romaji: 'jitensha',
     meaning: 'bicycle',
     type: 'noun',
-    example: 'これは自転車[じてんしゃ]です。',
-    exampleRomaji: 'Kore wa jitensha desu.',
-    exampleMeaning: 'This is a bicycle.'
+    example: '自転車[じてんしゃ]で行[い]きます。',
+    exampleRomaji: 'Jitensha de ikimasu.',
+    exampleMeaning: 'I go by bicycle.'
   },
   {
     kanji: '自動車',
@@ -2907,9 +2907,9 @@ const n5Vocab = [
     romaji: 'jidousha',
     meaning: 'car, vehicle',
     type: 'noun',
-    example: 'これは自動車[じどうしゃ]です。',
-    exampleRomaji: 'Kore wa jidousha desu.',
-    exampleMeaning: 'This is a car, vehicle.'
+    example: '駅[えき]の前[まえ]に自動車[じどうしゃ]があります。',
+    exampleRomaji: 'Eki no mae ni jidousha ga arimasu.',
+    exampleMeaning: 'There is a car in front of the station.'
   },
   {
     kanji: '死ぬ',
@@ -2927,9 +2927,9 @@ const n5Vocab = [
     romaji: 'jibiki',
     meaning: 'dictionary',
     type: 'noun',
-    example: 'これは字引[じびき]です。',
-    exampleRomaji: 'Kore wa jibiki desu.',
-    exampleMeaning: 'This is a dictionary.'
+    example: '字引[じびき]を忘[わす]れました。',
+    exampleRomaji: 'Jibiki o wasuremashita.',
+    exampleMeaning: 'I forgot my dictionary.'
   },
   {
     kanji: '自分',
@@ -2937,9 +2937,9 @@ const n5Vocab = [
     romaji: 'jibun',
     meaning: 'oneself',
     type: 'noun',
-    example: 'これは自分[じぶん]です。',
-    exampleRomaji: 'Kore wa jibun desu.',
-    exampleMeaning: 'This is an oneself.'
+    example: '自分[じぶん]で料理[りょうり]を作[つく]ります。',
+    exampleRomaji: 'Jibun de ryouri o tsukurimasu.',
+    exampleMeaning: 'I cook by myself.'
   },
   {
     kanji: '閉まる',
@@ -2987,9 +2987,9 @@ const n5Vocab = [
     romaji: 'shashin',
     meaning: 'photo',
     type: 'noun',
-    example: 'これは写真[しゃしん]です。',
-    exampleRomaji: 'Kore wa shashin desu.',
-    exampleMeaning: 'This is a photo.'
+    example: '写真[しゃしん]について話[はな]します。',
+    exampleRomaji: 'Shashin ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the photo.'
   },
   {
     kanji: 'シャツ',
@@ -2997,9 +2997,9 @@ const n5Vocab = [
     romaji: 'shatsu',
     meaning: 'shirt',
     type: 'noun',
-    example: 'これはシャツ[シャツ]です。',
-    exampleRomaji: 'Kore wa shatsu desu.',
-    exampleMeaning: 'This is a shirt.'
+    example: 'そのシャツはかっこいいですね。',
+    exampleRomaji: 'Sono shatsu wa kakkoii desu ne.',
+    exampleMeaning: 'That shirt looks nice.'
   },
   {
     kanji: '十',
@@ -3007,9 +3007,9 @@ const n5Vocab = [
     romaji: 'juu',
     meaning: 'ten',
     type: 'noun',
-    example: 'これは十[じゅう]です。',
-    exampleRomaji: 'Kore wa juu desu.',
-    exampleMeaning: 'This is ten.'
+    example: '全部[ぜんぶ]で十[じゅう]です。',
+    exampleRomaji: 'Zenbu de juu desu.',
+    exampleMeaning: 'It is ten in total.'
   },
   {
     kanji: '~週間',
@@ -3027,9 +3027,9 @@ const n5Vocab = [
     romaji: 'jugyou',
     meaning: 'lesson, class',
     type: 'noun',
-    example: 'これは授業[じゅぎょう]です。',
-    exampleRomaji: 'Kore wa jugyou desu.',
-    exampleMeaning: 'This is a lesson, class.'
+    example: '授業[じゅぎょう]を持[も]っています。',
+    exampleRomaji: 'Jugyou o motte imasu.',
+    exampleMeaning: 'I have a lesson.'
   },
   {
     kanji: '宿題',
@@ -3037,9 +3037,9 @@ const n5Vocab = [
     romaji: 'shukudai',
     meaning: 'homework',
     type: 'noun',
-    example: 'これは宿題[しゅくだい]です。',
-    exampleRomaji: 'Kore wa shukudai desu.',
-    exampleMeaning: 'This is homework.'
+    example: '机[つくえ]の上[うえ]に宿題[しゅくだい]があります。',
+    exampleRomaji: 'Tsukue no ue ni shukudai ga arimasu.',
+    exampleMeaning: 'There is homework on the desk.'
   },
   {
     kanji: '上手',
@@ -3067,9 +3067,9 @@ const n5Vocab = [
     romaji: 'shouyu',
     meaning: 'soy sauce',
     type: 'noun',
-    example: 'これは醤油[しょうゆ]です。',
-    exampleRomaji: 'Kore wa shouyu desu.',
-    exampleMeaning: 'This is a soy sauce.'
+    example: '醤油[しょうゆ]を使[つか]います。',
+    exampleRomaji: 'Shouyu o tsukaimasu.',
+    exampleMeaning: 'I use soy sauce.'
   },
   {
     kanji: '食堂',
@@ -3077,9 +3077,9 @@ const n5Vocab = [
     romaji: 'shokudou',
     meaning: 'dining room, canteen',
     type: 'noun',
-    example: 'これは食堂[しょくどう]です。',
-    exampleRomaji: 'Kore wa shokudou desu.',
-    exampleMeaning: 'This is a dining room, canteen.'
+    example: 'この近[ちか]くに食堂[しょくどう]があります。',
+    exampleRomaji: 'Kono chikaku ni shokudou ga arimasu.',
+    exampleMeaning: 'There is a dining room nearby.'
   },
   {
     kanji: '知る',
@@ -3117,9 +3117,9 @@ const n5Vocab = [
     romaji: 'shinbun',
     meaning: 'newspaper',
     type: 'noun',
-    example: 'これは新聞[しんぶん]です。',
-    exampleRomaji: 'Kore wa shinbun desu.',
-    exampleMeaning: 'This is a newspaper.'
+    example: '新聞[しんぶん]を忘[わす]れました。',
+    exampleRomaji: 'Shinbun o wasuremashita.',
+    exampleMeaning: 'I forgot my newspaper.'
   },
   {
     kanji: '水曜日',
@@ -3147,9 +3147,9 @@ const n5Vocab = [
     romaji: 'sukaato',
     meaning: 'skirt',
     type: 'noun',
-    example: 'これはスカート[スカート]です。',
-    exampleRomaji: 'Kore wa sukaato desu.',
-    exampleMeaning: 'This is a skirt.'
+    example: 'スカートをください。',
+    exampleRomaji: 'Sukaato o kudasai.',
+    exampleMeaning: 'Please give me the skirt.'
   },
   {
     kanji: '好き',
@@ -3177,9 +3177,9 @@ const n5Vocab = [
     romaji: 'sugu ni',
     meaning: 'at once',
     type: 'noun',
-    example: 'これはすぐにです。',
-    exampleRomaji: 'Kore wa sugu ni desu.',
-    exampleMeaning: 'This is an at once.'
+    example: 'すぐに来[き]てください。',
+    exampleRomaji: 'Sugu ni kite kudasai.',
+    exampleMeaning: 'Please come right away.'
   },
   {
     kanji: '少し',
@@ -3217,9 +3217,9 @@ const n5Vocab = [
     romaji: 'sutoobu',
     meaning: 'stove, heater',
     type: 'noun',
-    example: 'これはストーブ[ストーブ]です。',
-    exampleRomaji: 'Kore wa sutoobu desu.',
-    exampleMeaning: 'This is a stove, heater.'
+    example: 'ストーブを使[つか]います。',
+    exampleRomaji: 'Sutoobu o tsukaimasu.',
+    exampleMeaning: 'I use the stove.'
   },
   {
     kanji: 'スプーン',
@@ -3227,9 +3227,9 @@ const n5Vocab = [
     romaji: 'supuun',
     meaning: 'spoon',
     type: 'noun',
-    example: 'これはスプーン[スプーン]です。',
-    exampleRomaji: 'Kore wa supuun desu.',
-    exampleMeaning: 'This is a spoon.'
+    example: 'そのスプーンを取[と]ってください。',
+    exampleRomaji: 'Sono supuun o totte kudasai.',
+    exampleMeaning: 'Please pass me that spoon.'
   },
   {
     kanji: 'スポーツ',
@@ -3237,9 +3237,9 @@ const n5Vocab = [
     romaji: 'supootsu',
     meaning: 'sports',
     type: 'noun',
-    example: 'これはスポーツ[スポーツ]です。',
-    exampleRomaji: 'Kore wa supootsu desu.',
-    exampleMeaning: 'This is a sports.'
+    example: 'スポーツがあります。',
+    exampleRomaji: 'Supootsu ga arimasu.',
+    exampleMeaning: 'There is a sports.'
   },
   {
     kanji: 'ズボン',
@@ -3247,9 +3247,9 @@ const n5Vocab = [
     romaji: 'zubon',
     meaning: 'trousers',
     type: 'noun',
-    example: 'これはズボン[ズボン]です。',
-    exampleRomaji: 'Kore wa zubon desu.',
-    exampleMeaning: 'This is a trousers.'
+    example: '新[あたら]しいズボンを買[か]いました。',
+    exampleRomaji: 'Atarashii zubon o kaimashita.',
+    exampleMeaning: 'I bought new trousers.'
   },
   {
     kanji: '住む',
@@ -3267,9 +3267,9 @@ const n5Vocab = [
     romaji: 'surippa',
     meaning: 'slipper',
     type: 'noun',
-    example: 'これはスリッパ[スリッパ]です。',
-    exampleRomaji: 'Kore wa surippa desu.',
-    exampleMeaning: 'This is a slipper.'
+    example: 'スリッパが好[す]きです。',
+    exampleRomaji: 'Surippa ga suki desu.',
+    exampleMeaning: 'I like a slipper.'
   },
   {
     kanji: 'する',
@@ -3297,9 +3297,9 @@ const n5Vocab = [
     romaji: 'sei',
     meaning: 'height',
     type: 'noun',
-    example: 'これは背[せい]です。',
-    exampleRomaji: 'Kore wa sei desu.',
-    exampleMeaning: 'This is a height.'
+    example: '兄[あに]は背[せい]が高[たか]いです。',
+    exampleRomaji: 'Ani wa sei ga takai desu.',
+    exampleMeaning: 'My older brother is tall.'
   },
   {
     kanji: '生徒',
@@ -3307,9 +3307,9 @@ const n5Vocab = [
     romaji: 'seito',
     meaning: 'student',
     type: 'noun',
-    example: 'これは生徒[せいと]です。',
-    exampleRomaji: 'Kore wa seito desu.',
-    exampleMeaning: 'This is a student.'
+    example: '生徒[せいと]はやさしいです。',
+    exampleRomaji: 'Seito wa yasashii desu.',
+    exampleMeaning: 'A student is kind.'
   },
   {
     kanji: 'セーター',
@@ -3317,9 +3317,9 @@ const n5Vocab = [
     romaji: 'seetaa',
     meaning: 'sweater',
     type: 'noun',
-    example: 'これはセータ[セータ]ーです。',
-    exampleRomaji: 'Kore wa seetaa desu.',
-    exampleMeaning: 'This is a sweater.'
+    example: '新[あたら]しいセーターを買[か]いました。',
+    exampleRomaji: 'Atarashii seetaa o kaimashita.',
+    exampleMeaning: 'I bought a new sweater.'
   },
   {
     kanji: '石鹸',
@@ -3327,9 +3327,9 @@ const n5Vocab = [
     romaji: 'sekken',
     meaning: 'soap',
     type: 'noun',
-    example: 'これは石鹸[せっけん]です。',
-    exampleRomaji: 'Kore wa sekken desu.',
-    exampleMeaning: 'This is a soap.'
+    example: '机[つくえ]の上[うえ]に石鹸[せっけん]があります。',
+    exampleRomaji: 'Tsukue no ue ni sekken ga arimasu.',
+    exampleMeaning: 'There is a soap on the desk.'
   },
   {
     kanji: '背広',
@@ -3337,9 +3337,9 @@ const n5Vocab = [
     romaji: 'sebiro',
     meaning: 'jacket, suit',
     type: 'noun',
-    example: 'これは背広[せびろ]です。',
-    exampleRomaji: 'Kore wa sebiro desu.',
-    exampleMeaning: 'This is a jacket, suit.'
+    example: 'その背広[せびろ]はかっこいいですね。',
+    exampleRomaji: 'Sono sebiro wa kakkoii desu ne.',
+    exampleMeaning: 'That jacket looks nice.'
   },
   {
     kanji: '狭い',
@@ -3357,9 +3357,9 @@ const n5Vocab = [
     romaji: 'zero',
     meaning: 'zero',
     type: 'noun',
-    example: 'これはゼロ[ゼロ]です。',
-    exampleRomaji: 'Kore wa zero desu.',
-    exampleMeaning: 'This is zero.'
+    example: '答[こた]えはゼロです。',
+    exampleRomaji: 'Kotae wa zero desu.',
+    exampleMeaning: 'The answer is zero.'
   },
   {
     kanji: '千',
@@ -3367,9 +3367,9 @@ const n5Vocab = [
     romaji: 'sen',
     meaning: '1,000, thousand',
     type: 'noun',
-    example: 'これは千[せん]です。',
-    exampleRomaji: 'Kore wa sen desu.',
-    exampleMeaning: 'This is 1,000, thousand.'
+    example: '全部[ぜんぶ]で千[せん]です。',
+    exampleRomaji: 'Zenbu de sen desu.',
+    exampleMeaning: 'It is thousand in total.'
   },
   {
     kanji: '先月',
@@ -3377,9 +3377,9 @@ const n5Vocab = [
     romaji: 'sengetsu',
     meaning: 'last month',
     type: 'noun',
-    example: '先月[せんげつ]、日本語[にほんご]を勉強[べんきょう]します。',
-    exampleRomaji: 'Sengetsu, nihongo o benkyou shimasu.',
-    exampleMeaning: 'Last month, I study Japanese.'
+    example: '先月[せんげつ]、日本語[にほんご]を勉強[べんきょう]しました。',
+    exampleRomaji: 'Sengetsu, nihongo o benkyou shimashita.',
+    exampleMeaning: 'Last month, I studied Japanese.'
   },
   {
     kanji: '先週',
@@ -3387,9 +3387,9 @@ const n5Vocab = [
     romaji: 'senshuu',
     meaning: 'last week',
     type: 'noun',
-    example: '先週[せんしゅう]、日本語[にほんご]を勉強[べんきょう]します。',
-    exampleRomaji: 'Senshuu, nihongo o benkyou shimasu.',
-    exampleMeaning: 'Last week, I study Japanese.'
+    example: '先週[せんしゅう]、日本語[にほんご]を勉強[べんきょう]しました。',
+    exampleRomaji: 'Senshuu, nihongo o benkyou shimashita.',
+    exampleMeaning: 'Last week, I studied Japanese.'
   },
   {
     kanji: '先生',
@@ -3397,9 +3397,9 @@ const n5Vocab = [
     romaji: 'sensei',
     meaning: 'teacher',
     type: 'noun',
-    example: 'これは先生[せんせい]です。',
-    exampleRomaji: 'Kore wa sensei desu.',
-    exampleMeaning: 'This is a teacher.'
+    example: '先生[せんせい]に会[あ]います。',
+    exampleRomaji: 'Sensei ni aimasu.',
+    exampleMeaning: 'I meet a teacher.'
   },
   {
     kanji: '洗濯',
@@ -3407,9 +3407,9 @@ const n5Vocab = [
     romaji: 'sentaku',
     meaning: 'washing, to wash',
     type: 'noun',
-    example: 'これは洗濯[せんたく]です。',
-    exampleRomaji: 'Kore wa sentaku desu.',
-    exampleMeaning: 'This is a washing, to wash.'
+    example: '毎週[まいしゅう]、洗濯[せんたく]をします。',
+    exampleRomaji: 'Maishuu, sentaku o shimasu.',
+    exampleMeaning: 'I do the laundry every week.'
   },
   {
     kanji: '全部',
@@ -3417,9 +3417,9 @@ const n5Vocab = [
     romaji: 'zenbu',
     meaning: 'all',
     type: 'noun',
-    example: 'これは全部[ぜんぶ]です。',
-    exampleRomaji: 'Kore wa zenbu desu.',
-    exampleMeaning: 'This is an all.'
+    example: '宿題[しゅくだい]を全部[ぜんぶ]しました。',
+    exampleRomaji: 'Shukudai o zenbu shimashita.',
+    exampleMeaning: 'I did all of my homework.'
   },
   {
     kanji: 'そう',
@@ -3447,9 +3447,9 @@ const n5Vocab = [
     romaji: 'soushite',
     meaning: 'and then',
     type: 'noun',
-    example: 'これはそうしてです。',
-    exampleRomaji: 'Kore wa soushite desu.',
-    exampleMeaning: 'This is an and then.'
+    example: '手[て]を洗[あら]って、そうして食[た]べます。',
+    exampleRomaji: 'Te o aratte, soushite tabemasu.',
+    exampleMeaning: 'I wash my hands, and then eat.'
   },
   {
     kanji: 'そこ',
@@ -3467,9 +3467,9 @@ const n5Vocab = [
     romaji: 'sochira',
     meaning: 'there (polite)',
     type: 'noun',
-    example: 'これはそちらです。',
-    exampleRomaji: 'Kore wa sochira desu.',
-    exampleMeaning: 'This is a there (polite).'
+    example: 'そちらはどうですか。',
+    exampleRomaji: 'Sochira wa dou desu ka.',
+    exampleMeaning: 'How is it over there?'
   },
   {
     kanji: '外',
@@ -3477,9 +3477,9 @@ const n5Vocab = [
     romaji: 'soto',
     meaning: 'outside',
     type: 'noun',
-    example: 'これは外[そと]です。',
-    exampleRomaji: 'Kore wa soto desu.',
-    exampleMeaning: 'This is an outside.'
+    example: '外[そと]は寒[さむ]いです。',
+    exampleRomaji: 'Soto wa samui desu.',
+    exampleMeaning: 'It is cold outside.'
   },
   {
     kanji: 'その',
@@ -3507,9 +3507,9 @@ const n5Vocab = [
     romaji: 'sora',
     meaning: 'sky',
     type: 'noun',
-    example: 'これは空[そら]です。',
-    exampleRomaji: 'Kore wa sora desu.',
-    exampleMeaning: 'This is a sky.'
+    example: 'あそこに空[そら]が見[み]えます。',
+    exampleRomaji: 'Asoko ni sora ga miemasu.',
+    exampleMeaning: 'You can see a sky over there.'
   },
   {
     kanji: 'それ',
@@ -3527,9 +3527,9 @@ const n5Vocab = [
     romaji: 'sorekara',
     meaning: 'after that',
     type: 'noun',
-    example: 'これはそれからです。',
-    exampleRomaji: 'Kore wa sorekara desu.',
-    exampleMeaning: 'This is an after that.'
+    example: '晩[ばん]ご飯[はん]を食[た]べます。それから、テレビを見[み]ます。',
+    exampleRomaji: 'Bangohan o tabemasu. Sorekara, terebi o mimasu.',
+    exampleMeaning: 'I eat dinner. After that, I watch TV.'
   },
   {
     kanji: 'それでは',
@@ -3537,9 +3537,9 @@ const n5Vocab = [
     romaji: 'soredewa',
     meaning: 'then, well',
     type: 'noun',
-    example: 'これはそれではです。',
-    exampleRomaji: 'Kore wa soredewa desu.',
-    exampleMeaning: 'This is a then, well.'
+    example: 'それでは、始[はじ]めましょう。',
+    exampleRomaji: 'Sore dewa, hajimemashou.',
+    exampleMeaning: 'Well then, let\'s begin.'
   },
   {
     kanji: '〜台',
@@ -3557,9 +3557,9 @@ const n5Vocab = [
     romaji: 'daigaku',
     meaning: 'university',
     type: 'noun',
-    example: 'これは大学[だいがく]です。',
-    exampleRomaji: 'Kore wa daigaku desu.',
-    exampleMeaning: 'This is an university.'
+    example: '大学[だいがく]へ行[い]きます。',
+    exampleRomaji: 'Daigaku e ikimasu.',
+    exampleMeaning: 'I go to the university.'
   },
   {
     kanji: '大使館',
@@ -3567,9 +3567,9 @@ const n5Vocab = [
     romaji: 'taishikan',
     meaning: 'embassy',
     type: 'noun',
-    example: 'これは大使館[たいしかん]です。',
-    exampleRomaji: 'Kore wa taishikan desu.',
-    exampleMeaning: 'This is an embassy.'
+    example: '大使館[たいしかん]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Taishikan no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the embassy.'
   },
   {
     kanji: '大丈夫',
@@ -3617,9 +3617,9 @@ const n5Vocab = [
     romaji: 'daidokoro',
     meaning: 'kitchen',
     type: 'noun',
-    example: 'これは台所[だいどころ]です。',
-    exampleRomaji: 'Kore wa daidokoro desu.',
-    exampleMeaning: 'This is a kitchen.'
+    example: 'この近[ちか]くに台所[だいどころ]があります。',
+    exampleRomaji: 'Kono chikaku ni daidokoro ga arimasu.',
+    exampleMeaning: 'There is a kitchen nearby.'
   },
   {
     kanji: '大変',
@@ -3657,9 +3657,9 @@ const n5Vocab = [
     romaji: 'takushii',
     meaning: 'taxi',
     type: 'noun',
-    example: 'これはタクシ[タクシ]ーです。',
-    exampleRomaji: 'Kore wa takushii desu.',
-    exampleMeaning: 'This is a taxi.'
+    example: 'タクシーに乗[の]ります。',
+    exampleRomaji: 'Takushii ni norimasu.',
+    exampleMeaning: 'I ride the taxi.'
   },
   {
     kanji: '出す',
@@ -3697,9 +3697,9 @@ const n5Vocab = [
     romaji: 'tatemono',
     meaning: 'building',
     type: 'noun',
-    example: 'これは建物[たてもの]です。',
-    exampleRomaji: 'Kore wa tatemono desu.',
-    exampleMeaning: 'This is a building.'
+    example: '建物[たてもの]へ行[い]きます。',
+    exampleRomaji: 'Tatemono e ikimasu.',
+    exampleMeaning: 'I go to the building.'
   },
   {
     kanji: '楽しい',
@@ -3727,9 +3727,9 @@ const n5Vocab = [
     romaji: 'tabako',
     meaning: 'cigarette',
     type: 'noun',
-    example: 'これはたばこです。',
-    exampleRomaji: 'Kore wa tabako desu.',
-    exampleMeaning: 'This is a cigarette.'
+    example: 'いいたばこですね。',
+    exampleRomaji: 'Ii tabako desu ne.',
+    exampleMeaning: 'That is a good cigarette, isn\'t it?'
   },
   {
     kanji: '多分',
@@ -3747,9 +3747,9 @@ const n5Vocab = [
     romaji: 'tabemono',
     meaning: 'food',
     type: 'noun',
-    example: 'これは食べ物[たべもの]です。',
-    exampleRomaji: 'Kore wa tabemono desu.',
-    exampleMeaning: 'This is a food.'
+    example: '食べ物[たべもの]を食[た]べます。',
+    exampleRomaji: 'Tabemono o tabemasu.',
+    exampleMeaning: 'I eat food.'
   },
   {
     kanji: '食べる',
@@ -3767,9 +3767,9 @@ const n5Vocab = [
     romaji: 'tamago',
     meaning: 'egg',
     type: 'noun',
-    example: 'これは卵[たまご]です。',
-    exampleRomaji: 'Kore wa tamago desu.',
-    exampleMeaning: 'This is an egg.'
+    example: '毎朝[まいあさ]、卵[たまご]を食[た]べます。',
+    exampleRomaji: 'Maiasa, tamago o tabemasu.',
+    exampleMeaning: 'I eat egg every morning.'
   },
   {
     kanji: '誰',
@@ -3837,9 +3837,9 @@ const n5Vocab = [
     romaji: 'chikatetsu',
     meaning: 'subway',
     type: 'noun',
-    example: 'これは地下鉄[ちかてつ]です。',
-    exampleRomaji: 'Kore wa chikatetsu desu.',
-    exampleMeaning: 'This is a subway.'
+    example: '地下鉄[ちかてつ]で行[い]きます。',
+    exampleRomaji: 'Chikatetsu de ikimasu.',
+    exampleMeaning: 'I go by subway.'
   },
   {
     kanji: '地図',
@@ -3847,9 +3847,9 @@ const n5Vocab = [
     romaji: 'chizu',
     meaning: 'map',
     type: 'noun',
-    example: 'これは地図[ちず]です。',
-    exampleRomaji: 'Kore wa chizu desu.',
-    exampleMeaning: 'This is a map.'
+    example: '地図[ちず]を持[も]っています。',
+    exampleRomaji: 'Chizu o motte imasu.',
+    exampleMeaning: 'I have a map.'
   },
   {
     kanji: '父',
@@ -3857,9 +3857,9 @@ const n5Vocab = [
     romaji: 'chichi',
     meaning: 'my father',
     type: 'noun',
-    example: 'これは父[ちち]です。',
-    exampleRomaji: 'Kore wa chichi desu.',
-    exampleMeaning: 'This is my father.'
+    example: '父[ちち]は毎朝[まいあさ]、新聞[しんぶん]を読[よ]みます。',
+    exampleRomaji: 'Chichi wa maiasa, shinbun o yomimasu.',
+    exampleMeaning: 'My father reads the newspaper every morning.'
   },
   {
     kanji: '茶色',
@@ -3867,9 +3867,9 @@ const n5Vocab = [
     romaji: 'chairo',
     meaning: 'brown',
     type: 'noun',
-    example: 'これは茶色[ちゃいろ]です。',
-    exampleRomaji: 'Kore wa chairo desu.',
-    exampleMeaning: 'This is a brown.'
+    example: '茶色[ちゃいろ]について話[はな]します。',
+    exampleRomaji: 'Chairo ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the brown.'
   },
   {
     kanji: '茶碗',
@@ -3877,9 +3877,9 @@ const n5Vocab = [
     romaji: 'chawan',
     meaning: 'rice bowl',
     type: 'noun',
-    example: 'これは茶碗[ちゃわん]です。',
-    exampleRomaji: 'Kore wa chawan desu.',
-    exampleMeaning: 'This is rice bowl.'
+    example: '茶碗[ちゃわん]があります。',
+    exampleRomaji: 'Chawan ga arimasu.',
+    exampleMeaning: 'There is rice bowl.'
   },
   {
     kanji: '〜中',
@@ -3897,9 +3897,9 @@ const n5Vocab = [
     romaji: 'choudo',
     meaning: 'just',
     type: 'noun',
-    example: 'これはちょうどです。',
-    exampleRomaji: 'Kore wa choudo desu.',
-    exampleMeaning: 'This is a just.'
+    example: '今[いま]、ちょうど三時[さんじ]です。',
+    exampleRomaji: 'Ima, choudo san ji desu.',
+    exampleMeaning: 'It is exactly three o\'clock now.'
   },
   {
     kanji: 'ちょっと',
@@ -3919,7 +3919,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は一日[ついたち]です。',
     exampleRomaji: 'Kyou wa tsuitachi desu.',
-    exampleMeaning: 'Today is the the 1st day of a month.'
+    exampleMeaning: 'Today is 1st day of a month.'
   },
   {
     kanji: '使う',
@@ -3947,9 +3947,9 @@ const n5Vocab = [
     romaji: 'tsugi',
     meaning: 'next',
     type: 'noun',
-    example: 'これは次[つぎ]です。',
-    exampleRomaji: 'Kore wa tsugi desu.',
-    exampleMeaning: 'This is a next.'
+    example: '次[つぎ]の駅[えき]で降[お]ります。',
+    exampleRomaji: 'Tsugi no eki de orimasu.',
+    exampleMeaning: 'I get off at the next station.'
   },
   {
     kanji: '着く',
@@ -3967,9 +3967,9 @@ const n5Vocab = [
     romaji: 'tsukue',
     meaning: 'table',
     type: 'noun',
-    example: 'これは机[つくえ]です。',
-    exampleRomaji: 'Kore wa tsukue desu.',
-    exampleMeaning: 'This is a table.'
+    example: '机[つくえ]を使[つか]います。',
+    exampleRomaji: 'Tsukue o tsukaimasu.',
+    exampleMeaning: 'I use the table.'
   },
   {
     kanji: '作る',
@@ -4037,9 +4037,9 @@ const n5Vocab = [
     romaji: 'te',
     meaning: 'hand',
     type: 'noun',
-    example: 'これは手[て]です。',
-    exampleRomaji: 'Kore wa te desu.',
-    exampleMeaning: 'This is a hand.'
+    example: '手[て]を洗[あら]います。',
+    exampleRomaji: 'Te o araimasu.',
+    exampleMeaning: 'I wash my hand.'
   },
   {
     kanji: 'テープ',
@@ -4047,9 +4047,9 @@ const n5Vocab = [
     romaji: 'teepu',
     meaning: 'tape',
     type: 'noun',
-    example: 'これはテープ[テープ]です。',
-    exampleRomaji: 'Kore wa teepu desu.',
-    exampleMeaning: 'This is a tape.'
+    example: 'そのテープを取[と]ってください。',
+    exampleRomaji: 'Sono teepu o totte kudasai.',
+    exampleMeaning: 'Please pass me that tape.'
   },
   {
     kanji: 'テープレコーダー',
@@ -4057,9 +4057,9 @@ const n5Vocab = [
     romaji: 'teepu rekoodaa',
     meaning: 'tape recorder',
     type: 'noun',
-    example: 'これはテープレコーダ[テープレコーダ]ーです。',
-    exampleRomaji: 'Kore wa teepu rekoodaa desu.',
-    exampleMeaning: 'This is a tape recorder.'
+    example: '机[つくえ]の上[うえ]にテープレコーダーがあります。',
+    exampleRomaji: 'Tsukue no ue ni teepu rekoodaa ga arimasu.',
+    exampleMeaning: 'There is a tape recorder on the desk.'
   },
   {
     kanji: 'テーブル',
@@ -4067,9 +4067,9 @@ const n5Vocab = [
     romaji: 'teeburu',
     meaning: 'table',
     type: 'noun',
-    example: 'これはテーブル[テーブル]です。',
-    exampleRomaji: 'Kore wa teeburu desu.',
-    exampleMeaning: 'This is a table.'
+    example: 'テーブルを使[つか]います。',
+    exampleRomaji: 'Teeburu o tsukaimasu.',
+    exampleMeaning: 'I use the table.'
   },
   {
     kanji: '出かける',
@@ -4087,9 +4087,9 @@ const n5Vocab = [
     romaji: 'tegami',
     meaning: 'letter',
     type: 'noun',
-    example: 'これは手紙[てがみ]です。',
-    exampleRomaji: 'Kore wa tegami desu.',
-    exampleMeaning: 'This is a letter.'
+    example: '机[つくえ]の上[うえ]に手紙[てがみ]があります。',
+    exampleRomaji: 'Tsukue no ue ni tegami ga arimasu.',
+    exampleMeaning: 'There is a letter on the desk.'
   },
   {
     kanji: '出来る',
@@ -4107,9 +4107,9 @@ const n5Vocab = [
     romaji: 'deguchi',
     meaning: 'exit',
     type: 'noun',
-    example: 'これは出口[でぐち]です。',
-    exampleRomaji: 'Kore wa deguchi desu.',
-    exampleMeaning: 'This is an exit.'
+    example: '出口[でぐち]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Deguchi no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the exit.'
   },
   {
     kanji: 'テスト',
@@ -4117,9 +4117,9 @@ const n5Vocab = [
     romaji: 'tesuto',
     meaning: 'test',
     type: 'noun',
-    example: 'これはテスト[テスト]です。',
-    exampleRomaji: 'Kore wa tesuto desu.',
-    exampleMeaning: 'This is a test.'
+    example: 'テストを忘[わす]れました。',
+    exampleRomaji: 'Tesuto o wasuremashita.',
+    exampleMeaning: 'I forgot my test.'
   },
   {
     kanji: 'では',
@@ -4137,9 +4137,9 @@ const n5Vocab = [
     romaji: 'depaato',
     meaning: 'department store',
     type: 'noun',
-    example: 'これはデパート[デパート]です。',
-    exampleRomaji: 'Kore wa depaato desu.',
-    exampleMeaning: 'This is a department store.'
+    example: 'この近[ちか]くにデパートがあります。',
+    exampleRomaji: 'Kono chikaku ni depaato ga arimasu.',
+    exampleMeaning: 'There is a department store nearby.'
   },
   {
     kanji: 'でも',
@@ -4167,9 +4167,9 @@ const n5Vocab = [
     romaji: 'terebi',
     meaning: 'TV',
     type: 'noun',
-    example: 'これはテレビ[テレビ]です。',
-    exampleRomaji: 'Kore wa terebi desu.',
-    exampleMeaning: 'This is TV.'
+    example: 'そのテレビを取[と]ってください。',
+    exampleRomaji: 'Sono terebi o totte kudasai.',
+    exampleMeaning: 'Please pass me that TV.'
   },
   {
     kanji: '天気',
@@ -4177,9 +4177,9 @@ const n5Vocab = [
     romaji: 'tenki',
     meaning: 'weather',
     type: 'noun',
-    example: 'これは天気[てんき]です。',
-    exampleRomaji: 'Kore wa tenki desu.',
-    exampleMeaning: 'This is a weather.'
+    example: '天気[てんき]が好[す]きです。',
+    exampleRomaji: 'Tenki ga suki desu.',
+    exampleMeaning: 'I like a weather.'
   },
   {
     kanji: '電気',
@@ -4187,9 +4187,9 @@ const n5Vocab = [
     romaji: 'denki',
     meaning: 'electricity',
     type: 'noun',
-    example: 'これは電気[でんき]です。',
-    exampleRomaji: 'Kore wa denki desu.',
-    exampleMeaning: 'This is an electricity.'
+    example: '部屋[へや]の電気[でんき]をつけます。',
+    exampleRomaji: 'Heya no denki o tsukemasu.',
+    exampleMeaning: 'I turn on the light in the room.'
   },
   {
     kanji: '電車',
@@ -4197,9 +4197,9 @@ const n5Vocab = [
     romaji: 'densha',
     meaning: 'train',
     type: 'noun',
-    example: 'これは電車[でんしゃ]です。',
-    exampleRomaji: 'Kore wa densha desu.',
-    exampleMeaning: 'This is a train.'
+    example: '駅[えき]の前[まえ]に電車[でんしゃ]があります。',
+    exampleRomaji: 'Eki no mae ni densha ga arimasu.',
+    exampleMeaning: 'There is a train in front of the station.'
   },
   {
     kanji: '電話',
@@ -4207,9 +4207,9 @@ const n5Vocab = [
     romaji: 'denwa',
     meaning: 'phone',
     type: 'noun',
-    example: 'これは電話[でんわ]です。',
-    exampleRomaji: 'Kore wa denwa desu.',
-    exampleMeaning: 'This is a phone.'
+    example: 'いい電話[でんわ]ですね。',
+    exampleRomaji: 'Ii denwa desu ne.',
+    exampleMeaning: 'That is a good phone, isn\'t it?'
   },
   {
     kanji: '戸',
@@ -4217,9 +4217,9 @@ const n5Vocab = [
     romaji: 'to',
     meaning: 'door',
     type: 'noun',
-    example: 'これは戸[と]です。',
-    exampleRomaji: 'Kore wa to desu.',
-    exampleMeaning: 'This is a door.'
+    example: '机[つくえ]の上[うえ]に戸[と]があります。',
+    exampleRomaji: 'Tsukue no ue ni to ga arimasu.',
+    exampleMeaning: 'There is a door on the desk.'
   },
   {
     kanji: '〜度',
@@ -4237,9 +4237,9 @@ const n5Vocab = [
     romaji: 'doa',
     meaning: 'door',
     type: 'noun',
-    example: 'これはドア[ドア]です。',
-    exampleRomaji: 'Kore wa doa desu.',
-    exampleMeaning: 'This is a door.'
+    example: 'ドアを使[つか]います。',
+    exampleRomaji: 'Doa o tsukaimasu.',
+    exampleMeaning: 'I use the door.'
   },
   {
     kanji: 'トイレ',
@@ -4247,9 +4247,9 @@ const n5Vocab = [
     romaji: 'toire',
     meaning: 'toilet, lavatory',
     type: 'noun',
-    example: 'これはトイレ[トイレ]です。',
-    exampleRomaji: 'Kore wa toire desu.',
-    exampleMeaning: 'This is a toilet, lavatory.'
+    example: 'トイレへ行[い]きます。',
+    exampleRomaji: 'Toire e ikimasu.',
+    exampleMeaning: 'I go to the toilet.'
   },
   {
     kanji: 'どう',
@@ -4287,9 +4287,9 @@ const n5Vocab = [
     romaji: 'doubutsu',
     meaning: 'animal',
     type: 'noun',
-    example: 'これは動物[どうぶつ]です。',
-    exampleRomaji: 'Kore wa doubutsu desu.',
-    exampleMeaning: 'This is an animal.'
+    example: '動物[どうぶつ]が好[す]きです。',
+    exampleRomaji: 'Doubutsu ga suki desu.',
+    exampleMeaning: 'I like animals.'
   },
   {
     kanji: 'どうも',
@@ -4307,9 +4307,9 @@ const n5Vocab = [
     romaji: 'too',
     meaning: 'ten',
     type: 'noun',
-    example: 'これは十[とお]です。',
-    exampleRomaji: 'Kore wa too desu.',
-    exampleMeaning: 'This is ten.'
+    example: '答[こた]えは十[とお]です。',
+    exampleRomaji: 'Kotae wa too desu.',
+    exampleMeaning: 'The answer is ten.'
   },
   {
     kanji: '遠い',
@@ -4329,7 +4329,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は十日[とおか]です。',
     exampleRomaji: 'Kyou wa tooka desu.',
-    exampleMeaning: 'Today is the the 10th day of a month, 10 days.'
+    exampleMeaning: 'Today is 10th day of a month.'
   },
   {
     kanji: '時々',
@@ -4347,9 +4347,9 @@ const n5Vocab = [
     romaji: 'tokei',
     meaning: 'watch, clock',
     type: 'noun',
-    example: 'これは時計[とけい]です。',
-    exampleRomaji: 'Kore wa tokei desu.',
-    exampleMeaning: 'This is a watch, clock.'
+    example: 'その時計[とけい]を取[と]ってください。',
+    exampleRomaji: 'Sono tokei o totte kudasai.',
+    exampleMeaning: 'Please pass me that watch.'
   },
   {
     kanji: 'どこ',
@@ -4367,9 +4367,9 @@ const n5Vocab = [
     romaji: 'tokoro',
     meaning: 'place',
     type: 'noun',
-    example: 'これは所[ところ]です。',
-    exampleRomaji: 'Kore wa tokoro desu.',
-    exampleMeaning: 'This is a place.'
+    example: '所[ところ]について話[はな]します。',
+    exampleRomaji: 'Tokoro ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the place.'
   },
   {
     kanji: '図書館',
@@ -4377,9 +4377,9 @@ const n5Vocab = [
     romaji: 'toshokan',
     meaning: 'library',
     type: 'noun',
-    example: 'これは図書館[としょかん]です。',
-    exampleRomaji: 'Kore wa toshokan desu.',
-    exampleMeaning: 'This is a library.'
+    example: '図書館[としょかん]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Toshokan no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the library.'
   },
   {
     kanji: 'どちら',
@@ -4417,9 +4417,9 @@ const n5Vocab = [
     romaji: 'tonari',
     meaning: 'next to',
     type: 'noun',
-    example: 'これは隣[とな]りです。',
-    exampleRomaji: 'Kore wa tonari desu.',
-    exampleMeaning: 'This is a next to.'
+    example: '隣[とな]りに座[すわ]ってください。',
+    exampleRomaji: 'Tonari ni suwatte kudasai.',
+    exampleMeaning: 'Please sit next to me.'
   },
   {
     kanji: 'どの',
@@ -4457,9 +4457,9 @@ const n5Vocab = [
     romaji: 'tomodachi',
     meaning: 'friend',
     type: 'noun',
-    example: 'これは友達[ともだち]です。',
-    exampleRomaji: 'Kore wa tomodachi desu.',
-    exampleMeaning: 'This is a friend.'
+    example: '友達[ともだち]と話[はな]します。',
+    exampleRomaji: 'Tomodachi to hanashimasu.',
+    exampleMeaning: 'I talk with a friend.'
   },
   {
     kanji: '土曜日',
@@ -4477,9 +4477,9 @@ const n5Vocab = [
     romaji: 'tori',
     meaning: 'bird',
     type: 'noun',
-    example: 'これは鳥[とり]です。',
-    exampleRomaji: 'Kore wa tori desu.',
-    exampleMeaning: 'This is a bird.'
+    example: '鳥[とり]が好[す]きです。',
+    exampleRomaji: 'Tori ga suki desu.',
+    exampleMeaning: 'I like a bird.'
   },
   {
     kanji: '鶏肉',
@@ -4487,9 +4487,9 @@ const n5Vocab = [
     romaji: 'toriniku',
     meaning: 'chicken meat',
     type: 'noun',
-    example: 'これは鶏肉[とりにく]です。',
-    exampleRomaji: 'Kore wa toriniku desu.',
-    exampleMeaning: 'This is a chicken meat.'
+    example: '鶏肉[とりにく]が好[す]きです。',
+    exampleRomaji: 'Toriniku ga suki desu.',
+    exampleMeaning: 'I like chicken meat.'
   },
   {
     kanji: '取る',
@@ -4537,9 +4537,9 @@ const n5Vocab = [
     romaji: 'naifu',
     meaning: 'knife',
     type: 'noun',
-    example: 'これはナイフ[ナイフ]です。',
-    exampleRomaji: 'Kore wa naifu desu.',
-    exampleMeaning: 'This is a knife.'
+    example: '机[つくえ]の上[うえ]にナイフがあります。',
+    exampleRomaji: 'Tsukue no ue ni naifu ga arimasu.',
+    exampleMeaning: 'There is a knife on the desk.'
   },
   {
     kanji: '中',
@@ -4547,9 +4547,9 @@ const n5Vocab = [
     romaji: 'naka',
     meaning: 'inside',
     type: 'noun',
-    example: 'これは中[なか]です。',
-    exampleRomaji: 'Kore wa naka desu.',
-    exampleMeaning: 'This is an inside.'
+    example: '机[つくえ]の中[なか]にあります。',
+    exampleRomaji: 'Tsukue no naka ni arimasu.',
+    exampleMeaning: 'It is at the inside of the desk.'
   },
   {
     kanji: '長い',
@@ -4607,9 +4607,9 @@ const n5Vocab = [
     romaji: 'nanatsu',
     meaning: 'seven',
     type: 'noun',
-    example: 'これは七[なな]つです。',
-    exampleRomaji: 'Kore wa nanatsu desu.',
-    exampleMeaning: 'This is seven.'
+    example: '全部[ぜんぶ]で七[なな]つです。',
+    exampleRomaji: 'Zenbu de nanatsu desu.',
+    exampleMeaning: 'It is seven in total.'
   },
   {
     kanji: '何',
@@ -4617,9 +4617,9 @@ const n5Vocab = [
     romaji: 'nani',
     meaning: 'what?',
     type: 'noun',
-    example: 'これは何[なに]ですか。',
-    exampleRomaji: 'Kore wa nani desu ka.',
-    exampleMeaning: 'What is this?'
+    example: '何[なに]があります。',
+    exampleRomaji: 'Nani ga arimasu.',
+    exampleMeaning: 'There is a what.'
   },
   {
     kanji: '七日',
@@ -4629,7 +4629,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は七日[なのか]です。',
     exampleRomaji: 'Kyou wa nanoka desu.',
-    exampleMeaning: 'Today is the the 7th of a month, 7 days.'
+    exampleMeaning: 'Today is 7th of a month.'
   },
   {
     kanji: '名前',
@@ -4637,9 +4637,9 @@ const n5Vocab = [
     romaji: 'namae',
     meaning: 'name',
     type: 'noun',
-    example: 'これは名前[なまえ]です。',
-    exampleRomaji: 'Kore wa namae desu.',
-    exampleMeaning: 'This is a name.'
+    example: '名前[なまえ]をここに書[か]いてください。',
+    exampleRomaji: 'Namae o koko ni kaite kudasai.',
+    exampleMeaning: 'Please write your name here.'
   },
   {
     kanji: '習う',
@@ -4687,9 +4687,9 @@ const n5Vocab = [
     romaji: 'ni',
     meaning: 'two',
     type: 'noun',
-    example: 'これは二[に]です。',
-    exampleRomaji: 'Kore wa ni desu.',
-    exampleMeaning: 'This is two.'
+    example: '答[こた]えは二[に]です。',
+    exampleRomaji: 'Kotae wa ni desu.',
+    exampleMeaning: 'The answer is two.'
   },
   {
     kanji: '賑やか',
@@ -4707,9 +4707,9 @@ const n5Vocab = [
     romaji: 'oniku',
     meaning: 'meat',
     type: 'noun',
-    example: 'これはお肉[おにく]です。',
-    exampleRomaji: 'Kore wa oniku desu.',
-    exampleMeaning: 'This is a meat.'
+    example: 'お肉[おにく]が好[す]きです。',
+    exampleRomaji: 'Oniku ga suki desu.',
+    exampleMeaning: 'I like a meat.'
   },
   {
     kanji: '西',
@@ -4717,9 +4717,9 @@ const n5Vocab = [
     romaji: 'nishi',
     meaning: 'west',
     type: 'noun',
-    example: 'これは西[にし]です。',
-    exampleRomaji: 'Kore wa nishi desu.',
-    exampleMeaning: 'This is a west.'
+    example: '西[にし]へ行[い]ってください。',
+    exampleRomaji: 'Nishi e itte kudasai.',
+    exampleMeaning: 'Please go to the west.'
   },
   {
     kanji: '〜日',
@@ -4747,9 +4747,9 @@ const n5Vocab = [
     romaji: 'nimotsu',
     meaning: 'luggage',
     type: 'noun',
-    example: 'これは荷物[にもつ]です。',
-    exampleRomaji: 'Kore wa nimotsu desu.',
-    exampleMeaning: 'This is luggage.'
+    example: 'いい荷物[にもつ]ですね。',
+    exampleRomaji: 'Ii nimotsu desu ne.',
+    exampleMeaning: 'That is a good luggage, isn\'t it?'
   },
   {
     kanji: 'ニュース',
@@ -4757,9 +4757,9 @@ const n5Vocab = [
     romaji: 'nyuusu',
     meaning: 'news',
     type: 'noun',
-    example: 'これはニュース[ニュース]です。',
-    exampleRomaji: 'Kore wa nyuusu desu.',
-    exampleMeaning: 'This is a news.'
+    example: 'ニュースについて話[はな]します。',
+    exampleRomaji: 'Nyuusu ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the news.'
   },
   {
     kanji: '庭',
@@ -4767,9 +4767,9 @@ const n5Vocab = [
     romaji: 'niwa',
     meaning: 'garden',
     type: 'noun',
-    example: 'これは庭[にわ]です。',
-    exampleRomaji: 'Kore wa niwa desu.',
-    exampleMeaning: 'This is a garden.'
+    example: 'この近[ちか]くに庭[にわ]があります。',
+    exampleRomaji: 'Kono chikaku ni niwa ga arimasu.',
+    exampleMeaning: 'There is a garden nearby.'
   },
   {
     kanji: '〜人',
@@ -4797,9 +4797,9 @@ const n5Vocab = [
     romaji: 'nekutai',
     meaning: 'necktie',
     type: 'noun',
-    example: 'これはネクタイ[ネクタイ]です。',
-    exampleRomaji: 'Kore wa nekutai desu.',
-    exampleMeaning: 'This is a necktie.'
+    example: 'ネクタイをください。',
+    exampleRomaji: 'Nekutai o kudasai.',
+    exampleMeaning: 'Please give me the necktie.'
   },
   {
     kanji: '寝る',
@@ -4827,9 +4827,9 @@ const n5Vocab = [
     romaji: 'nooto',
     meaning: 'notebook',
     type: 'noun',
-    example: 'これはノート[ノート]です。',
-    exampleRomaji: 'Kore wa nooto desu.',
-    exampleMeaning: 'This is a notebook.'
+    example: 'ノートを持[も]っています。',
+    exampleRomaji: 'Nooto o motte imasu.',
+    exampleMeaning: 'I have a notebook.'
   },
   {
     kanji: '登る',
@@ -4847,9 +4847,9 @@ const n5Vocab = [
     romaji: 'nomimono',
     meaning: 'drinks',
     type: 'noun',
-    example: 'これは飲物[のみもの]です。',
-    exampleRomaji: 'Kore wa nomimono desu.',
-    exampleMeaning: 'This is a drinks.'
+    example: '飲物[のみもの]があります。',
+    exampleRomaji: 'Nomimono ga arimasu.',
+    exampleMeaning: 'There is a drinks.'
   },
   {
     kanji: '飲む',
@@ -4877,9 +4877,9 @@ const n5Vocab = [
     romaji: 'ha',
     meaning: 'teeth',
     type: 'noun',
-    example: 'これは歯[は]です。',
-    exampleRomaji: 'Kore wa ha desu.',
-    exampleMeaning: 'This is a teeth.'
+    example: '歯[は]が痛[いた]いです。',
+    exampleRomaji: 'Ha ga itai desu.',
+    exampleMeaning: 'My teeth hurts.'
   },
   {
     kanji: 'パーテイー',
@@ -4887,9 +4887,9 @@ const n5Vocab = [
     romaji: 'paateii',
     meaning: 'party',
     type: 'noun',
-    example: 'これはパーテイ[パーテイ]ーです。',
-    exampleRomaji: 'Kore wa paateii desu.',
-    exampleMeaning: 'This is a party.'
+    example: 'パーテイーが好[す]きです。',
+    exampleRomaji: 'Paateii ga suki desu.',
+    exampleMeaning: 'I like a party.'
   },
   {
     kanji: 'はい',
@@ -4917,9 +4917,9 @@ const n5Vocab = [
     romaji: 'haizara',
     meaning: 'ashtray',
     type: 'noun',
-    example: 'これは灰皿[はいざら]です。',
-    exampleRomaji: 'Kore wa haizara desu.',
-    exampleMeaning: 'This is an ashtray.'
+    example: '灰皿[はいざら]を使[つか]います。',
+    exampleRomaji: 'Haizara o tsukaimasu.',
+    exampleMeaning: 'I use the ashtray.'
   },
   {
     kanji: '入る',
@@ -4937,9 +4937,9 @@ const n5Vocab = [
     romaji: 'hagaki',
     meaning: 'postcard',
     type: 'noun',
-    example: 'これは葉書[はがき]です。',
-    exampleRomaji: 'Kore wa hagaki desu.',
-    exampleMeaning: 'This is a postcard.'
+    example: '机[つくえ]の上[うえ]に葉書[はがき]があります。',
+    exampleRomaji: 'Tsukue no ue ni hagaki ga arimasu.',
+    exampleMeaning: 'There is a postcard on the desk.'
   },
   {
     kanji: '履く',
@@ -4957,9 +4957,9 @@ const n5Vocab = [
     romaji: 'hako',
     meaning: 'box',
     type: 'noun',
-    example: 'これは箱[はこ]です。',
-    exampleRomaji: 'Kore wa hako desu.',
-    exampleMeaning: 'This is a box.'
+    example: 'その箱[はこ]を取[と]ってください。',
+    exampleRomaji: 'Sono hako o totte kudasai.',
+    exampleMeaning: 'Please pass me that box.'
   },
   {
     kanji: '橋',
@@ -4967,9 +4967,9 @@ const n5Vocab = [
     romaji: 'hashi',
     meaning: 'bridge',
     type: 'noun',
-    example: 'これは橋[はし]です。',
-    exampleRomaji: 'Kore wa hashi desu.',
-    exampleMeaning: 'This is a bridge.'
+    example: '橋[はし]へ行[い]きます。',
+    exampleRomaji: 'Hashi e ikimasu.',
+    exampleMeaning: 'I go to the bridge.'
   },
   {
     kanji: '箸',
@@ -4977,9 +4977,9 @@ const n5Vocab = [
     romaji: 'hashi',
     meaning: 'chopsticks',
     type: 'noun',
-    example: 'これは箸[はし]です。',
-    exampleRomaji: 'Kore wa hashi desu.',
-    exampleMeaning: 'This is a chopsticks.'
+    example: 'いい箸[はし]ですね。',
+    exampleRomaji: 'Ii hashi desu ne.',
+    exampleMeaning: 'That is a good chopsticks, isn\'t it?'
   },
   {
     kanji: '始まる',
@@ -4997,9 +4997,9 @@ const n5Vocab = [
     romaji: 'hajime',
     meaning: 'start, the beginning',
     type: 'noun',
-    example: 'これは始[はじ]めです。',
-    exampleRomaji: 'Kore wa hajime desu.',
-    exampleMeaning: 'This is a start, the beginning.'
+    example: '始[はじ]めに名前[なまえ]を書[か]いてください。',
+    exampleRomaji: 'Hajime ni namae o kaite kudasai.',
+    exampleMeaning: 'Please write your name at the beginning.'
   },
   {
     kanji: '初めて',
@@ -5027,9 +5027,9 @@ const n5Vocab = [
     romaji: 'basu',
     meaning: 'bus',
     type: 'noun',
-    example: 'これはバス[バス]です。',
-    exampleRomaji: 'Kore wa basu desu.',
-    exampleMeaning: 'This is a bus.'
+    example: 'バスに乗[の]ります。',
+    exampleRomaji: 'Basu ni norimasu.',
+    exampleMeaning: 'I ride the bus.'
   },
   {
     kanji: 'バター',
@@ -5037,9 +5037,9 @@ const n5Vocab = [
     romaji: 'bataa',
     meaning: 'butter',
     type: 'noun',
-    example: 'これはバタ[バタ]ーです。',
-    exampleRomaji: 'Kore wa bataa desu.',
-    exampleMeaning: 'This is a butter.'
+    example: 'スーパーでバターを買[か]います。',
+    exampleRomaji: 'Suupaa de bataa o kaimasu.',
+    exampleMeaning: 'I buy butter at the supermarket.'
   },
   {
     kanji: '二十歳',
@@ -5067,9 +5067,9 @@ const n5Vocab = [
     romaji: 'hachi',
     meaning: 'eight',
     type: 'noun',
-    example: 'これは八[はち]です。',
-    exampleRomaji: 'Kore wa hachi desu.',
-    exampleMeaning: 'This is eight.'
+    example: '全部[ぜんぶ]で八[はち]です。',
+    exampleRomaji: 'Zenbu de hachi desu.',
+    exampleMeaning: 'It is eight in total.'
   },
   {
     kanji: '二十日',
@@ -5079,7 +5079,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は二十日[はつか]です。',
     exampleRomaji: 'Kyou wa hatsuka desu.',
-    exampleMeaning: 'Today is the the 20th of the month, 20 days.'
+    exampleMeaning: 'Today is 20th of the month.'
   },
   {
     kanji: '花',
@@ -5087,9 +5087,9 @@ const n5Vocab = [
     romaji: 'hana',
     meaning: 'flower',
     type: 'noun',
-    example: 'これは花[はな]です。',
-    exampleRomaji: 'Kore wa hana desu.',
-    exampleMeaning: 'This is a flower.'
+    example: '花[はな]がきれいです。',
+    exampleRomaji: 'Hana ga kirei desu.',
+    exampleMeaning: 'The flower is beautiful.'
   },
   {
     kanji: '鼻',
@@ -5097,9 +5097,9 @@ const n5Vocab = [
     romaji: 'hana',
     meaning: 'nose',
     type: 'noun',
-    example: 'これは鼻[はな]です。',
-    exampleRomaji: 'Kore wa hana desu.',
-    exampleMeaning: 'This is a nose.'
+    example: '鼻[はな]を洗[あら]います。',
+    exampleRomaji: 'Hana o araimasu.',
+    exampleMeaning: 'I wash my nose.'
   },
   {
     kanji: '話',
@@ -5107,9 +5107,9 @@ const n5Vocab = [
     romaji: 'hanashi',
     meaning: 'conversation, tale',
     type: 'noun',
-    example: 'これは話[はなし]です。',
-    exampleRomaji: 'Kore wa hanashi desu.',
-    exampleMeaning: 'This is a conversation, tale.'
+    example: '話[はなし]について話[はな]します。',
+    exampleRomaji: 'Hanashi ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the conversation.'
   },
   {
     kanji: '話す',
@@ -5127,9 +5127,9 @@ const n5Vocab = [
     romaji: 'haha',
     meaning: 'my mother',
     type: 'noun',
-    example: 'これは母[はは]です。',
-    exampleRomaji: 'Kore wa haha desu.',
-    exampleMeaning: 'This is my mother.'
+    example: '母[はは]は料理[りょうり]が上手[じょうず]です。',
+    exampleRomaji: 'Haha wa ryouri ga jouzu desu.',
+    exampleMeaning: 'My mother is good at cooking.'
   },
   {
     kanji: '早い',
@@ -5217,9 +5217,9 @@ const n5Vocab = [
     romaji: 'pan',
     meaning: 'bread',
     type: 'noun',
-    example: 'これはパン[パン]です。',
-    exampleRomaji: 'Kore wa pan desu.',
-    exampleMeaning: 'This is a bread.'
+    example: 'パンを食[た]べます。',
+    exampleRomaji: 'Pan o tabemasu.',
+    exampleMeaning: 'I eat bread.'
   },
   {
     kanji: 'ハンカチ',
@@ -5227,9 +5227,9 @@ const n5Vocab = [
     romaji: 'hankachi',
     meaning: 'handkerchief',
     type: 'noun',
-    example: 'これはハンカチ[ハンカチ]です。',
-    exampleRomaji: 'Kore wa hankachi desu.',
-    exampleMeaning: 'This is a handkerchief.'
+    example: '机[つくえ]の上[うえ]にハンカチがあります。',
+    exampleRomaji: 'Tsukue no ue ni hankachi ga arimasu.',
+    exampleMeaning: 'There is a handkerchief on the desk.'
   },
   {
     kanji: '番号',
@@ -5237,9 +5237,9 @@ const n5Vocab = [
     romaji: 'bangou',
     meaning: 'number',
     type: 'noun',
-    example: 'これは番号[ばんごう]です。',
-    exampleRomaji: 'Kore wa bangou desu.',
-    exampleMeaning: 'This is a number.'
+    example: '電話[でんわ]番号[ばんごう]を教[おし]えてください。',
+    exampleRomaji: 'Denwa bangou o oshiete kudasai.',
+    exampleMeaning: 'Please tell me your phone number.'
   },
   {
     kanji: '晩ご飯',
@@ -5247,9 +5247,9 @@ const n5Vocab = [
     romaji: 'bangohan',
     meaning: 'dinner',
     type: 'noun',
-    example: 'これは晩ご飯[ばんごはん]です。',
-    exampleRomaji: 'Kore wa bangohan desu.',
-    exampleMeaning: 'This is a dinner.'
+    example: '毎朝[まいあさ]、晩ご飯[ばんごはん]を食[た]べます。',
+    exampleRomaji: 'Maiasa, bangohan o tabemasu.',
+    exampleMeaning: 'I eat dinner every morning.'
   },
   {
     kanji: '半分',
@@ -5257,9 +5257,9 @@ const n5Vocab = [
     romaji: 'hanbun',
     meaning: 'half',
     type: 'noun',
-    example: 'これは半分[はんぶん]です。',
-    exampleRomaji: 'Kore wa hanbun desu.',
-    exampleMeaning: 'This is a half.'
+    example: 'りんごを半分[はんぶん]食[た]べました。',
+    exampleRomaji: 'Ringo o hanbun tabemashita.',
+    exampleMeaning: 'I ate half of the apple.'
   },
   {
     kanji: '東',
@@ -5267,9 +5267,9 @@ const n5Vocab = [
     romaji: 'higashi',
     meaning: 'east',
     type: 'noun',
-    example: 'これは東[ひがし]です。',
-    exampleRomaji: 'Kore wa higashi desu.',
-    exampleMeaning: 'This is an east.'
+    example: '駅[えき]は東[ひがし]にあります。',
+    exampleRomaji: 'Eki wa higashi ni arimasu.',
+    exampleMeaning: 'The station is to the east.'
   },
   {
     kanji: '〜匹',
@@ -5317,9 +5317,9 @@ const n5Vocab = [
     romaji: 'hikouki',
     meaning: 'plane',
     type: 'noun',
-    example: 'これは飛行機[ひこうき]です。',
-    exampleRomaji: 'Kore wa hikouki desu.',
-    exampleMeaning: 'This is a plane.'
+    example: '飛行機[ひこうき]で行[い]きます。',
+    exampleRomaji: 'Hikouki de ikimasu.',
+    exampleMeaning: 'I go by plane.'
   },
   {
     kanji: '左',
@@ -5327,9 +5327,9 @@ const n5Vocab = [
     romaji: 'hidari',
     meaning: 'left',
     type: 'noun',
-    example: 'これは左[ひだり]です。',
-    exampleRomaji: 'Kore wa hidari desu.',
-    exampleMeaning: 'This is a left.'
+    example: '机[つくえ]の左[ひだり]にあります。',
+    exampleRomaji: 'Tsukue no hidari ni arimasu.',
+    exampleMeaning: 'It is at the left of the desk.'
   },
   {
     kanji: '人',
@@ -5337,9 +5337,9 @@ const n5Vocab = [
     romaji: 'hito',
     meaning: 'person',
     type: 'noun',
-    example: 'これは人[ひと]です。',
-    exampleRomaji: 'Kore wa hito desu.',
-    exampleMeaning: 'This is a person.'
+    example: '人[ひと]はやさしいです。',
+    exampleRomaji: 'Hito wa yasashii desu.',
+    exampleMeaning: 'A person is kind.'
   },
   {
     kanji: '一つ',
@@ -5347,9 +5347,9 @@ const n5Vocab = [
     romaji: 'hitotsu',
     meaning: 'one',
     type: 'noun',
-    example: 'これは一[ひと]つです。',
-    exampleRomaji: 'Kore wa hitotsu desu.',
-    exampleMeaning: 'This is one.'
+    example: '答[こた]えは一[ひと]つです。',
+    exampleRomaji: 'Kotae wa hitotsu desu.',
+    exampleMeaning: 'The answer is one.'
   },
   {
     kanji: '一月',
@@ -5367,9 +5367,9 @@ const n5Vocab = [
     romaji: 'hitori',
     meaning: 'one person',
     type: 'noun',
-    example: 'これは一人[ひとり]です。',
-    exampleRomaji: 'Kore wa hitori desu.',
-    exampleMeaning: 'This is one person.'
+    example: '全部[ぜんぶ]で一人[ひとり]です。',
+    exampleRomaji: 'Zenbu de hitori desu.',
+    exampleMeaning: 'It is one person in total.'
   },
   {
     kanji: '暇',
@@ -5387,9 +5387,9 @@ const n5Vocab = [
     romaji: 'hyaku',
     meaning: 'hundred',
     type: 'noun',
-    example: 'これは百[ひゃく]です。',
-    exampleRomaji: 'Kore wa hyaku desu.',
-    exampleMeaning: 'This is hundred.'
+    example: '答[こた]えは百[ひゃく]です。',
+    exampleRomaji: 'Kotae wa hyaku desu.',
+    exampleMeaning: 'The answer is hundred.'
   },
   {
     kanji: '病院',
@@ -5397,9 +5397,9 @@ const n5Vocab = [
     romaji: 'byouin',
     meaning: 'hospital',
     type: 'noun',
-    example: 'これは病院[びょういん]です。',
-    exampleRomaji: 'Kore wa byouin desu.',
-    exampleMeaning: 'This is a hospital.'
+    example: '病院[びょういん]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Byouin no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the hospital.'
   },
   {
     kanji: '病気',
@@ -5407,9 +5407,9 @@ const n5Vocab = [
     romaji: 'byouki',
     meaning: 'ill, sick',
     type: 'noun',
-    example: 'これは病気[びょうき]です。',
-    exampleRomaji: 'Kore wa byouki desu.',
-    exampleMeaning: 'This is an ill, sick.'
+    example: '病気[びょうき]で学校[がっこう]を休[やす]みました。',
+    exampleRomaji: 'Byouki de gakkou o yasumimashita.',
+    exampleMeaning: 'I missed school because I was sick.'
   },
   {
     kanji: '平仮名',
@@ -5417,9 +5417,9 @@ const n5Vocab = [
     romaji: 'hiragana',
     meaning: 'hiragana characters',
     type: 'noun',
-    example: 'これは平仮名[ひらがな]です。',
-    exampleRomaji: 'Kore wa hiragana desu.',
-    exampleMeaning: 'This is a hiragana characters.'
+    example: '平仮名[ひらがな]を忘[わす]れました。',
+    exampleRomaji: 'Hiragana o wasuremashita.',
+    exampleMeaning: 'I forgot my hiragana characters.'
   },
   {
     kanji: '昼',
@@ -5437,9 +5437,9 @@ const n5Vocab = [
     romaji: 'hirugohan',
     meaning: 'lunch',
     type: 'noun',
-    example: 'これは昼ご飯[ひるごはん]です。',
-    exampleRomaji: 'Kore wa hirugohan desu.',
-    exampleMeaning: 'This is a lunch.'
+    example: '昼ご飯[ひるごはん]が好[す]きです。',
+    exampleRomaji: 'Hirugohan ga suki desu.',
+    exampleMeaning: 'I like lunch.'
   },
   {
     kanji: '広い',
@@ -5457,9 +5457,9 @@ const n5Vocab = [
     romaji: 'firumu',
     meaning: 'film',
     type: 'noun',
-    example: 'これはフィルム[フィルム]です。',
-    exampleRomaji: 'Kore wa firumu desu.',
-    exampleMeaning: 'This is a film.'
+    example: 'フィルムを使[つか]います。',
+    exampleRomaji: 'Firumu o tsukaimasu.',
+    exampleMeaning: 'I use the film.'
   },
   {
     kanji: '封筒',
@@ -5467,9 +5467,9 @@ const n5Vocab = [
     romaji: 'fuutou',
     meaning: 'envelope',
     type: 'noun',
-    example: 'これは封筒[ふうとう]です。',
-    exampleRomaji: 'Kore wa fuutou desu.',
-    exampleMeaning: 'This is an envelope.'
+    example: '封筒[ふうとう]があります。',
+    exampleRomaji: 'Fuutou ga arimasu.',
+    exampleMeaning: 'There is an envelope.'
   },
   {
     kanji: 'プール',
@@ -5477,9 +5477,9 @@ const n5Vocab = [
     romaji: 'puuru',
     meaning: 'pool',
     type: 'noun',
-    example: 'これはプール[プール]です。',
-    exampleRomaji: 'Kore wa puuru desu.',
-    exampleMeaning: 'This is a pool.'
+    example: 'プールが好[す]きです。',
+    exampleRomaji: 'Puuru ga suki desu.',
+    exampleMeaning: 'I like a pool.'
   },
   {
     kanji: 'フォーク',
@@ -5487,9 +5487,9 @@ const n5Vocab = [
     romaji: 'fooku',
     meaning: 'fork',
     type: 'noun',
-    example: 'これはフォーク[フォーク]です。',
-    exampleRomaji: 'Kore wa fooku desu.',
-    exampleMeaning: 'This is a fork.'
+    example: 'そのフォークを取[と]ってください。',
+    exampleRomaji: 'Sono fooku o totte kudasai.',
+    exampleMeaning: 'Please pass me that fork.'
   },
   {
     kanji: '吹く',
@@ -5497,9 +5497,9 @@ const n5Vocab = [
     romaji: 'fuku',
     meaning: 'to blow (wind)',
     type: 'verb',
-    example: '風[かぜ]が吹[ふ]きます。',
-    exampleRomaji: 'Kaze ga fukimasu.',
-    exampleMeaning: 'The wind blows.'
+    example: 'その服[ふく]はかっこいいですね。',
+    exampleRomaji: 'Sono fuku wa kakkoii desu ne.',
+    exampleMeaning: 'Those clothes look nice.'
   },
   {
     kanji: '服',
@@ -5507,9 +5507,9 @@ const n5Vocab = [
     romaji: 'fuku',
     meaning: 'clothes',
     type: 'noun',
-    example: 'これは服[ふく]です。',
-    exampleRomaji: 'Kore wa fuku desu.',
-    exampleMeaning: 'This is clothes.'
+    example: 'その服[ふく]はかっこいいですね。',
+    exampleRomaji: 'Sono fuku wa kakkoii desu ne.',
+    exampleMeaning: 'Those clothes look nice.'
   },
   {
     kanji: '二つ',
@@ -5517,9 +5517,9 @@ const n5Vocab = [
     romaji: 'futatsu',
     meaning: 'two',
     type: 'noun',
-    example: 'これは二[ふた]つです。',
-    exampleRomaji: 'Kore wa futatsu desu.',
-    exampleMeaning: 'This is two.'
+    example: '全部[ぜんぶ]で二[ふた]つです。',
+    exampleRomaji: 'Zenbu de futatsu desu.',
+    exampleMeaning: 'It is two in total.'
   },
   {
     kanji: '豚肉',
@@ -5527,9 +5527,9 @@ const n5Vocab = [
     romaji: 'butaniku',
     meaning: 'pork',
     type: 'noun',
-    example: 'これは豚肉[ぶたにく]です。',
-    exampleRomaji: 'Kore wa butaniku desu.',
-    exampleMeaning: 'This is a pork.'
+    example: 'スーパーで豚肉[ぶたにく]を買[か]います。',
+    exampleRomaji: 'Suupaa de butaniku o kaimasu.',
+    exampleMeaning: 'I buy pork at the supermarket.'
   },
   {
     kanji: '二人',
@@ -5537,9 +5537,9 @@ const n5Vocab = [
     romaji: 'futari',
     meaning: 'two people',
     type: 'noun',
-    example: 'これは二人[ふたり]です。',
-    exampleRomaji: 'Kore wa futari desu.',
-    exampleMeaning: 'This is two people.'
+    example: '答[こた]えは二人[ふたり]です。',
+    exampleRomaji: 'Kotae wa futari desu.',
+    exampleMeaning: 'The answer is two people.'
   },
   {
     kanji: '二日',
@@ -5549,7 +5549,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は二日[ふつか]です。',
     exampleRomaji: 'Kyou wa futsuka desu.',
-    exampleMeaning: 'Today is the 2nd day of the month, 2 days.'
+    exampleMeaning: 'Today is 2nd day of the month.'
   },
   {
     kanji: '太い',
@@ -5587,9 +5587,9 @@ const n5Vocab = [
     romaji: 'ofuro',
     meaning: 'bath',
     type: 'noun',
-    example: 'これはお風呂[おふろ]です。',
-    exampleRomaji: 'Kore wa ofuro desu.',
-    exampleMeaning: 'This is a bath.'
+    example: 'この近[ちか]くにお風呂[おふろ]があります。',
+    exampleRomaji: 'Kono chikaku ni ofuro ga arimasu.',
+    exampleMeaning: 'There is a bath nearby.'
   },
   {
     kanji: '〜分',
@@ -5607,9 +5607,9 @@ const n5Vocab = [
     romaji: 'peeji',
     meaning: 'page',
     type: 'noun',
-    example: 'これはページ[ページ]です。',
-    exampleRomaji: 'Kore wa peeji desu.',
-    exampleMeaning: 'This is a page.'
+    example: 'いいページですね。',
+    exampleRomaji: 'Ii peeji desu ne.',
+    exampleMeaning: 'That is a good page, isn\'t it?'
   },
   {
     kanji: '下手',
@@ -5627,9 +5627,9 @@ const n5Vocab = [
     romaji: 'beddo',
     meaning: 'bed',
     type: 'noun',
-    example: 'これはベッド[ベッド]です。',
-    exampleRomaji: 'Kore wa beddo desu.',
-    exampleMeaning: 'This is a bed.'
+    example: '机[つくえ]の上[うえ]にベッドがあります。',
+    exampleRomaji: 'Tsukue no ue ni beddo ga arimasu.',
+    exampleMeaning: 'There is a bed on the desk.'
   },
   {
     kanji: '部屋',
@@ -5637,9 +5637,9 @@ const n5Vocab = [
     romaji: 'heya',
     meaning: 'room',
     type: 'noun',
-    example: 'これは部屋[へや]です。',
-    exampleRomaji: 'Kore wa heya desu.',
-    exampleMeaning: 'This is a room.'
+    example: '部屋[へや]へ行[い]きます。',
+    exampleRomaji: 'Heya e ikimasu.',
+    exampleMeaning: 'I go to the room.'
   },
   {
     kanji: '辺',
@@ -5647,9 +5647,9 @@ const n5Vocab = [
     romaji: 'hen',
     meaning: 'side, part, area',
     type: 'noun',
-    example: 'これは辺[へん]です。',
-    exampleRomaji: 'Kore wa hen desu.',
-    exampleMeaning: 'This is a side, part, area.'
+    example: '辺[へん]へ行[い]ってください。',
+    exampleRomaji: 'Hen e itte kudasai.',
+    exampleMeaning: 'Please go to the side.'
   },
   {
     kanji: 'ペン',
@@ -5657,9 +5657,9 @@ const n5Vocab = [
     romaji: 'pen',
     meaning: 'pen',
     type: 'noun',
-    example: 'これはペン[ぺん]です。',
-    exampleRomaji: 'Kore wa pen desu.',
-    exampleMeaning: 'This is a pen.'
+    example: 'ペン[ぺん]を使[つか]います。',
+    exampleRomaji: 'Pen o tsukaimasu.',
+    exampleMeaning: 'I use the pen.'
   },
   {
     kanji: '勉強',
@@ -5697,9 +5697,9 @@ const n5Vocab = [
     romaji: 'boushi',
     meaning: 'hat',
     type: 'noun',
-    example: 'これは帽子[ぼうし]です。',
-    exampleRomaji: 'Kore wa boushi desu.',
-    exampleMeaning: 'This is a hat.'
+    example: '新[あたら]しい帽子[ぼうし]を買[か]いました。',
+    exampleRomaji: 'Atarashii boushi o kaimashita.',
+    exampleMeaning: 'I bought a new hat.'
   },
   {
     kanji: 'ボールペン',
@@ -5707,9 +5707,9 @@ const n5Vocab = [
     romaji: 'boorupen',
     meaning: 'ballpen',
     type: 'noun',
-    example: 'これはボールペン[ボールペン]です。',
-    exampleRomaji: 'Kore wa boorupen desu.',
-    exampleMeaning: 'This is a ballpen.'
+    example: 'そのボールペンを取[と]ってください。',
+    exampleRomaji: 'Sono boorupen o totte kudasai.',
+    exampleMeaning: 'Please pass me that ballpen.'
   },
   {
     kanji: '他',
@@ -5717,9 +5717,9 @@ const n5Vocab = [
     romaji: 'hoka',
     meaning: 'another, other',
     type: 'noun',
-    example: 'これは他[ほか]です。',
-    exampleRomaji: 'Kore wa hoka desu.',
-    exampleMeaning: 'This is an another, other.'
+    example: '他[ほか]の店[みせ]へ行[い]きましょう。',
+    exampleRomaji: 'Hoka no mise e ikimashou.',
+    exampleMeaning: 'Let\'s go to a different shop.'
   },
   {
     kanji: 'ポケット',
@@ -5727,9 +5727,9 @@ const n5Vocab = [
     romaji: 'poketto',
     meaning: 'pocket',
     type: 'noun',
-    example: 'これはポケット[ポケット]です。',
-    exampleRomaji: 'Kore wa poketto desu.',
-    exampleMeaning: 'This is a pocket.'
+    example: '机[つくえ]の上[うえ]にポケットがあります。',
+    exampleRomaji: 'Tsukue no ue ni poketto ga arimasu.',
+    exampleMeaning: 'There is a pocket on the desk.'
   },
   {
     kanji: '欲しい',
@@ -5757,9 +5757,9 @@ const n5Vocab = [
     romaji: 'botan',
     meaning: 'button',
     type: 'noun',
-    example: 'これはボタン[ボタン]です。',
-    exampleRomaji: 'Kore wa botan desu.',
-    exampleMeaning: 'This is a button.'
+    example: 'ボタンを使[つか]います。',
+    exampleRomaji: 'Botan o tsukaimasu.',
+    exampleMeaning: 'I use the button.'
   },
   {
     kanji: 'ホテル',
@@ -5767,9 +5767,9 @@ const n5Vocab = [
     romaji: 'hoteru',
     meaning: 'hotel',
     type: 'noun',
-    example: 'これはホテル[ホテル]です。',
-    exampleRomaji: 'Kore wa hoteru desu.',
-    exampleMeaning: 'This is a hotel.'
+    example: 'ホテルの前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Hoteru no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the hotel.'
   },
   {
     kanji: '本',
@@ -5777,9 +5777,9 @@ const n5Vocab = [
     romaji: 'hon',
     meaning: 'book',
     type: 'noun',
-    example: 'これは本[ほん]です。',
-    exampleRomaji: 'Kore wa hon desu.',
-    exampleMeaning: 'This is a book.'
+    example: '本[ほん]を持[も]っています。',
+    exampleRomaji: 'Hon o motte imasu.',
+    exampleMeaning: 'I have a book.'
   },
   {
     kanji: '〜本',
@@ -5797,9 +5797,9 @@ const n5Vocab = [
     romaji: 'hondana',
     meaning: 'bookshelf',
     type: 'noun',
-    example: 'これは本棚[ほんだな]です。',
-    exampleRomaji: 'Kore wa hondana desu.',
-    exampleMeaning: 'This is a bookshelf.'
+    example: 'その本棚[ほんだな]を取[と]ってください。',
+    exampleRomaji: 'Sono hondana o totte kudasai.',
+    exampleMeaning: 'Please pass me that bookshelf.'
   },
   {
     kanji: '本当に',
@@ -5887,9 +5887,9 @@ const n5Vocab = [
     romaji: 'mae',
     meaning: 'front',
     type: 'noun',
-    example: 'これは前[まえ]です。',
-    exampleRomaji: 'Kore wa mae desu.',
-    exampleMeaning: 'This is a front.'
+    example: '机[つくえ]の前[まえ]にあります。',
+    exampleRomaji: 'Tsukue no mae ni arimasu.',
+    exampleMeaning: 'It is at the front of the desk.'
   },
   {
     kanji: '〜前',
@@ -5947,9 +5947,9 @@ const n5Vocab = [
     romaji: 'machi',
     meaning: 'city, town',
     type: 'noun',
-    example: 'これは町[まち]です。',
-    exampleRomaji: 'Kore wa machi desu.',
-    exampleMeaning: 'This is a city, town.'
+    example: 'この近[ちか]くに町[まち]があります。',
+    exampleRomaji: 'Kono chikaku ni machi ga arimasu.',
+    exampleMeaning: 'There is a city nearby.'
   },
   {
     kanji: '待つ',
@@ -5967,9 +5967,9 @@ const n5Vocab = [
     romaji: 'massugu ni',
     meaning: 'straight ahead',
     type: 'noun',
-    example: 'これは真直[まっす]ぐにです。',
-    exampleRomaji: 'Kore wa massugu ni desu.',
-    exampleMeaning: 'This is a straight ahead.'
+    example: 'この道[みち]を真直[まっす]ぐに行[い]ってください。',
+    exampleRomaji: 'Kono michi o massugu ni itte kudasai.',
+    exampleMeaning: 'Please go straight along this road.'
   },
   {
     kanji: 'マッチ',
@@ -5977,9 +5977,9 @@ const n5Vocab = [
     romaji: 'machi',
     meaning: 'matches',
     type: 'noun',
-    example: 'これはマッチ[マッチ]です。',
-    exampleRomaji: 'Kore wa machi desu.',
-    exampleMeaning: 'This is a matches.'
+    example: '机[つくえ]の上[うえ]にマッチがあります。',
+    exampleRomaji: 'Tsukue no ue ni macchi ga arimasu.',
+    exampleMeaning: 'There are matches on the desk.'
   },
   {
     kanji: '窓',
@@ -5987,9 +5987,9 @@ const n5Vocab = [
     romaji: 'mado',
     meaning: 'window',
     type: 'noun',
-    example: 'これは窓[まど]です。',
-    exampleRomaji: 'Kore wa mado desu.',
-    exampleMeaning: 'This is a window.'
+    example: '机[つくえ]の上[うえ]に窓[まど]があります。',
+    exampleRomaji: 'Tsukue no ue ni mado ga arimasu.',
+    exampleMeaning: 'There is a window on the desk.'
   },
   {
     kanji: '丸い',
@@ -6007,9 +6007,9 @@ const n5Vocab = [
     romaji: 'man',
     meaning: 'ten thousand',
     type: 'noun',
-    example: 'これは万[まん]です。',
-    exampleRomaji: 'Kore wa man desu.',
-    exampleMeaning: 'This is ten thousand.'
+    example: '全部[ぜんぶ]で万[まん]です。',
+    exampleRomaji: 'Zenbu de man desu.',
+    exampleMeaning: 'It is ten thousand in total.'
   },
   {
     kanji: '万年筆',
@@ -6017,9 +6017,9 @@ const n5Vocab = [
     romaji: 'mannenhitsu',
     meaning: 'fountain pen',
     type: 'noun',
-    example: 'これは万年筆[まんねんひつ]です。',
-    exampleRomaji: 'Kore wa mannenhitsu desu.',
-    exampleMeaning: 'This is a fountain pen.'
+    example: '万年筆[まんねんひつ]を使[つか]います。',
+    exampleRomaji: 'Mannenhitsu o tsukaimasu.',
+    exampleMeaning: 'I use the fountain pen.'
   },
   {
     kanji: '磨く',
@@ -6037,9 +6037,9 @@ const n5Vocab = [
     romaji: 'migi',
     meaning: 'right',
     type: 'noun',
-    example: 'これは右[みぎ]です。',
-    exampleRomaji: 'Kore wa migi desu.',
-    exampleMeaning: 'This is a right.'
+    example: '右[みぎ]へ行[い]ってください。',
+    exampleRomaji: 'Migi e itte kudasai.',
+    exampleMeaning: 'Please go to the right.'
   },
   {
     kanji: '短い',
@@ -6057,9 +6057,9 @@ const n5Vocab = [
     romaji: 'omizu',
     meaning: 'water',
     type: 'noun',
-    example: 'これはお水[おみず]です。',
-    exampleRomaji: 'Kore wa omizu desu.',
-    exampleMeaning: 'This is water.'
+    example: 'お水[おみず]を飲[の]みます。',
+    exampleRomaji: 'Omizu o nomimasu.',
+    exampleMeaning: 'I drink water.'
   },
   {
     kanji: '店',
@@ -6067,9 +6067,9 @@ const n5Vocab = [
     romaji: 'mise',
     meaning: 'shop',
     type: 'noun',
-    example: 'これは店[みせ]です。',
-    exampleRomaji: 'Kore wa mise desu.',
-    exampleMeaning: 'This is a shop.'
+    example: '店[みせ]へ行[い]きます。',
+    exampleRomaji: 'Mise e ikimasu.',
+    exampleMeaning: 'I go to the shop.'
   },
   {
     kanji: '見せる',
@@ -6087,9 +6087,9 @@ const n5Vocab = [
     romaji: 'michi',
     meaning: 'road',
     type: 'noun',
-    example: 'これは道[みち]です。',
-    exampleRomaji: 'Kore wa michi desu.',
-    exampleMeaning: 'This is a road.'
+    example: '道[みち]の前[まえ]で待[ま]ちます。',
+    exampleRomaji: 'Michi no mae de machimasu.',
+    exampleMeaning: 'I wait in front of the road.'
   },
   {
     kanji: '三日',
@@ -6099,7 +6099,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は三日[みっか]です。',
     exampleRomaji: 'Kyou wa mikka desu.',
-    exampleMeaning: 'Today is the 3rd day of a month, 3 days.'
+    exampleMeaning: 'Today is 3rd day of a month.'
   },
   {
     kanji: '三つ',
@@ -6107,9 +6107,9 @@ const n5Vocab = [
     romaji: 'mittsu',
     meaning: 'three',
     type: 'noun',
-    example: 'これは三[みっ]つです。',
-    exampleRomaji: 'Kore wa mittsu desu.',
-    exampleMeaning: 'This is three.'
+    example: '答[こた]えは三[みっ]つです。',
+    exampleRomaji: 'Kotae wa mittsu desu.',
+    exampleMeaning: 'The answer is three.'
   },
   {
     kanji: '皆さん',
@@ -6117,9 +6117,9 @@ const n5Vocab = [
     romaji: 'minsan',
     meaning: 'everyone',
     type: 'noun',
-    example: 'これは皆[みな]さんです。',
-    exampleRomaji: 'Kore wa minsan desu.',
-    exampleMeaning: 'This is an everyone.'
+    example: '皆[みな]さん、おはようございます。',
+    exampleRomaji: 'Minasan, ohayou gozaimasu.',
+    exampleMeaning: 'Good morning, everyone.'
   },
   {
     kanji: '南',
@@ -6127,9 +6127,9 @@ const n5Vocab = [
     romaji: 'minami',
     meaning: 'south',
     type: 'noun',
-    example: 'これは南[みなみ]です。',
-    exampleRomaji: 'Kore wa minami desu.',
-    exampleMeaning: 'This is a south.'
+    example: '机[つくえ]の南[みなみ]にあります。',
+    exampleRomaji: 'Tsukue no minami ni arimasu.',
+    exampleMeaning: 'It is at the south of the desk.'
   },
   {
     kanji: '耳',
@@ -6137,9 +6137,9 @@ const n5Vocab = [
     romaji: 'mimi',
     meaning: 'ear',
     type: 'noun',
-    example: 'これは耳[みみ]です。',
-    exampleRomaji: 'Kore wa mimi desu.',
-    exampleMeaning: 'This is an ear.'
+    example: '耳[みみ]が痛[いた]いです。',
+    exampleRomaji: 'Mimi ga itai desu.',
+    exampleMeaning: 'My ear hurts.'
   },
   {
     kanji: '見る',
@@ -6157,9 +6157,9 @@ const n5Vocab = [
     romaji: 'minna',
     meaning: 'all, everyone',
     type: 'noun',
-    example: 'これは皆[みんな]です。',
-    exampleRomaji: 'Kore wa minna desu.',
-    exampleMeaning: 'This is an all, everyone.'
+    example: '皆[みんな]で写真[しゃしん]を撮[と]ります。',
+    exampleRomaji: 'Minna de shashin o torimasu.',
+    exampleMeaning: 'We all take a photo together.'
   },
   {
     kanji: '六日',
@@ -6169,7 +6169,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は六日[むいか]です。',
     exampleRomaji: 'Kyou wa muika desu.',
-    exampleMeaning: 'Today is the the 6th day of a month, 6 days.'
+    exampleMeaning: 'Today is 6th day of a month.'
   },
   {
     kanji: '向こう',
@@ -6177,9 +6177,9 @@ const n5Vocab = [
     romaji: 'mukou',
     meaning: 'over there',
     type: 'noun',
-    example: 'これは向[む]こうです。',
-    exampleRomaji: 'Kore wa mukou desu.',
-    exampleMeaning: 'This is an over there.'
+    example: '向[む]こうに山[やま]が見[み]えます。',
+    exampleRomaji: 'Mukou ni yama ga miemasu.',
+    exampleMeaning: 'I can see a mountain over there.'
   },
   {
     kanji: '難しい',
@@ -6197,9 +6197,9 @@ const n5Vocab = [
     romaji: 'muttsu',
     meaning: 'six',
     type: 'noun',
-    example: 'これは六[むっ]つです。',
-    exampleRomaji: 'Kore wa muttsu desu.',
-    exampleMeaning: 'This is six.'
+    example: '全部[ぜんぶ]で六[むっ]つです。',
+    exampleRomaji: 'Zenbu de muttsu desu.',
+    exampleMeaning: 'It is six in total.'
   },
   {
     kanji: '目',
@@ -6207,9 +6207,9 @@ const n5Vocab = [
     romaji: 'me',
     meaning: 'eye',
     type: 'noun',
-    example: 'これは目[め]です。',
-    exampleRomaji: 'Kore wa me desu.',
-    exampleMeaning: 'This is an eye.'
+    example: '目[め]を洗[あら]います。',
+    exampleRomaji: 'Me o araimasu.',
+    exampleMeaning: 'I wash my eye.'
   },
   {
     kanji: 'メートル',
@@ -6217,9 +6217,9 @@ const n5Vocab = [
     romaji: 'meetoru',
     meaning: 'meter',
     type: 'noun',
-    example: 'これはメートル[メートル]です。',
-    exampleRomaji: 'Kore wa meetoru desu.',
-    exampleMeaning: 'This is a meter.'
+    example: '駅[えき]まで百[ひゃく]メートルです。',
+    exampleRomaji: 'Eki made hyaku meetoru desu.',
+    exampleMeaning: 'It is a hundred meters to the station.'
   },
   {
     kanji: 'めがね',
@@ -6227,9 +6227,9 @@ const n5Vocab = [
     romaji: 'megane',
     meaning: 'a pair of glasses',
     type: 'noun',
-    example: 'これはめがねです。',
-    exampleRomaji: 'Kore wa megane desu.',
-    exampleMeaning: 'This is a pair of glasses.'
+    example: 'そのめがねはかっこいいですね。',
+    exampleRomaji: 'Sono megane wa kakkoii desu ne.',
+    exampleMeaning: 'That pair of glasses looks nice.'
   },
   {
     kanji: 'もう',
@@ -6297,9 +6297,9 @@ const n5Vocab = [
     romaji: 'motto',
     meaning: 'more',
     type: 'noun',
-    example: 'これはもっとです。',
-    exampleRomaji: 'Kore wa motto desu.',
-    exampleMeaning: 'This is a more.'
+    example: 'もっと勉強[べんきょう]してください。',
+    exampleRomaji: 'Motto benkyou shite kudasai.',
+    exampleMeaning: 'Please study more.'
   },
   {
     kanji: '物',
@@ -6307,9 +6307,9 @@ const n5Vocab = [
     romaji: 'mono',
     meaning: 'thing',
     type: 'noun',
-    example: 'これは物[もの]です。',
-    exampleRomaji: 'Kore wa mono desu.',
-    exampleMeaning: 'This is a thing.'
+    example: '物[もの]について話[はな]します。',
+    exampleRomaji: 'Mono ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the thing.'
   },
   {
     kanji: '門',
@@ -6317,9 +6317,9 @@ const n5Vocab = [
     romaji: 'mon',
     meaning: 'gate',
     type: 'noun',
-    example: 'これは門[もん]です。',
-    exampleRomaji: 'Kore wa mon desu.',
-    exampleMeaning: 'This is a gate.'
+    example: 'この近[ちか]くに門[もん]があります。',
+    exampleRomaji: 'Kono chikaku ni mon ga arimasu.',
+    exampleMeaning: 'There is a gate nearby.'
   },
   {
     kanji: '問題',
@@ -6327,9 +6327,9 @@ const n5Vocab = [
     romaji: 'mondai',
     meaning: 'problem, question',
     type: 'noun',
-    example: 'これは問題[もんだい]です。',
-    exampleRomaji: 'Kore wa mondai desu.',
-    exampleMeaning: 'This is a problem, question.'
+    example: '机[つくえ]の上[うえ]に問題[もんだい]があります。',
+    exampleRomaji: 'Tsukue no ue ni mondai ga arimasu.',
+    exampleMeaning: 'There is a problem on the desk.'
   },
   {
     kanji: '〜屋',
@@ -6347,9 +6347,9 @@ const n5Vocab = [
     romaji: 'yaoya',
     meaning: 'vegetable shop',
     type: 'noun',
-    example: 'これは八百屋[やおや]です。',
-    exampleRomaji: 'Kore wa yaoya desu.',
-    exampleMeaning: 'This is a vegetable shop.'
+    example: '八百屋[やおや]で野菜[やさい]を買[か]います。',
+    exampleRomaji: 'Yaoya de yasai o kaimasu.',
+    exampleMeaning: 'I buy vegetables at the greengrocer.'
   },
   {
     kanji: '野菜',
@@ -6357,9 +6357,9 @@ const n5Vocab = [
     romaji: 'yasai',
     meaning: 'vegetable',
     type: 'noun',
-    example: 'これは野菜[やさい]です。',
-    exampleRomaji: 'Kore wa yasai desu.',
-    exampleMeaning: 'This is a vegetable.'
+    example: '野菜[やさい]を食[た]べます。',
+    exampleRomaji: 'Yasai o tabemasu.',
+    exampleMeaning: 'I eat vegetable.'
   },
   {
     kanji: '優しい',
@@ -6407,9 +6407,9 @@ const n5Vocab = [
     romaji: 'yattsu',
     meaning: 'eight',
     type: 'noun',
-    example: 'これは八[やっ]つです。',
-    exampleRomaji: 'Kore wa yattsu desu.',
-    exampleMeaning: 'This is eight.'
+    example: '答[こた]えは八[やっ]つです。',
+    exampleRomaji: 'Kotae wa yattsu desu.',
+    exampleMeaning: 'The answer is eight.'
   },
   {
     kanji: '山',
@@ -6417,9 +6417,9 @@ const n5Vocab = [
     romaji: 'yama',
     meaning: 'mountain',
     type: 'noun',
-    example: 'これは山[やま]です。',
-    exampleRomaji: 'Kore wa yama desu.',
-    exampleMeaning: 'This is a mountain.'
+    example: 'あそこに山[やま]が見[み]えます。',
+    exampleRomaji: 'Asoko ni yama ga miemasu.',
+    exampleMeaning: 'You can see a mountain over there.'
   },
   {
     kanji: 'やる',
@@ -6439,7 +6439,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は八日[ようか]です。',
     exampleRomaji: 'Kyou wa youka desu.',
-    exampleMeaning: 'Today is the 8th day of the month, 8 days.'
+    exampleMeaning: 'Today is 8th day of the month.'
   },
   {
     kanji: '洋服',
@@ -6447,9 +6447,9 @@ const n5Vocab = [
     romaji: 'youfuku',
     meaning: 'western style clothing',
     type: 'noun',
-    example: 'これは洋服[ようふく]です。',
-    exampleRomaji: 'Kore wa youfuku desu.',
-    exampleMeaning: 'This is a western style clothing.'
+    example: '洋服[ようふく]をください。',
+    exampleRomaji: 'Youfuku o kudasai.',
+    exampleMeaning: 'Please give me the western style clothing.'
   },
   {
     kanji: 'よく',
@@ -6467,9 +6467,9 @@ const n5Vocab = [
     romaji: 'yoko',
     meaning: 'horizontal',
     type: 'noun',
-    example: 'これは横[よこ]です。',
-    exampleRomaji: 'Kore wa yoko desu.',
-    exampleMeaning: 'This is a horizontal.'
+    example: '本[ほん]はテレビの横[よこ]にあります。',
+    exampleRomaji: 'Hon wa terebi no yoko ni arimasu.',
+    exampleMeaning: 'The book is beside the TV.'
   },
   {
     kanji: '四日',
@@ -6479,7 +6479,7 @@ const n5Vocab = [
     type: 'noun',
     example: '今日[きょう]は四日[よっか]です。',
     exampleRomaji: 'Kyou wa yokka desu.',
-    exampleMeaning: 'Today is the 4th day of the month, 4 days.'
+    exampleMeaning: 'Today is 4th day of the month.'
   },
   {
     kanji: '四つ',
@@ -6487,9 +6487,9 @@ const n5Vocab = [
     romaji: 'yottsu',
     meaning: 'four',
     type: 'noun',
-    example: 'これは四[よっ]つです。',
-    exampleRomaji: 'Kore wa yottsu desu.',
-    exampleMeaning: 'This is four.'
+    example: '全部[ぜんぶ]で四[よっ]つです。',
+    exampleRomaji: 'Zenbu de yottsu desu.',
+    exampleMeaning: 'It is four in total.'
   },
   {
     kanji: '呼ぶ',
@@ -6557,9 +6557,9 @@ const n5Vocab = [
     romaji: 'rajio',
     meaning: 'radio',
     type: 'noun',
-    example: 'これはラジオ[ラジオ]です。',
-    exampleRomaji: 'Kore wa rajio desu.',
-    exampleMeaning: 'This is a radio.'
+    example: 'そのラジオを取[と]ってください。',
+    exampleRomaji: 'Sono rajio o totte kudasai.',
+    exampleMeaning: 'Please pass me that radio.'
   },
   {
     kanji: '立派',
@@ -6567,9 +6567,9 @@ const n5Vocab = [
     romaji: 'rippa',
     meaning: 'splendid',
     type: 'noun',
-    example: 'これは立派[りっぱ]です。',
-    exampleRomaji: 'Kore wa rippa desu.',
-    exampleMeaning: 'This is a splendid.'
+    example: 'この建物[たてもの]は立派[りっぱ]です。',
+    exampleRomaji: 'Kono tatemono wa rippa desu.',
+    exampleMeaning: 'This building is splendid.'
   },
   {
     kanji: '留学生',
@@ -6577,9 +6577,9 @@ const n5Vocab = [
     romaji: 'ryuugakusei',
     meaning: 'foreign student',
     type: 'noun',
-    example: 'これは留学生[りゅうがくせい]です。',
-    exampleRomaji: 'Kore wa ryuugakusei desu.',
-    exampleMeaning: 'This is a foreign student.'
+    example: '留学生[りゅうがくせい]に会[あ]います。',
+    exampleRomaji: 'Ryuugakusei ni aimasu.',
+    exampleMeaning: 'I meet a foreign student.'
   },
   {
     kanji: '両親',
@@ -6587,9 +6587,9 @@ const n5Vocab = [
     romaji: 'ryoushin',
     meaning: 'parents',
     type: 'noun',
-    example: 'これは両親[りょうしん]です。',
-    exampleRomaji: 'Kore wa ryoushin desu.',
-    exampleMeaning: 'This is a parents.'
+    example: '両親[りょうしん]と話[はな]します。',
+    exampleRomaji: 'Ryoushin to hanashimasu.',
+    exampleMeaning: 'I talk with a parents.'
   },
   {
     kanji: '料理',
@@ -6597,9 +6597,9 @@ const n5Vocab = [
     romaji: 'ryouri',
     meaning: 'cooking',
     type: 'noun',
-    example: 'これは料理[りょうり]です。',
-    exampleRomaji: 'Kore wa ryouri desu.',
-    exampleMeaning: 'This is a cooking.'
+    example: '料理[りょうり]があります。',
+    exampleRomaji: 'Ryouri ga arimasu.',
+    exampleMeaning: 'There is a cooking.'
   },
   {
     kanji: '旅行',
@@ -6607,9 +6607,9 @@ const n5Vocab = [
     romaji: 'ryokou',
     meaning: 'travel',
     type: 'noun',
-    example: 'これは旅行[りょこう]です。',
-    exampleRomaji: 'Kore wa ryokou desu.',
-    exampleMeaning: 'This is a travel.'
+    example: '旅行[りょこう]が好[す]きです。',
+    exampleRomaji: 'Ryokou ga suki desu.',
+    exampleMeaning: 'I like a travel.'
   },
   {
     kanji: 'れい',
@@ -6617,9 +6617,9 @@ const n5Vocab = [
     romaji: 'rei',
     meaning: 'zero',
     type: 'noun',
-    example: 'これはれいです。',
-    exampleRomaji: 'Kore wa rei desu.',
-    exampleMeaning: 'This is zero.'
+    example: '答[こた]えはれいです。',
+    exampleRomaji: 'Kotae wa rei desu.',
+    exampleMeaning: 'The answer is zero.'
   },
   {
     kanji: '冷蔵庫',
@@ -6627,9 +6627,9 @@ const n5Vocab = [
     romaji: 'reizouko',
     meaning: 'refrigerator',
     type: 'noun',
-    example: 'これは冷蔵庫[れいぞうこ]です。',
-    exampleRomaji: 'Kore wa reizouko desu.',
-    exampleMeaning: 'This is a refrigerator.'
+    example: '机[つくえ]の上[うえ]に冷蔵庫[れいぞうこ]があります。',
+    exampleRomaji: 'Tsukue no ue ni reizouko ga arimasu.',
+    exampleMeaning: 'There is a refrigerator on the desk.'
   },
   {
     kanji: 'レコード',
@@ -6637,9 +6637,9 @@ const n5Vocab = [
     romaji: 'rekoodo',
     meaning: 'record',
     type: 'noun',
-    example: 'これはレコード[レコード]です。',
-    exampleRomaji: 'Kore wa rekoodo desu.',
-    exampleMeaning: 'This is a record.'
+    example: 'いいレコードですね。',
+    exampleRomaji: 'Ii rekoodo desu ne.',
+    exampleMeaning: 'That is a good record, isn\'t it?'
   },
   {
     kanji: 'レストラン',
@@ -6647,9 +6647,9 @@ const n5Vocab = [
     romaji: 'resutoran',
     meaning: 'restaurant',
     type: 'noun',
-    example: 'これはレストラン[レストラン]です。',
-    exampleRomaji: 'Kore wa resutoran desu.',
-    exampleMeaning: 'This is a restaurant.'
+    example: 'レストランへ行[い]きます。',
+    exampleRomaji: 'Resutoran e ikimasu.',
+    exampleMeaning: 'I go to the restaurant.'
   },
   {
     kanji: '練習',
@@ -6657,9 +6657,9 @@ const n5Vocab = [
     romaji: 'renshuu',
     meaning: 'practice',
     type: 'noun',
-    example: 'これは練習[れんしゅう]です。',
-    exampleRomaji: 'Kore wa renshuu desu.',
-    exampleMeaning: 'This is a practice.'
+    example: '練習[れんしゅう]について話[はな]します。',
+    exampleRomaji: 'Renshuu ni tsuite hanashimasu.',
+    exampleMeaning: 'I talk about the practice.'
   },
   {
     kanji: '六',
@@ -6667,9 +6667,9 @@ const n5Vocab = [
     romaji: 'roku',
     meaning: 'six',
     type: 'noun',
-    example: 'これは六[ろく]です。',
-    exampleRomaji: 'Kore wa roku desu.',
-    exampleMeaning: 'This is six.'
+    example: '全部[ぜんぶ]で六[ろく]です。',
+    exampleRomaji: 'Zenbu de roku desu.',
+    exampleMeaning: 'It is six in total.'
   },
   {
     kanji: 'ワイシャツ',
@@ -6677,9 +6677,9 @@ const n5Vocab = [
     romaji: 'waishatsu',
     meaning: 'white shirt',
     type: 'noun',
-    example: 'これはワイシャツ[ワイシャツ]です。',
-    exampleRomaji: 'Kore wa waishatsu desu.',
-    exampleMeaning: 'This is a white shirt.'
+    example: '新[あたら]しいワイシャツを買[か]いました。',
+    exampleRomaji: 'Atarashii waishatsu o kaimashita.',
+    exampleMeaning: 'I bought a new white shirt.'
   },
   {
     kanji: '若い',

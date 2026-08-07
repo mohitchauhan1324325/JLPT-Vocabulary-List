@@ -41,10 +41,12 @@ router.get('/', async (req, res, next) => {
     // --------------------------
 
     if (all === 'true') {
-      const words = await Vocab.find(filter).sort({
-        level: -1,
-        kanji: 1,
-      });
+      const words = await Vocab.find(filter)
+        .collation({ locale: "ja" })
+        .sort({
+          kana: 1,
+          kanji: 1,
+        });
 
       return res.json({
         success: true,
@@ -62,8 +64,9 @@ router.get('/', async (req, res, next) => {
     const totalWords = await Vocab.countDocuments(filter);
 
     const words = await Vocab.find(filter)
+      .collation({ locale: "ja" })
       .sort({
-        level: -1,
+        kana: 1,
         kanji: 1,
       })
       .skip((pageNumber - 1) * pageSize)
@@ -109,7 +112,14 @@ router.get('/:level', async (req, res, next) => {
     if (!validLevels.includes(level.toUpperCase())) {
       return res.status(400).json({ success: false, message: 'Invalid level' });
     }
-    const words = await Vocab.find({ level: level.toUpperCase() }).sort({ kanji: 1 });
+    const words = await Vocab.find({
+      level: level.toUpperCase()
+    })
+      .collation({ locale: "ja" })
+      .sort({
+        kana: 1,
+        kanji: 1,
+      });
     res.json({ success: true, count: words.length, data: words });
   } catch (err) {
     next(err);

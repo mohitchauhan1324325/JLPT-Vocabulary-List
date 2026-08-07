@@ -11,17 +11,11 @@ dotenv.config({ path: path.join(__dirname, '../.env') });
 const Vocab = require('../models/Vocab');
 const n5Vocab = require('./n5_vocab');
 
-console.log("First word:", n5Vocab[0]);
-console.log("Expression count:", n5Vocab.filter(x => x.type === "expression").length);
-console.log("Counter count:", n5Vocab.filter(x => x.type === "counter").length);
-console.log("Question count:", n5Vocab.filter(x => x.type === "question").length);
-console.log("Number count:", n5Vocab.filter(x => x.type === "number").length);
-console.log("Prefix count:", n5Vocab.filter(x => x.type === "prefix").length);
-
 const vocabData = {
   N5: n5Vocab,
 };
-console.log(n5Vocab.find(x => x.kanji === "〜台"));
+
+
 async function seed() {
   try {
     await mongoose.connect(process.env.MONGO_URI);
