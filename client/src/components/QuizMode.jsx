@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useApp } from "../context/AppContext";
 import { renderFurigana } from "../utils/furigana";
+import { createQuiz, getKanaRanges } from "../utils/QuizEngine";
 
 /* -------------------- Helpers -------------------- */
 
@@ -46,10 +47,15 @@ export default function QuizMode() {
         quizScore,
         recordQuizAnswer,
         showToast,
+        currentLevel,
     } = useApp();
 
-    /* Quiz */
+    const kanaRanges = getKanaRanges();
 
+    /* Quiz */
+    const [selectedAlphabet, setSelectedAlphabet] = useState('all');
+    const [selectedType, setSelectedType] = useState('all');
+    const [questionCount, setQuestionCount] = useState(10);
     const [quizWords, setQuizWords] = useState([]);
 
     const [currentIndex, setCurrentIndex] =
@@ -77,34 +83,31 @@ export default function QuizMode() {
 
     /* -------------------- Start Quiz -------------------- */
 
-    useEffect(() => {
+    const startQuiz = () => {
+        const quiz = createQuiz({
+            allWords,
+            alphabet: selectedAlphabet,
+            type: selectedType,
+            count: questionCount,
+        });
 
-        if (allWords.length < 4) return;
+        if (quiz.length < 4) {
+            showToast('Not enough words for this selection.');
+            return;
+        }
 
-        const shuffled = shuffle(allWords);
-
-        setQuizWords(shuffled);
-
+        setQuizWords(quiz);
         setCurrentIndex(0);
-
         setFinished(false);
-
         setAnswered(false);
-
         setSelected(null);
-
         setCorrectCount(0);
-
         setWrongCount(0);
 
         setQuestion(
-            buildQuestion(
-                shuffled[0],
-                shuffled
-            )
+            buildQuestion(quiz[0], quiz)
         );
-
-    }, [allWords]);
+    };
 
     /* -------------------- Next -------------------- */
 
@@ -140,30 +143,27 @@ export default function QuizMode() {
     /* -------------------- Restart -------------------- */
 
     const restartQuiz = () => {
+        const quiz = createQuiz({
+            allWords,
+            alphabet: selectedAlphabet,
+            type: selectedType,
+            count: questionCount,
+        });
 
-        const shuffled = shuffle(allWords);
+        if (quiz.length < 4) {
+            showToast('Not enough words for this selection.');
+            return;
+        }
 
-        setQuizWords(shuffled);
-
+        setQuizWords(quiz);
         setCurrentIndex(0);
-
         setFinished(false);
-
         setAnswered(false);
-
         setSelected(null);
-
         setCorrectCount(0);
-
         setWrongCount(0);
 
-        setQuestion(
-            buildQuestion(
-                shuffled[0],
-                shuffled
-            )
-        );
-
+        setQuestion(buildQuestion(quiz[0], quiz));
     };
 
     /* -------------------- Answer -------------------- */
@@ -264,27 +264,7 @@ export default function QuizMode() {
 
     /* -------------------- Empty -------------------- */
 
-    if (!question && !finished) {
 
-        return (
-            <section className="quiz-mode visible">
-
-                <div className="empty-state">
-
-                    <span className="empty-kanji">
-                        問
-                    </span>
-
-                    <p className="empty-text">
-                        Need at least 4 vocabulary words.
-                    </p>
-
-                </div>
-
-            </section>
-        );
-
-    }
 
     /* -------------------- Finish -------------------- */
 
@@ -354,6 +334,48 @@ export default function QuizMode() {
             aria-label="Quiz Mode"
         >
 
+            <div className="quiz-alphabet">
+                <button
+                    className={selectedAlphabet === 'all' ? 'active' : ''}
+                    onClick={() => setSelectedAlphabet('all')}
+                >
+                    All
+                </button>
+
+                {Object.entries(kanaRanges).map(([id, range]) => (
+                    <button
+                        key={id}
+                        className={selectedAlphabet === id ? 'active' : ''}
+                        onClick={() => setSelectedAlphabet(id)}
+                    >
+                        {range.label}
+                    </button>
+                ))}
+            </div>
+
+            <div className="quiz-count">
+                <button
+                    className={questionCount === 10 ? 'active' : ''}
+                    onClick={() => setQuestionCount(10)}
+                >
+                    10
+                </button>
+
+                <button
+                    className={questionCount === 20 ? 'active' : ''}
+                    onClick={() => setQuestionCount(20)}
+                >
+                    20
+                </button>
+
+                <button
+                    className={questionCount === 30 ? 'active' : ''}
+                    onClick={() => setQuestionCount(30)}
+                >
+                    30
+                </button>
+            </div>
+
             <div className="quiz-score">
 
                 <strong>
@@ -394,58 +416,72 @@ export default function QuizMode() {
                 }}
             />
 
-            <div className="quiz-question">
+            {!question && !finished && (
+                <button
+                    className="quiz-next-btn visible"
+                    onClick={startQuiz}
+                >
+                    ▶ Start Quiz
+                </button>
+            )}
 
-                <span className="quiz-question-kanji">
-                    {question.correct.kanji}
-                </span>
+            {question && (
+                <div className="quiz-question">
 
-                <div className="quiz-question-kana">
-                    {question.correct.kana}
+                    <span className="quiz-question-kanji">
+                        {question.correct.kanji}
+                    </span>
+
+                    <div className="quiz-question-kana">
+                        {question.correct.kana}
+                    </div>
+
                 </div>
+            )}
 
-            </div>
+            {question && (
 
-            <div
-                className="quiz-options"
-                role="group"
-            >
+                <div
+                    className="quiz-options"
+                    role="group"
+                >
 
-                {question.options.map((opt, index) => {
+                    {question.options.map((opt, index) => {
 
-                    let cls = "quiz-option";
+                        let cls = "quiz-option";
 
-                    if (answered) {
-                        if (opt.meaning === question.correct.meaning) {
-                            cls += " correct";
-                        } else if (opt.meaning === selected) {
-                            cls += " wrong";
+                        if (answered) {
+                            if (opt.meaning === question.correct.meaning) {
+                                cls += " correct";
+                            } else if (opt.meaning === selected) {
+                                cls += " wrong";
+                            }
                         }
-                    }
 
-                    return (
-                        <button
-                            key={index}
-                            className={cls}
-                            disabled={answered}
-                            onClick={() => handleAnswer(opt)}
-                        >
-                            <span
-                                style={{
-                                    fontWeight: 600,
-                                    marginRight: 8,
-                                }}
+                        return (
+                            <button
+                                key={index}
+                                className={cls}
+                                disabled={answered}
+                                onClick={() => handleAnswer(opt)}
                             >
-                                {index + 1}.
-                            </span>
+                                <span
+                                    style={{
+                                        fontWeight: 600,
+                                        marginRight: 8,
+                                    }}
+                                >
+                                    {index + 1}.
+                                </span>
 
-                            {opt.meaning}
-                        </button>
-                    );
+                                {opt.meaning}
+                            </button>
+                        );
 
-                })}
+                    })}
 
-            </div>
+                </div>
+            )}
 
             {answered && (
                 <>

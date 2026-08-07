@@ -1035,6 +1035,33 @@ body::before {
   background: var(--sumi);
 }
 
+.quiz-alphabet button,
+.quiz-count button {
+  padding: 6px 16px;
+  border: 1px solid var(--washi-dark);
+  border-radius: 20px;
+  background: rgba(255, 248, 238, 0.8);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12px;
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: 0.05em;
+}
+
+.quiz-alphabet button:hover,
+.quiz-count button:hover {
+  background: rgba(255, 248, 238, 1);
+  color: var(--ink);
+}
+
+.quiz-alphabet button.active,
+.quiz-count button.active {
+  background: var(--ink);
+  color: #fff !important;
+  border-color: var(--ink);
+}
+
 /* ── Toast ── */
 .toast {
   position: fixed;
