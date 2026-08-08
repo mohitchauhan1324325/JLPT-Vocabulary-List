@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { renderFurigana } from '../utils/furigana';
+import { speakJapanese } from '../utils/speech';
 
 const TYPE_CHAR = {
   verb: '動',

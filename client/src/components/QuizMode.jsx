@@ -540,6 +540,22 @@ export default function QuizMode() {
                                         marginTop: 10,
                                     }}
                                 >
+                                    <strong>Romaji:</strong>
+                                </p>
+
+                                <p>
+                                    {question.correct.exampleRomaji}
+                                </p>
+                            </>
+                        )}
+
+                        {question.correct.exampleMeaning && (
+                            <>
+                                <p
+                                    style={{
+                                        marginTop: 10,
+                                    }}
+                                >
                                     <strong>Translation:</strong>
                                 </p>
 
