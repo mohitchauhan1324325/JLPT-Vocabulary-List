@@ -538,6 +538,29 @@ body::before {
   width: 6px;
 }
 
+/* 🔊 Pronunciation buttons */
+.speak-btn {
+  padding: 6px 10px;
+  border: 1px solid var(--washi-dark);
+  border-radius: 20px;
+  background: rgba(255, 248, 238, 0.8);
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13px;
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.speak-btn:hover {
+  background: rgba(255, 248, 238, 1);
+  color: var(--ink);
+}
+
+.speak-btn:active {
+  transform: scale(0.95);
+}
+
 .level-N5 {
   --level-color: var(--n5-color);
 }

@@ -70,6 +70,17 @@ export default function VocabCard({ word, index }) {
           <div className="kanji-display">
             <span className="kanji-main">{word.kanji}</span>
             <span className="kana-reading">{word.kana}</span>
+            <button
+              className="speak-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                speakJapanese(word.kana);
+              }}
+              aria-label={`Pronounce ${word.kana}`}
+              title="Pronounce"
+            >
+              🔊
+            </button>
           </div>
           <div className="card-badges">
             <span className={`level-badge badge-${word.level}`}>{word.level}</span>
@@ -78,8 +89,6 @@ export default function VocabCard({ word, index }) {
             </span>
           </div>
         </div>
-
-        <div className="card-divider" />
 
         {/* Meaning */}
         <div className="meaning-section">
@@ -92,7 +101,17 @@ export default function VocabCard({ word, index }) {
         <div className="example-section">
           <div className="example-jp">
             {renderFurigana(word.example)}
+            <button
+              className="speak-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                speakJapanese(word.example);
+              }}
+            >
+              🔊
+            </button>
           </div>
+
 
           <div className="example-romaji">
             {word.exampleRomaji}
