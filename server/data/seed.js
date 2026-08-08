@@ -2,11 +2,17 @@
  * Seed script — populates MongoDB with JLPT vocabulary data
  * Run with: node data/seed.js
  */
+
+
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const path = require('path');
 
 dotenv.config({ path: path.join(__dirname, '../.env') });
+
+const dns = require('dns');
+
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const Vocab = require('../models/Vocab');
 const n5Vocab = require('./n5_vocab');
