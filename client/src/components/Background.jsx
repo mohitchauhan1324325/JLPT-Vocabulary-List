@@ -3,51 +3,80 @@ import React, { useEffect, useRef } from 'react';
 const BG_CHARS = ['語', '彙', '学', '道', '心', '力', '風', '花', '水', '山', '月', '星', '夢', '空', '海'];
 const PETALS = ['🌸', '🌺', '🍃'];
 
+const MAX_PETALS = 12;
+
 export default function Background() {
   const bgRef = useRef(null);
   const petalsRef = useRef(null);
-  const petalInterval = useRef(null);
 
   useEffect(() => {
-    // Floating kanji
     const bg = bgRef.current;
+    const container = petalsRef.current;
+
+    if (!bg || !container) return;
+
+    // ── Floating Kanji ──
     for (let i = 0; i < 12; i++) {
       const el = document.createElement('div');
+
       el.className = 'bg-kanji-char';
-      el.textContent = BG_CHARS[Math.floor(Math.random() * BG_CHARS.length)];
+      el.textContent =
+        BG_CHARS[Math.floor(Math.random() * BG_CHARS.length)];
+
       el.style.left = Math.random() * 100 + 'vw';
-      el.style.animationDuration = (25 + Math.random() * 40) + 's';
-      el.style.animationDelay = (Math.random() * 30) + 's';
-      el.style.fontSize = (60 + Math.random() * 100) + 'px';
+      el.style.animationDuration = 25 + Math.random() * 40 + 's';
+      el.style.animationDelay = Math.random() * 30 + 's';
+      el.style.fontSize = 60 + Math.random() * 100 + 'px';
+
       bg.appendChild(el);
     }
 
-    // Sakura petals
-    const container = petalsRef.current;
+    // ── Sakura Petals ──
     const createPetal = () => {
+      // Never allow more than MAX_PETALS
+      if (container.children.length >= MAX_PETALS) return;
+
       const el = document.createElement('div');
+
       el.className = 'petal';
-      el.textContent = PETALS[Math.floor(Math.random() * PETALS.length)];
+      el.textContent =
+        PETALS[Math.floor(Math.random() * PETALS.length)];
+
       el.style.left = Math.random() * 100 + 'vw';
-      el.style.fontSize = (10 + Math.random() * 10) + 'px';
-      el.style.animationDuration = (8 + Math.random() * 12) + 's';
+      el.style.fontSize = 10 + Math.random() * 10 + 'px';
+      el.style.animationDuration = 8 + Math.random() * 12 + 's';
+
       container.appendChild(el);
-      el.addEventListener('animationend', () => el.remove());
+
+      const removePetal = () => {
+        el.removeEventListener('animationend', removePetal);
+        el.remove();
+      };
+
+      el.addEventListener('animationend', removePetal);
     };
 
-    // Seed a few immediately
-    for (let i = 0; i < 3; i++) setTimeout(createPetal, i * 800);
-    petalInterval.current = setInterval(createPetal, 2200);
+    // Initial petals
+    for (let i = 0; i < MAX_PETALS; i++) {
+      setTimeout(createPetal, i * 700);
+    }
+
+    // Create new petals slowly
+    const interval = setInterval(createPetal, 2200);
 
     return () => {
-      clearInterval(petalInterval.current);
+      clearInterval(interval);
+
+      // Clean everything when component unmounts
+      bg.replaceChildren();
+      container.replaceChildren();
     };
   }, []);
 
   return (
     <>
-      <div className="bg-kanji" ref={bgRef} aria-hidden="true" />
-      <div ref={petalsRef} aria-hidden="true" />
+      <div ref={bgRef} className="bg-kanji-container" />
+      <div ref={petalsRef} className="petals-container" />
     </>
   );
 }

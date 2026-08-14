@@ -319,6 +319,17 @@ export default function FlashcardMode() {
               </div>
             )}
 
+            {word.exampleRomaji && (
+              <div
+                className="flashcard-example-romaji"
+                style={{ marginTop: 8 }}
+              >
+                <strong>Romaji</strong>
+
+                <p>{word.exampleRomaji}</p>
+              </div>
+            )}
+
             {word.exampleMeaning && (
               <div
                 className="flashcard-example-meaning"
