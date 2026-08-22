@@ -6753,4 +6753,4 @@ const n5Vocab = [
   },
 ];
 
-module.exports = n5Vocab;
+export default n5Vocab;

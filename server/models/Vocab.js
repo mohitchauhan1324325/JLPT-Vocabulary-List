@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const vocabSchema = new mongoose.Schema(
   {
@@ -44,4 +44,4 @@ vocabSchema.index({ type: 1 });
 vocabSchema.index({ kana: 1 });
 vocabSchema.index({ kanji: 'text', kana: 'text', romaji: 'text', meaning: 'text' });
 
-module.exports = mongoose.model('Vocab', vocabSchema);
+export default mongoose.model('Vocab', vocabSchema);

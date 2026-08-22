@@ -1,45 +1,59 @@
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
+import dns from 'dns';
 
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const dotenv = require('dotenv');
+import vocabRoutes from './routes/vocabRoutes.js';
+import progressRoutes from './routes/progressRoutes.js';
+import errorHandler from './middleware/errorHandler.js';
 
 dotenv.config();
-
-const dns = require('dns');
 
 dns.setServers(['8.8.8.8', '8.8.4.4']);
 
 const app = express();
 
+
 // ── Middleware ──
-app.use(cors({
-  origin: [
-    'http://localhost:5173',
-    'http://localhost:3000',
-    process.env.CLIENT_URL
-  ],
-  credentials: true,
-}));
+
+app.use(
+  cors({
+    origin: [
+      'http://localhost:5173',
+      'http://localhost:3000',
+      process.env.CLIENT_URL,
+    ],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
+
 // ── Routes ──
-app.use('/api/vocab', require('./routes/vocab'));
-app.use('/api/progress', require('./routes/progress'));
+
+app.use('/api/vocab', vocabRoutes);
+app.use('/api/progress', progressRoutes);
+
 
 // ── Health check ──
+
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    message: 'JLPT Vocab API is running 🎌'
+    message: 'JLPT Vocab API is running 🎌',
   });
 });
 
+
 // ── Error Handler ──
-app.use(require('./middleware/errorHandler'));
+
+app.use(errorHandler);
+
 
 // ── MongoDB Connection ──
+
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
@@ -53,6 +67,10 @@ mongoose
     });
   })
   .catch((err) => {
-    console.error('❌ MongoDB connection error:', err.message);
+    console.error(
+      '❌ MongoDB connection error:',
+      err.message
+    );
+
     process.exit(1);
   });
