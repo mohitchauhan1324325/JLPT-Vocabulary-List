@@ -1,126 +1,179 @@
 # JLPT Vocab
 
-![Node.js](https://img.shields.io/badge/Node-18%2B-green?logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-5-purple?logo=vite&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-%F0%9F%8C%8A-47A248) ![Express](https://img.shields.io/badge/Express-4.x-black?logo=express&logoColor=white) ![License: MIT](https://img.shields.io/badge/License-MIT-yellow)
+![Node.js 18+](https://img.shields.io/badge/Node.js-18%2B-339933?logo=nodedotjs&logoColor=white) ![React 18](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=111827) ![Vite 5](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white) ![Express 4](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-8-47A248?logo=mongodb&logoColor=white) ![License MIT](https://img.shields.io/badge/License-MIT-F0C808)
 
-A polished JLPT vocabulary study application (client + API) that stores JLPT-level words and user progress in MongoDB. This repository is structured to be developer-friendly and ready for local development or deployment.
+A full-stack JLPT vocabulary study tool. Browse Japanese words, search and filter by level or part of speech, study with flashcards, take quizzes, and keep favorites and mastered words across sessions.
 
-## Table of contents
-- Quick demo
-- Tech stack
-- Project structure
-- Features
-- Getting started
-- Environment & seeding
-- Running the app
-- API reference
-- Contributing
-- License & acknowledgements
+## Contents
 
-## Quick demo
-Start the server and client locally to try the app. See "Getting started" for commands.
+- [Tech stack](#tech-stack)
+- [Features](#features)
+- [Project structure](#project-structure)
+- [Getting started](#getting-started)
+- [Available scripts](#available-scripts)
+- [API reference](#api-reference)
+- [Adding vocabulary](#adding-vocabulary)
 
 ## Tech stack
-- Frontend: React 18 + Vite
-- Backend: Node.js + Express
-- Database: MongoDB (Mongoose ODM)
-- Tooling: nodemon (dev), concurrently
 
-## Project structure
-```
-jlpt_vocab/
-├─ client/                # React + Vite frontend
-│  ├─ index.html
-│  ├─ package.json
-│  └─ src/                # React components, pages, api wrappers
-├─ server/                # Express API server
-│  ├─ data/               # seed/data files (server/data/seed.js)
-│  ├─ models/             # Mongoose models (Vocab, Progress)
-│  ├─ routes/             # API routes (vocab.js, progress.js)
-│  ├─ middleware/         # error handlers
-│  ├─ server.js           # app entry
-│  └─ package.json
-├─ package.json           # root scripts (dev, seed, install:all)
-└─ README.md
-```
+The project uses the following technologies. The logos below are loaded from Simple Icons so the stack is visible at a glance in GitHub and other Markdown viewers.
+
+<p>
+	<img src="https://cdn.simpleicons.org/react/61DAFB" width="52" height="52" alt="React" title="React" />
+	<img src="https://cdn.simpleicons.org/vite/646CFF" width="52" height="52" alt="Vite" title="Vite" />
+	<img src="https://cdn.simpleicons.org/nodedotjs/339933" width="52" height="52" alt="Node.js" title="Node.js" />
+	<img src="https://cdn.simpleicons.org/express/000000" width="52" height="52" alt="Express" title="Express" />
+	<img src="https://cdn.simpleicons.org/mongodb/47A248" width="52" height="52" alt="MongoDB" title="MongoDB" />
+	<img src="https://cdn.simpleicons.org/mongoose/880000" width="52" height="52" alt="Mongoose" title="Mongoose" />
+	<img src="https://cdn.simpleicons.org/axios/5A29E4" width="52" height="52" alt="Axios" title="Axios" />
+	<img src="https://cdn.simpleicons.org/npm/CB3837" width="52" height="52" alt="npm" title="npm" />
+</p>
+
+| Layer | Technologies |
+| --- | --- |
+| Client | React 18.3, React DOM, Vite 5.3 |
+| API | Node.js, Express 4.19, CORS, dotenv |
+| Persistence | MongoDB with Mongoose 8.5 |
+| Client HTTP | Axios |
+| Development | Vite HMR, Nodemon, Concurrently |
 
 ## Features
-- Organized JLPT vocabulary by level (N5, N4, ...)
-- Seed script to populate MongoDB with example vocabulary and example sentences
-- Simple progress tracking model for quiz/flashcard modes
-- Clean React components for study modes (flashcards, quiz, search, stats)
+
+- Vocabulary list with Japanese sorting, pagination, and empty/loading states.
+- JLPT level navigation for N1 through N5 and part-of-speech filtering.
+- Search across kanji, kana, romaji, and English meaning.
+- Flashcard mode with furigana, example sentences, speech support, favorites, and mastered status.
+- Quiz mode with persistent correct and total answer counts.
+- Per-browser progress identified by a UUID stored in `localStorage`.
+- MongoDB seed script. The bundled dataset currently seeds N5 entries; the schema supports N1-N5.
+- Responsive client served by Vite and connected to the API through a development proxy.
+
+## Project structure
+
+```text
+jlpt_vocab/
+├─ client/
+│  ├─ src/
+│  │  ├─ api/             # Axios API client and session header
+│  │  ├─ components/      # Header, filters, cards, flashcards, quiz, stats
+│  │  ├─ context/         # Application state and API-backed progress actions
+│  │  ├─ pages/           # Home page
+│  │  └─ utils/           # Furigana, quiz, and speech helpers
+│  ├─ package.json
+│  └─ vite.config.js       # Vite server and /api proxy
+├─ server/
+│  ├─ data/               # N5 vocabulary and seed script
+│  ├─ middleware/         # Error handler
+│  ├─ models/             # Vocab and Progress Mongoose models
+│  ├─ routes/             # Vocabulary and progress endpoints
+│  ├─ package.json
+│  └─ server.js           # Express entry point
+├─ package.json           # Root development scripts
+└─ README.md
+```
 
 ## Getting started
 
 ### Prerequisites
-- Node.js (18+ recommended)
-- npm (or yarn)
-- MongoDB (local or Atlas)
 
-### Install dependencies for both parts:
+- Node.js 18 or newer
+- npm
+- A running MongoDB instance or MongoDB Atlas database
+
+### Install
+
+From the repository root:
+
 ```bash
 npm run install:all
 ```
 
-### Create the server environment file `server/.env` with the minimum variables:
-```
-MONGO_URI=<your-mongo-connection-string>
+Create `server/.env`:
+
+```dotenv
+MONGO_URI=mongodb://127.0.0.1:27017/jlpt_vocab
 PORT=5000
+# Optional when the client is hosted separately:
+# CLIENT_URL=http://localhost:5173
 ```
 
-## Seeding the database
-Seed the database with the bundled JLPT vocabulary (optional but recommended):
+The client uses `/api` by default, which Vite proxies to `http://localhost:5000`. To point it at another API, create `client/.env` with:
+
+```dotenv
+VITE_API_URL=https://your-api.example.com/api
+```
+
+### Seed the database
+
+The seed command clears the `Vocab` collection before inserting the bundled N5 dataset. Run it only against the database intended for development:
+
 ```bash
 npm run seed
-# runs: cd server && node data/seed.js
 ```
 
-Notes
-- The seed script (`server/data/seed.js`) populates the `Vocab` collection. It requires a reachable MongoDB specified by `MONGO_URI`.
+### Run in development
 
-## Run the app
-Run both client and server in development (root):
+Start both services from the repository root:
+
 ```bash
 npm run dev
 ```
 
-Run server only:
+The client is available at `http://localhost:5173`. The API listens on `http://localhost:5000` by default.
+
+To run one service separately:
+
 ```bash
-cd server
-npm run dev
-# or `npm start` to run without nodemon
+cd server && npm run dev
+cd client && npm run dev
 ```
 
-Run client only:
-```bash
-cd client
-npm run dev
-```
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run install:all` | Install server and client dependencies |
+| `npm run dev` | Run the API and client concurrently |
+| `npm run server` | Run the server in development mode |
+| `npm run client` | Run the Vite client |
+| `npm run seed` | Clear and seed the vocabulary collection |
+| `cd server && npm start` | Run the API without Nodemon |
+| `cd client && npm run build` | Create a production client build |
+| `cd client && npm run preview` | Preview the production client build |
 
 ## API reference
-The server exposes simple routes under `server/routes`. Typical endpoints include:
-- `GET /api/vocab` — list or query vocabulary
-- `GET /api/vocab/:id` — retrieve a single vocab entry
-- `POST /api/progress` — record user progress (see `server/models/Progress.js`)
 
-Open the server port configured in `server/.env` (default `5000`) to access the API.
+All progress routes use the `x-session-id` header. The client creates and stores this ID automatically.
 
-## Customization & extending data
-- Add more vocabulary to the appropriate JLPT level inside `server/data/seed.js`.
-- Keep example sentences simple and include furigana as needed for kanji.
+### Vocabulary
 
-## Contributing
-- Fork and open a PR for additions or bug fixes.
-- Keep changes small and focused: new entries should update `server/data/seed.js` and any related tests.
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| `GET` | `/api/vocab` | Paginated vocabulary list |
+| `GET` | `/api/vocab?level=N5&type=noun&search=学校&page=1&limit=20` | Filter and search vocabulary |
+| `GET` | `/api/vocab?all=true` | Return all matching words for study modes |
+| `GET` | `/api/vocab/levels` | Return vocabulary counts grouped by level |
+| `GET` | `/api/vocab/:level` | Return all words for an exact N1-N5 level |
 
-## License
-MIT
+### Progress
 
-## Acknowledgements
-- Built with React, Vite, Express, and MongoDB.
-- Badges via shields.io
+| Method | Endpoint | Body | Description |
+| --- | --- | --- | --- |
+| `GET` | `/api/progress` | - | Get or create session progress |
+| `PUT` | `/api/progress/favorite` | `{ "key": "kanji+kana" }` | Toggle a favorite word |
+| `PUT` | `/api/progress/mastered` | `{ "key": "kanji+kana" }` | Toggle mastered status |
+| `PUT` | `/api/progress/quiz` | `{ "correct": true }` | Increment quiz totals and optionally correct answers |
+| `DELETE` | `/api/progress/reset` | - | Reset favorites, mastered words, and quiz score |
 
-## Contact
-If you want help improving the README or adding CI, tests, or deployment instructions, tell me what you'd like next and I can implement it.
-"# JLPT-Vocabulary-List" 
-"# JLPT-Vocabulary-List" 
-"# JLPT-Vocabulary-List" 
+### Health check
+
+```text
+GET /api/health
+```
+
+Returns `{ "status": "ok" }` when the API is running.
+
+## Adding vocabulary
+
+Add entries to `server/data/n5_vocab.js`, or add another level dataset and register it in `server/data/seed.js` under `vocabData`. Each entry needs `kanji`, `kana`, `romaji`, `meaning`, `type`, and optional example sentence fields. Supported levels are `N1`, `N2`, `N3`, `N4`, and `N5`.
+
