@@ -72,6 +72,7 @@ export default function VocabCard({ word, index }) {
             <span className="kana-reading">{word.kana}</span>
             <button
               className="speak-btn"
+              onPointerDown={(e) => e.stopPropagation()}
               onClick={(e) => {
                 e.stopPropagation();
                 speakJapanese(word.kana);
