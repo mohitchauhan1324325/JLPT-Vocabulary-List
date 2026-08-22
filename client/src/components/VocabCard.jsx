@@ -104,6 +104,7 @@ export default function VocabCard({ word, index }) {
             {renderFurigana(word.example)}
             <button
               className="speak-btn"
+              onPointerDown={(e) => e.stopPropagation()}
               onClick={(e) => {
                 e.stopPropagation();
                 speakJapanese(word.example);
