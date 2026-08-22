@@ -4,8 +4,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import dns from 'dns';
 
-import vocabRoutes from './routes/vocabRoutes.js';
-import progressRoutes from './routes/progressRoutes.js';
+import vocabRoutes from './routes/vocab.js';
+import progressRoutes from './routes/progress.js';
 import errorHandler from './middleware/errorHandler.js';
 
 dotenv.config();
