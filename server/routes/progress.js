@@ -1,16 +1,25 @@
 import express from 'express';
-import { getProgress, resetProgress, toggleFavorite, toggleMastered, updateQuizScore } from '../controller/progress.js';
+
+import {
+    getProgress,
+    resetProgress,
+    toggleFavorite,
+    toggleMastered,
+    updateQuizScore
+} from '../controller/progress.js';
+
+import authMiddleware from '../middleware/authMiddleware.js';
 
 const router = express.Router();
 
-router.get('/', getProgress);
+router.get('/', authMiddleware, getProgress);
 
-router.put('/favorite', toggleFavorite);
+router.put('/favorite', authMiddleware, toggleFavorite);
 
-router.put('/mastered', toggleMastered);
+router.put('/mastered', authMiddleware, toggleMastered);
 
-router.put('/quiz', updateQuizScore);
+router.put('/quiz', authMiddleware, updateQuizScore);
 
-router.delete('/reset', resetProgress);
+router.delete('/reset', authMiddleware, resetProgress);
 
 export default router;

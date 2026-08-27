@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 
 const userSchema = new mongoose.Schema(
   {
@@ -19,6 +20,7 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
+      minlength: 6,
     },
   },
   {
@@ -26,4 +28,32 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-export default mongoose.model('User', userSchema);
+// Password save hone se pehle hash hoga
+userSchema.pre("save", async function (next) {
+  // Agar password change nahi hua,
+  // to dobara hash mat karo
+  if (!this.isModified("password")) {
+    return next();
+  }
+
+  const salt = await bcrypt.genSalt(10);
+
+  this.password = await bcrypt.hash(
+    this.password,
+    salt
+  );
+
+  next();
+});
+
+// Login ke time password compare karne ke liye
+userSchema.methods.comparePassword = async function (
+  candidatePassword
+) {
+  return bcrypt.compare(
+    candidatePassword,
+    this.password
+  );
+};
+
+export default mongoose.model("User", userSchema);

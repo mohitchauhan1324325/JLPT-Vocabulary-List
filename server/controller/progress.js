@@ -1,15 +1,15 @@
-import Progress from '../models/Progress.js';
+import Progress from "../models/Progress.js";
 
-// Helper: get or create progress doc for sessionId
-async function getOrCreate(sessionId) {
-    if (!sessionId) {
-        throw new Error('sessionId required');
+// Helper: get or create progress doc for logged-in user
+async function getOrCreate(userId) {
+    if (!userId) {
+        throw new Error("userId required");
     }
 
-    let progress = await Progress.findOne({ sessionId });
+    let progress = await Progress.findOne({ userId });
 
     if (!progress) {
-        progress = await Progress.create({ sessionId });
+        progress = await Progress.create({ userId });
     }
 
     return progress;
@@ -19,9 +19,9 @@ async function getOrCreate(sessionId) {
 // GET /api/progress
 export const getProgress = async (req, res, next) => {
     try {
-        const sessionId = req.headers['x-session-id'];
+        const userId = req.user.userId;
 
-        const progress = await getOrCreate(sessionId);
+        const progress = await getOrCreate(userId);
 
         res.json({
             success: true,
@@ -36,17 +36,17 @@ export const getProgress = async (req, res, next) => {
 // PUT /api/progress/favorite
 export const toggleFavorite = async (req, res, next) => {
     try {
-        const sessionId = req.headers['x-session-id'];
+        const userId = req.user.userId;
         const { key } = req.body;
 
         if (!key) {
             return res.status(400).json({
                 success: false,
-                message: 'key required',
+                message: "key required",
             });
         }
 
-        const progress = await getOrCreate(sessionId);
+        const progress = await getOrCreate(userId);
 
         const idx = progress.favorites.indexOf(key);
 
@@ -54,10 +54,10 @@ export const toggleFavorite = async (req, res, next) => {
 
         if (idx === -1) {
             progress.favorites.push(key);
-            action = 'added';
+            action = "added";
         } else {
             progress.favorites.splice(idx, 1);
-            action = 'removed';
+            action = "removed";
         }
 
         await progress.save();
@@ -76,17 +76,17 @@ export const toggleFavorite = async (req, res, next) => {
 // PUT /api/progress/mastered
 export const toggleMastered = async (req, res, next) => {
     try {
-        const sessionId = req.headers['x-session-id'];
+        const userId = req.user.userId;
         const { key } = req.body;
 
         if (!key) {
             return res.status(400).json({
                 success: false,
-                message: 'key required',
+                message: "key required",
             });
         }
 
-        const progress = await getOrCreate(sessionId);
+        const progress = await getOrCreate(userId);
 
         const idx = progress.mastered.indexOf(key);
 
@@ -94,10 +94,10 @@ export const toggleMastered = async (req, res, next) => {
 
         if (idx === -1) {
             progress.mastered.push(key);
-            action = 'added';
+            action = "added";
         } else {
             progress.mastered.splice(idx, 1);
-            action = 'removed';
+            action = "removed";
         }
 
         await progress.save();
@@ -116,10 +116,10 @@ export const toggleMastered = async (req, res, next) => {
 // PUT /api/progress/quiz
 export const updateQuizScore = async (req, res, next) => {
     try {
-        const sessionId = req.headers['x-session-id'];
+        const userId = req.user.userId;
         const { correct } = req.body;
 
-        const progress = await getOrCreate(sessionId);
+        const progress = await getOrCreate(userId);
 
         progress.quizScore.total += 1;
 
@@ -142,9 +142,9 @@ export const updateQuizScore = async (req, res, next) => {
 // DELETE /api/progress/reset
 export const resetProgress = async (req, res, next) => {
     try {
-        const sessionId = req.headers['x-session-id'];
+        const userId = req.user.userId;
 
-        const progress = await getOrCreate(sessionId);
+        const progress = await getOrCreate(userId);
 
         progress.favorites = [];
         progress.mastered = [];
@@ -157,7 +157,7 @@ export const resetProgress = async (req, res, next) => {
 
         res.json({
             success: true,
-            message: 'Progress reset',
+            message: "Progress reset",
             data: progress,
         });
     } catch (err) {

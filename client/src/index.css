@@ -1309,3 +1309,440 @@ body::before {
 .example-jp {
   line-height: 2;
 }
+
+/* =========================
+   Authentication
+========================= */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px 20px;
+
+  background:
+    radial-gradient(circle at top,
+      rgba(143, 61, 61, 0.06),
+      transparent 45%);
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  padding: 38px 36px;
+
+  border: 1px solid rgba(92, 72, 58, 0.14);
+  border-radius: 18px;
+
+  background: rgba(250, 247, 242, 0.94);
+
+  box-shadow:
+    0 18px 45px rgba(92, 72, 58, 0.10);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Japanese character */
+
+.auth-mon {
+  width: 62px;
+  height: 62px;
+
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(143, 61, 61, 0.25);
+  border-radius: 50%;
+
+  background: rgba(143, 61, 61, 0.07);
+  color: #8f3d3d;
+
+  font-family: serif;
+  font-size: 29px;
+  font-weight: 600;
+
+  box-shadow:
+    inset 0 0 0 5px rgba(143, 61, 61, 0.025);
+}
+
+.auth-card h1 {
+  margin: 0;
+
+  color: #4d3b30;
+
+  text-align: center;
+
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.auth-subtitle {
+  margin: 9px 0 28px;
+
+  color: #806f62;
+
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Fields */
+
+.auth-field {
+  margin-bottom: 18px;
+}
+
+.auth-field label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #5c483a;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.auth-field input {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 12px 14px;
+
+  border: 1px solid rgba(92, 72, 58, 0.20);
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.72);
+  color: #4d3b30;
+
+  font: inherit;
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.auth-field input::placeholder {
+  color: #a4968b;
+}
+
+.auth-field input:focus {
+  border-color: #9b5555;
+
+  background: #fff;
+
+  box-shadow:
+    0 0 0 3px rgba(143, 61, 61, 0.08);
+}
+
+/* Submit */
+
+.auth-submit {
+  width: 100%;
+
+  margin-top: 4px;
+
+  padding: 12px 16px;
+
+  border: 1px solid #8f3d3d;
+  border-radius: 9px;
+
+  background: #8f3d3d;
+  color: #fff;
+
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.auth-submit:hover:not(:disabled) {
+  background: #783333;
+  border-color: #783333;
+
+  box-shadow:
+    0 5px 14px rgba(143, 61, 61, 0.18);
+
+  transform: translateY(-1px);
+}
+
+.auth-submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.auth-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Error */
+
+.auth-error {
+  margin: 0 0 16px;
+
+  padding: 10px 12px;
+
+  border: 1px solid rgba(143, 61, 61, 0.18);
+  border-radius: 8px;
+
+  background: rgba(143, 61, 61, 0.07);
+  color: #8f3d3d;
+
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Login / Register switch */
+
+.auth-switch {
+  margin-top: 22px;
+
+  color: #806f62;
+
+  text-align: center;
+
+  font-size: 13px;
+}
+
+.auth-switch button {
+  margin-left: 6px;
+
+  border: none;
+  background: none;
+
+  color: #8f3d3d;
+
+  font: inherit;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.auth-switch button:hover {
+  color: #783333;
+  text-decoration: underline;
+}
+
+/* Loading */
+
+.auth-loading {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #faf7f2;
+
+  color: #5c483a;
+
+  font-size: 15px;
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .auth-page {
+    padding: 20px 14px;
+  }
+
+  .auth-card {
+    padding: 30px 22px;
+    border-radius: 15px;
+  }
+
+  .auth-card h1 {
+    font-size: 23px;
+  }
+
+  .auth-mon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 26px;
+  }
+}
+
+/* =========================
+   Navigation Bar
+========================= */
+
+.navbar {
+  width: 100%;
+  margin: 0 auto;
+
+  background: rgba(250, 247, 242, 0.92);
+  border-top: 1px solid rgba(92, 72, 58, 0.10);
+  border-bottom: 1px solid rgba(92, 72, 58, 0.14);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.navbar-inner {
+  width: min(1100px, calc(100% - 40px));
+  min-height: 54px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* Navigation links */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.navbar-links a {
+  position: relative;
+
+  padding: 8px 14px;
+
+  color: #5c483a;
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #8f3d3d;
+  background: rgba(143, 61, 61, 0.07);
+}
+
+/* Small Japanese-style underline on hover */
+
+.navbar-links a::after {
+  content: "";
+
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 4px;
+
+  height: 1px;
+
+  background: #9b5555;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.2s ease;
+}
+
+.navbar-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* User section */
+
+.navbar-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #5c483a;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Logout */
+
+.navbar-logout {
+  padding: 7px 14px;
+
+  border: 1px solid rgba(143, 61, 61, 0.30);
+  border-radius: 8px;
+
+  background: transparent;
+  color: #8f3d3d;
+
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.navbar-logout:hover {
+  background: #8f3d3d;
+  border-color: #8f3d3d;
+  color: #fff;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .navbar-inner {
+    width: calc(100% - 20px);
+    min-height: 50px;
+    gap: 10px;
+  }
+
+  .navbar-links {
+    gap: 0;
+  }
+
+  .navbar-links a {
+    padding: 7px 8px;
+    font-size: 12px;
+  }
+
+  .navbar-links a::after {
+    left: 8px;
+    right: 8px;
+  }
+
+  .navbar-user {
+    display: none;
+  }
+
+  .navbar-logout {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}

@@ -10,6 +10,7 @@ import FilterControls from '../components/FilterControls';
 import VocabCard from '../components/VocabCard';
 import FlashcardMode from '../components/FlashcardMode';
 import QuizMode from '../components/QuizMode';
+import Navbar from '../components/Navbar';
 
 const MODES = [
   { id: 'list', label: '📚 語彙リスト · List' },
@@ -41,6 +42,7 @@ export default function Home() {
       <Background />
 
       <div id="app">
+        <Navbar />
         <Header />
         <SearchBar />
         <LevelNav />

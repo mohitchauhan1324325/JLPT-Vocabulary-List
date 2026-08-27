@@ -7,6 +7,7 @@ import dns from 'dns';
 import vocabRoutes from './routes/vocab.js';
 import progressRoutes from './routes/progress.js';
 import errorHandler from './middleware/errorHandler.js';
+import authRoutes from "./routes/auth.js";
 
 dotenv.config();
 
@@ -35,6 +36,7 @@ app.use(express.json());
 
 app.use('/api/vocab', vocabRoutes);
 app.use('/api/progress', progressRoutes);
+app.use("/api/auth", authRoutes);
 
 
 // ── Health check ──
