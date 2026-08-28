@@ -7,6 +7,7 @@ A full-stack JLPT vocabulary study tool. Browse Japanese words, search and filte
 ## Contents
 
 - [Tech stack](#tech-stack)
+- [Project analysis](#project-analysis)
 - [Features](#features)
 - [Project structure](#project-structure)
 - [Getting started](#getting-started)
@@ -37,6 +38,50 @@ The project uses the following technologies. The logos below are loaded from Sim
 | Client HTTP | Axios |
 | Development | Vite HMR, Nodemon, Concurrently |
 
+## Project analysis
+
+JLPT Vocab is a two-process MERN-style application:
+
+```text
+Browser (React + Vite)
+	|
+	| Axios requests to /api
+	v
+Express API (Node.js)
+	|
+	v
+MongoDB (User, Progress, and Vocab collections)
+```
+
+### Runtime flow
+
+1. Vite serves the React client on port `5173` and proxies `/api` requests to the Express server on port `5000` during development.
+2. The client starts at `/`, where the landing page links users to authentication or the vocabulary experience.
+3. Registration and login call `/api/auth`, receive a seven-day JWT, and store the token and basic user record in `localStorage`.
+4. `App.jsx` protects `/vocabulary`, `/quiz`, and `/flashcards`. `AuthContext` adds the JWT as a Bearer token to every Axios request.
+5. `AppContext` owns shared study state. Changing the JLPT level, part of speech, search text, or page triggers a paginated vocabulary request and a second `all=true` request for study modes.
+6. The API filters vocabulary by level, type, and a case-insensitive search over kanji, kana, romaji, and English meaning. Results are sorted with Japanese collation.
+7. Authenticated progress actions update the user's single `Progress` document. Favorites and mastered words are stored as vocabulary keys, while quiz activity increments `correct` and `total` counters.
+
+### State and persistence boundaries
+
+| Concern | Owner | Persistence |
+| --- | --- | --- |
+| Authenticated user and JWT | `AuthContext` | Browser `localStorage`; user and hashed password in MongoDB |
+| Vocabulary filters, page, loading, and toast state | `AppContext` | React memory |
+| Vocabulary records | Express vocabulary controller | MongoDB `Vocab` collection |
+| Favorites, mastered words, and quiz score | Express progress controller | MongoDB `Progress` collection, keyed by `userId` |
+| `jlpt_session_id` | Axios client | Browser `localStorage`; sent as `x-session-id`, but not currently used by the server for authorization |
+
+### Security and operational notes
+
+- Passwords are hashed with `bcryptjs`; passwords are never returned in auth responses.
+- Progress endpoints require a valid `Authorization: Bearer <token>` header. Vocabulary and health endpoints are public.
+- `JWT_SECRET` is required for registration, login, and progress requests and must be set in `server/.env`.
+- CORS allows the local Vite and port `3000` origins plus the optional `CLIENT_URL` value.
+- The seed script deletes the complete vocabulary collection before inserting its configured datasets. Treat it as a development or intentionally reset operation.
+- There are currently no test scripts or test files in the repository. Client production builds can be checked with `npm run build`.
+
 ## Features
 
 - Vocabulary list with Japanese sorting, pagination, and empty/loading states.
@@ -44,8 +89,8 @@ The project uses the following technologies. The logos below are loaded from Sim
 - Search across kanji, kana, romaji, and English meaning.
 - Flashcard mode with furigana, example sentences, speech support, favorites, and mastered status.
 - Quiz mode with persistent correct and total answer counts.
-- Per-browser progress identified by a UUID stored in `localStorage`.
-- MongoDB seed script. The bundled dataset currently seeds N5 entries; the schema supports N1-N5.
+- Account-based progress protected by JWT authentication.
+- MongoDB seed script. The bundled dataset currently seeds 800 N5 entries; the schema supports N1-N5.
 - Responsive client served by Vite and connected to the API through a development proxy.
 
 ## Project structure
@@ -55,17 +100,17 @@ jlpt_vocab/
 ├─ client/
 │  ├─ src/
 │  │  ├─ api/             # Axios API client and session header
-│  │  ├─ components/      # Header, filters, cards, flashcards, quiz, stats
-│  │  ├─ context/         # Application state and API-backed progress actions
-│  │  ├─ pages/           # Home page
+│  │  ├─ components/      # Navigation, filters, cards, study modes, stats, and feedback
+│  │  ├─ context/         # Auth state and shared vocabulary/progress state
+│  │  ├─ pages/           # Landing, auth, vocabulary, quiz, and flashcard views
 │  │  └─ utils/           # Furigana, quiz, and speech helpers
 │  ├─ package.json
 │  └─ vite.config.js       # Vite server and /api proxy
 ├─ server/
 │  ├─ data/               # N5 vocabulary and seed script
-│  ├─ middleware/         # Error handler
-│  ├─ models/             # Vocab and Progress Mongoose models
-│  ├─ routes/             # Vocabulary and progress endpoints
+│  ├─ middleware/         # JWT auth guard and error handler
+│  ├─ models/             # User, Vocab, and Progress Mongoose models
+│  ├─ routes/             # Auth, vocabulary, and progress endpoints
 │  ├─ package.json
 │  └─ server.js           # Express entry point
 ├─ package.json           # Root development scripts
@@ -93,6 +138,7 @@ Create `server/.env`:
 ```dotenv
 MONGO_URI=mongodb://127.0.0.1:27017/jlpt_vocab
 PORT=5000
+JWT_SECRET=replace-with-a-long-random-secret
 # Optional when the client is hosted separately:
 # CLIENT_URL=http://localhost:5173
 ```
@@ -143,7 +189,7 @@ cd client && npm run dev
 
 ## API reference
 
-All progress routes use the `x-session-id` header. The client creates and stores this ID automatically.
+Progress routes require the JWT added by the client as `Authorization: Bearer <token>`. The client also sends an `x-session-id` header for compatibility, but the current server identifies progress by the JWT user ID.
 
 ### Vocabulary
 
@@ -165,6 +211,13 @@ All progress routes use the `x-session-id` header. The client creates and stores
 | `PUT` | `/api/progress/quiz` | `{ "correct": true }` | Increment quiz totals and optionally correct answers |
 | `DELETE` | `/api/progress/reset` | - | Reset favorites, mastered words, and quiz score |
 
+### Authentication
+
+| Method | Endpoint | Body | Description |
+| --- | --- | --- | --- |
+| `POST` | `/api/auth/register` | `{ "name": "Aki", "email": "aki@example.com", "password": "..." }` | Create an account and return a JWT |
+| `POST` | `/api/auth/login` | `{ "email": "aki@example.com", "password": "..." }` | Validate credentials and return a JWT |
+
 ### Health check
 
 ```text
@@ -175,5 +228,12 @@ Returns `{ "status": "ok" }` when the API is running.
 
 ## Adding vocabulary
 
-Add entries to `server/data/n5_vocab.js`, or add another level dataset and register it in `server/data/seed.js` under `vocabData`. Each entry needs `kanji`, `kana`, `romaji`, `meaning`, `type`, and optional example sentence fields. Supported levels are `N1`, `N2`, `N3`, `N4`, and `N5`.
+Add entries to `server/data/n5_vocab.js`, or add another level dataset and register it in `server/data/seed.js` under `vocabData`. Each entry needs `kanji`, `kana`, `romaji`, `meaning`, and a schema-supported `type`; `example`, `exampleRomaji`, and `exampleMeaning` are optional. The dataset level is assigned by the key in `vocabData`, and supported levels are `N1`, `N2`, `N3`, `N4`, and `N5`.
+
+## Current scope
+
+- Only the N5 seed dataset is bundled and registered, even though the data model and UI are prepared for N1-N4.
+- Quiz and flashcard content is loaded from the filtered `all=true` vocabulary response, so very large datasets may require server-side limits or a dedicated study endpoint.
+- Authentication has login and registration only; there is no password reset, email verification, refresh-token flow, or account deletion endpoint.
+- Progress is account-specific and requires signing in. The browser UUID does not provide a separate anonymous progress mode.
 
