@@ -177,3 +177,5 @@ Returns `{ "status": "ok" }` when the API is running.
 
 Add entries to `server/data/n5_vocab.js`, or add another level dataset and register it in `server/data/seed.js` under `vocabData`. Each entry needs `kanji`, `kana`, `romaji`, `meaning`, `type`, and optional example sentence fields. Supported levels are `N1`, `N2`, `N3`, `N4`, and `N5`.
 
+## Developer
+Mohit Chauhan 
