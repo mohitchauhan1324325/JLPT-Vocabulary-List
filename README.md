@@ -237,3 +237,5 @@ Add entries to `server/data/n5_vocab.js`, or add another level dataset and regis
 - Authentication has login and registration only; there is no password reset, email verification, refresh-token flow, or account deletion endpoint.
 - Progress is account-specific and requires signing in. The browser UUID does not provide a separate anonymous progress mode.
 
+## Developer
+Mohit Chauhan 
