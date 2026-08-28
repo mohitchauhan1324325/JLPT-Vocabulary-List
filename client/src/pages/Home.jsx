@@ -1,148 +1,260 @@
-import React, { useEffect } from 'react';
-import { useApp } from '../context/AppContext';
-import Header from '../components/Header';
-import Background from '../components/Background';
-import SearchBar from '../components/SearchBar';
-import LevelNav from '../components/LevelNav';
-import StatsBar from '../components/StatsBar';
-import ProgressBar from '../components/ProgressBar';
-import FilterControls from '../components/FilterControls';
-import VocabCard from '../components/VocabCard';
-import FlashcardMode from '../components/FlashcardMode';
-import QuizMode from '../components/QuizMode';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import Navbar from '../components/Navbar';
-
-const MODES = [
-  { id: 'list', label: '📚 語彙リスト · List' },
-  { id: 'flashcard', label: '🃏 フラッシュカード · Flashcard' },
-  { id: 'quiz', label: '✏️ クイズ · Quiz' },
-];
-
 export default function Home() {
-  const {
-    currentMode,
-    words,
-    loadingWords,
-    dispatch,
-    showToast,
-    currentPage,
-    totalPages,
-  } = useApp();
+    const { isAuthenticated } = useAuth();
 
-  // Welcome toast
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      showToast('ようこそ！JLPT語彙学習へ · Welcome to JLPT Vocab!');
-    }, 900);
-    return () => clearTimeout(timer);
-  }, [showToast]);
+    return (
+        <div className="landing-page">
+            <Navbar />
+            
+            {/* Hero */}
+            <section className="hero-section">
 
-  return (
-    <>
-      <Background />
-
-      <div id="app">
-        <Navbar />
-        <Header />
-        <SearchBar />
-        <LevelNav />
-        <StatsBar />
-        <ProgressBar />
-
-        {/* Mode Toggle */}
-        <div className="mode-toggle" role="tablist" aria-label="View mode">
-          {MODES.map(({ id, label }) => (
-            <button
-              key={id}
-              className={`mode-btn ${currentMode === id ? 'active' : ''}`}
-              data-mode={id}
-              id={`mode-${id}`}
-              role="tab"
-              aria-selected={currentMode === id}
-              onClick={() => dispatch({ type: 'SET_MODE', payload: id })}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {/* Filter controls — only in list mode */}
-        {currentMode === 'list' && <FilterControls />}
-
-        {/* ── List Mode ── */}
-        {currentMode === 'list' && (
-          <main aria-label="Vocabulary list">
-            {loadingWords ? (
-              <div className="loading-state">
-                ...
-              </div>
-            ) : words.length === 0 ? (
-              <div className="empty-state">
-                ...
-              </div>
-            ) : (
-              <>
-                <div className="vocab-grid" id="vocabGrid" role="list">
-                  {words.map((word, i) => (
-                    <VocabCard key={word._id} word={word} index={i} />
-                  ))}
+                <div className="hero-mon">
+                    語
                 </div>
 
-                {totalPages > 1 && (
-                  <div className="pagination">
-                    <button
-                      className="page-btn"
-                      disabled={currentPage === 1}
-                      onClick={() =>
-                        dispatch({
-                          type: 'SET_PAGE',
-                          payload: currentPage - 1,
-                        })
-                      }
+                <p className="hero-kicker">
+                    日本語を学び、世界を広げる
+                </p>
+
+                <h1>
+                    Master Japanese Vocabulary
+                    <span>for the JLPT</span>
+                </h1>
+
+                <p className="hero-description">
+                    Learn Japanese vocabulary, practice with quizzes and
+                    flashcards, and build your JLPT skills step by step.
+                </p>
+
+                <div className="hero-actions">
+                    <Link
+                        to={isAuthenticated ? '/vocabulary' : '/login'}
+                        className="hero-primary-btn"
                     >
-                      ← Previous
-                    </button>
+                        {isAuthenticated ? 'Start Learning' : 'Get Started'}
+                    </Link>
 
-                    <span className="page-info">
-                      Page {currentPage} of {totalPages}
-                    </span>
+                    {!isAuthenticated && (
+                        <Link
+                            to="/login"
+                            className="hero-secondary-btn"
+                        >
+                            Login
+                        </Link>
+                    )}
+                </div>
 
-                    <button
-                      className="page-btn"
-                      disabled={currentPage === totalPages}
-                      onClick={() =>
-                        dispatch({
-                          type: 'SET_PAGE',
-                          payload: currentPage + 1,
-                        })
-                      }
+            </section>
+
+
+            {/* Features */}
+            <section className="features-section">
+
+                <div className="section-heading">
+                    <p className="section-kicker">
+                        学習ツール
+                    </p>
+
+                    <h2>
+                        Everything you need to learn
+                    </h2>
+
+                    <p>
+                        Build your Japanese vocabulary with simple,
+                        focused learning tools.
+                    </p>
+                </div>
+
+
+                <div className="feature-grid">
+
+                    <Link
+                        to="/vocabulary"
+                        className="feature-card"
                     >
-                      Next →
-                    </button>
-                  </div>
-                )}
-              </>
-            )}
-          </main>
-        )}
+                        <div className="feature-icon">📚</div>
 
-        {/* ── Flashcard Mode ── */}
-        {currentMode === 'flashcard' && <FlashcardMode />}
+                        <h3>Vocabulary</h3>
 
-        {/* ── Quiz Mode ── */}
-        {currentMode === 'quiz' && <QuizMode />}
+                        <p>
+                            Explore JLPT vocabulary from N5 to N1,
+                            search words and learn their meanings.
+                        </p>
 
-        {/* Footer */}
-        <footer className="site-footer" role="contentinfo">
-          <div className="footer-mon" aria-hidden="true">⌘ 菊 ⌘</div>
-          <p className="footer-text">
-            日本語能力試験対策 · JLPT Study Tool · 一期一会
-          </p>
-          <p className="footer-text" style={{ marginTop: '6px', fontSize: '11px', opacity: 0.7 }}>
-            語学の道は遠く、されど一歩から · The road of language is long, yet starts with one step
-          </p>
-        </footer>
-      </div>
-    </>
-  );
+                        <span>Explore vocabulary →</span>
+                    </Link>
+
+
+                    <Link
+                        to="/vocabulary"
+                        className="feature-card"
+                    >
+                        <div className="feature-icon">🃏</div>
+
+                        <h3>Flashcards</h3>
+
+                        <p>
+                            Review vocabulary using interactive
+                            flashcards and strengthen your memory.
+                        </p>
+
+                        <span>Practice flashcards →</span>
+                    </Link>
+
+
+                    <Link
+                        to="/vocabulary"
+                        className="feature-card"
+                    >
+                        <div className="feature-icon">✏️</div>
+
+                        <h3>Quiz</h3>
+
+                        <p>
+                            Test your knowledge and track how well
+                            you understand Japanese vocabulary.
+                        </p>
+
+                        <span>Take a quiz →</span>
+                    </Link>
+
+
+                    <div className="feature-card feature-coming-soon">
+                        <div className="feature-icon">🤖</div>
+
+                        <h3>AI Japanese Tutor</h3>
+
+                        <p>
+                            Practice conversations, understand grammar
+                            and get personalized Japanese explanations.
+                        </p>
+
+                        <span>Coming soon</span>
+                    </div>
+
+
+                    <div className="feature-card">
+                        <div className="feature-icon">📊</div>
+
+                        <h3>Progress Tracking</h3>
+
+                        <p>
+                            Keep track of mastered vocabulary, quiz
+                            performance and your learning progress.
+                        </p>
+
+                        <span>Track your progress</span>
+                    </div>
+
+
+                    <div className="feature-card">
+                        <div className="feature-icon">⭐</div>
+
+                        <h3>Favorites</h3>
+
+                        <p>
+                            Save difficult or important words and
+                            review them whenever you want.
+                        </p>
+
+                        <span>Build your word list</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            {/* JLPT Levels */}
+            <section className="levels-section">
+
+                <div className="section-heading">
+                    <p className="section-kicker">
+                        JLPT レベル
+                    </p>
+
+                    <h2>
+                        Learn at your level
+                    </h2>
+
+                    <p>
+                        Start from your current Japanese level and
+                        gradually work your way up.
+                    </p>
+                </div>
+
+
+                <div className="level-cards">
+
+                    {['N5', 'N4', 'N3', 'N2', 'N1'].map((level) => (
+                        <Link
+                            key={level}
+                            to={`/vocabulary?level=${level}`}
+                            className="level-card"
+                        >
+                            <span>{level}</span>
+
+                            <small>
+                                JLPT
+                            </small>
+                        </Link>
+                    ))}
+
+                </div>
+
+            </section>
+
+
+            {/* CTA */}
+            <section className="cta-section">
+
+                <div className="cta-content">
+
+                    <div className="cta-mon">
+                        学
+                    </div>
+
+                    <h2>
+                        Start your Japanese learning journey
+                    </h2>
+
+                    <p>
+                        One word at a time. One step at a time.
+                    </p>
+
+                    <Link
+                        to={isAuthenticated ? '/vocabulary' : '/login'}
+                        className="hero-primary-btn"
+                    >
+                        {isAuthenticated
+                            ? 'Continue Learning'
+                            : 'Create Your Account'}
+                    </Link>
+
+                </div>
+
+            </section>
+
+
+            {/* Footer */}
+            <footer className="landing-footer">
+                <div className="footer-mon">
+                    ⌘ 菊 ⌘
+                </div>
+
+                <p>
+                    日本語能力試験対策 · JLPT Study Tool · 一期一会
+                </p>
+
+                <p className="footer-small">
+                    The road of language is long, yet starts with one step.
+                </p>
+            </footer>
+
+        </div>
+    );
 }

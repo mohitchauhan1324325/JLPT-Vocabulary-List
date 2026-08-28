@@ -1,37 +1,63 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 export default function Navbar() {
-    const { user, logout } = useAuth();
+    const { isAuthenticated, logout } = useAuth();
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate('/');
+    };
 
     return (
-        <nav className="navbar">
-            <div className="navbar-inner">
+        <nav className="site-navbar">
+            <Link to="/" className="navbar-brand">
+                <span className="navbar-mon">語</span>
 
-                <div className="navbar-links">
-                    <a href="#vocabulary">Vocabulary</a>
-                    <a href="#quiz">Quiz</a>
-                    <a href="#favorites">Favorites</a>
-                </div>
+                <span className="navbar-title">
+                    JLPT 語彙
+                    <small>Japanese Vocabulary</small>
+                </span>
+            </Link>
 
-                <div className="navbar-account">
-                    {user && (
-                        <>
-                            <span className="navbar-user">
-                                👤 {user.name}
-                            </span>
+            <div className="navbar-links">
+                <Link to="/" className="navbar-link">
+                    Home
+                </Link>
 
-                            <button
-                                type="button"
-                                className="navbar-logout"
-                                onClick={logout}
-                            >
-                                Logout
-                            </button>
-                        </>
-                    )}
-                </div>
+                <Link to="/vocabulary" className="navbar-link">
+                    Vocabulary
+                </Link>
 
+                {isAuthenticated && (
+                    <>
+                        <Link to="/quiz" className="navbar-link">
+                            Quiz
+                        </Link>
+
+                        <Link to="/flashcards" className="navbar-link">
+                            Flashcards
+                        </Link>
+                    </>
+                )}
+            </div>
+
+            <div className="navbar-auth">
+                {isAuthenticated ? (
+                    <button
+                        type="button"
+                        className="navbar-logout"
+                        onClick={handleLogout}
+                    >
+                        Logout
+                    </button>
+                ) : (
+                    <Link to="/login" className="navbar-login">
+                        Login
+                    </Link>
+                )}
             </div>
         </nav>
     );
