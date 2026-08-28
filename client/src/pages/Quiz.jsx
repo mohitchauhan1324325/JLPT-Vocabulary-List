@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar.jsx';
 import SearchBar from '../components/SearchBar';
 import LevelNav from '../components/LevelNav';
 import QuizMode from '../components/QuizMode.jsx';
+import StatsBar from '../components/StatsBar.jsx';
 
 export default function Quiz() {
     return (
@@ -17,8 +18,10 @@ export default function Quiz() {
                 <Navbar />
 
                 <Header />
-                
+
                 <LevelNav />
+
+                <StatsBar />
 
                 <main aria-label="JLPT Quiz">
 

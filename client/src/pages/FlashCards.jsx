@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import SearchBar from '../components/SearchBar';
 import LevelNav from '../components/LevelNav';
 import FlashcardMode from '../components/FlashcardMode';
+import StatsBar from '../components/StatsBar';
 
 export default function Flashcards() {
     return (
@@ -21,6 +22,8 @@ export default function Flashcards() {
                 <SearchBar />
 
                 <LevelNav />
+
+                <StatsBar />
 
                 <main aria-label="JLPT Flashcards">
 
