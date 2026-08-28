@@ -1,9 +1,11 @@
 import React from 'react';
 
-import Background from '../components/Background';
-import Header from '../components/Header';
-import Navbar from '../components/Navbar';
-import QuizMode from '../components/QuizMode';
+import Background from '../components/Background.jsx';
+import Header from '../components/Header.jsx';
+import Navbar from '../components/Navbar.jsx';
+import SearchBar from '../components/SearchBar';
+import LevelNav from '../components/LevelNav';
+import QuizMode from '../components/QuizMode.jsx';
 
 export default function Quiz() {
     return (
@@ -15,6 +17,8 @@ export default function Quiz() {
                 <Navbar />
 
                 <Header />
+                
+                <LevelNav />
 
                 <main aria-label="JLPT Quiz">
 

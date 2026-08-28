@@ -3,6 +3,8 @@ import React from 'react';
 import Background from '../components/Background';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
+import SearchBar from '../components/SearchBar';
+import LevelNav from '../components/LevelNav';
 import FlashcardMode from '../components/FlashcardMode';
 
 export default function Flashcards() {
@@ -15,6 +17,10 @@ export default function Flashcards() {
                 <Navbar />
 
                 <Header />
+
+                <SearchBar />
+
+                <LevelNav />
 
                 <main aria-label="JLPT Flashcards">
 
