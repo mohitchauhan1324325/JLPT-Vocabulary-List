@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useApp } from '../context/AppContext';
 
 import Header from '../components/Header';
@@ -29,6 +29,9 @@ export default function Vocabulary() {
 
     return () => clearTimeout(timer);
   }, [showToast]);
+
+  console.log("fetchVocabByLevel");
+  
 
   return (
     <>

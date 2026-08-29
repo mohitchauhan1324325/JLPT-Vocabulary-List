@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Background from '../components/Background';
 import Header from '../components/Header';
 import Navbar from '../components/Navbar';
